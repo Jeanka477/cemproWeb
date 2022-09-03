@@ -1,0 +1,22 @@
+@include tablet{
+    .contenedor-anuncios{
+        @include grid(3,2rem);
+    }
+}
+
+.anuncio {
+background-color: lighten( #436647, 5);
+border: 1px solid darken(#436647,5 );
+
+.contenido-anuncio{
+    padding: 2rem;
+}
+h3, p{
+    margin: 0;
+}
+.precio{
+    color:black;
+    font-weight: $bold;
+    font-size: 3rem;
+}
+}

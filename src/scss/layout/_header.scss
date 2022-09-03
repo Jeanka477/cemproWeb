@@ -1,0 +1,41 @@
+
+//.no-webp .inicio{
+ //   background-image: url(../img/CemprodecaFondo.jpg);
+//}
+//.webp .inicio{
+ //   background-image: url(../img/CemprodecaFondo.jpg);
+//}
+.header{
+    background-color: #4d825a;
+    padding: 1 rem 0 3 0;
+
+    &.inicio {
+        background-position: center center;
+        background-size: cover;
+        @include tablet{
+            min-height: 5rem;
+        }
+        
+
+    }
+}
+.h1Principal{
+    color: black;
+}
+.contenido-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include tablet{
+        min-height: 3rem;
+    }
+
+    h1{
+        text-align: left;
+        color: white;
+        font-weight: $bold;
+        line-height: 2;
+    }
+    
+}
