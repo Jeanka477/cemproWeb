@@ -5,8 +5,8 @@
 }
 
 .anuncio {
-background-color: lighten( #436647, 5);
-border: 1px solid darken(#436647,5 );
+background-color: lighten( #999f9a, 5);
+border: 1px solid darken(#999f9a,5 );
 
 .contenido-anuncio{
     padding: 2rem;
@@ -19,4 +19,23 @@ h3, p{
     font-weight: $bold;
     font-size: 3rem;
 }
+}
+
+.iconos-cararteristicas {
+    display: flex;
+    list-style: none;
+    padding: 0;
+
+    li {
+        flex: 1;
+        display: flex;
+
+        img {
+            flex: 0 0 5rem;
+            
+        }
+        p{
+            font-weight: black;
+        }
+    }
 }
