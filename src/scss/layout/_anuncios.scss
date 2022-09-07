@@ -14,17 +14,20 @@ border: 1px solid darken(#999f9a,5 );
 h3, p{
     margin: 0;
 }
+
+}
+
 .precio{
     color:black;
     font-weight: $bold;
     font-size: 3rem;
-}
 }
 
 .iconos-cararteristicas {
     display: flex;
     list-style: none;
     padding: 0;
+    max-width: 40rem;
 
     li {
         flex: 1;
