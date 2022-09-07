@@ -4,9 +4,10 @@
     }
 }
 
-.anuncio {
-background-color: lighten( #97daf2, 5);
-border: 1px solid darken(#97daf2,5 );
+.anuncio{
+    background-color: lighten($gris, 5);
+    border: 1px solid darken($grisOscuro, 10);
+    box-shadow: 1px 1px 9px;
 
 .contenido-anuncio{
     padding: 2rem;
