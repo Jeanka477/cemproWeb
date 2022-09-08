@@ -1,6 +1,7 @@
 
-.boton-celeste {
-    background-color: #2EC4F4;
+.boton-amarillo {
+    background-color:  #419aaa;
+
     color: black;
     border-radius: round($number: 0);
     font-weight: $bold;
@@ -14,7 +15,11 @@
 
 .bton-ver-propiedades{
     justify-content: flex-end;
+
     background-color:#2EC4F4;
+
+    background-color: #419aaa;
+
     color: black;
     font-weight: $bold;
     padding: 2rem 3rem;
