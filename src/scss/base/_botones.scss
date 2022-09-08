@@ -1,5 +1,10 @@
+ 
 .boton-amarillo {
     background-color: #287aa2;
+
+}
+.boton-celeste {
+    background-color: $celeste;
     color: black;
     border-radius: round($number: 0);
     font-weight: $bold;
@@ -12,7 +17,6 @@
 }
 
 .bton-ver-propiedades{
-    display: flex;
     justify-content: flex-end;
     background-color:#287aa2;
     color: black;
@@ -20,6 +24,18 @@
     padding: 2rem 3rem;
     text-align: center;
     margin-top:2 ;
+    
    
 }
 
+.bton-ver-proyectos{
+    background-color: $celeste;
+    color: black;
+    border-radius: round($number: 0);
+    font-weight: $bold;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin-top:2 ;
+    display:block;
+    
+}
