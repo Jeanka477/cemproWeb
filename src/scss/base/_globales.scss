@@ -66,3 +66,48 @@ border-radius: 5px 5px 5px 5px;
 -webkit-border-radius: 5px 5px 5px 5px;
 -moz-border-radius: 5px 5px 5px 5px;
 }
+
+
+
+// css para contacto
+
+
+.contenedor-contacto{
+    display: flex;
+    flex-direction:row;
+}
+
+@include tablet{
+    .contenedor-contacto{
+        @include grid(2,2rem);
+    }
+
+}
+//enlaces
+@include tablet{
+.redes-sociales{
+    @include grid(1,3rem);
+}
+
+}
+
+.redes-sociales{
+    
+margin-left: auto;
+margin-right: auto;
+margin-top: 6rem;
+}
+
+.contactos ul {
+display:grid;
+align-items: center;
+list-style-type: none;
+margin-top: auto;
+}
+
+
+.maps{
+
+padding-top: 5rem;
+}
+//fin css para contacto

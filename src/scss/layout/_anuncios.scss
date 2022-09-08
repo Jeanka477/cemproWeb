@@ -1,3 +1,4 @@
+//Disenio para pagina principal
 @include tablet{
     .contenedor-anuncios{
         @include grid(3,2rem);
@@ -45,3 +46,37 @@ h3, p{
         }
     }
 }
+
+
+
+
+//DISENO PARA PAGINA DE HISTORIA
+.anuncio-historia{
+    background-color: lighten($celeste, 5);
+    border: 1px solid darken($grisOscuro, 10);
+    box-shadow: 1px 1px 9px;
+}
+
+
+.imagen-historia{
+    padding: 2rem;
+}
+
+@include tablet{
+    .contenedor-historia{
+        @include grid(3,2rem);
+        padding: 2rem;
+    }
+
+}
+
+.contenido-historia{
+    padding: 2rem;
+}
+h3, p{
+    margin: 0;
+}
+
+
+
+
