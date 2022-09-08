@@ -1,10 +1,6 @@
- 
-.boton-amarillo {
-    background-color: #287aa2;
 
-}
 .boton-celeste {
-    background-color: $celeste;
+    background-color: #2EC4F4;
     color: black;
     border-radius: round($number: 0);
     font-weight: $bold;
@@ -18,7 +14,7 @@
 
 .bton-ver-propiedades{
     justify-content: flex-end;
-    background-color:#287aa2;
+    background-color:#2EC4F4;
     color: black;
     font-weight: $bold;
     padding: 2rem 3rem;
@@ -29,13 +25,13 @@
 }
 
 .bton-ver-proyectos{
-    background-color: $celeste;
+     justify-content: flex-end;
+    background-color:#00b0e6;
     color: black;
-    border-radius: round($number: 0);
     font-weight: $bold;
-    padding: 1rem 3rem;
+    padding: 2rem 3rem;
     text-align: center;
     margin-top:2 ;
-    display:block;
+  
     
 }
