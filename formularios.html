@@ -43,6 +43,10 @@
          <fieldset class="datos-personales">
             
              <legend>Datos personales</legend>
+
+             <label for="Monto">Monto a solicitar</label>
+             <input type="number"  id="Monto" placeholder="Monto en colones" >
+
              <label for="nombre">Nombre</label>
              <input type="text" placeholder="Tu nombre" id="nombre">
 
@@ -86,7 +90,7 @@
 
               
              <legend>Direccion exacta</legend>
-             <textarea name="textarea" rows="5" cols="80">Escriba la direccion exacta de su domicilio</textarea>
+             <textarea name="textarea" rows="5" cols="80">Escriba la dirección exacta de su domicilio</textarea>
             <br>
 
 
@@ -123,8 +127,19 @@
 
             <label for="trabajo">Lugar de trabajo</label>
             <input type="text" placeholder="Lugar donde labora" id="trabajo">
-            <label for="nombre">Telefono</label>
-            <input type="text" placeholder="Telefono" id="nombre">
+
+            <label for="telefono">Telefono</label>
+            <input type="text" placeholder="Telefono" id="telefono">
+
+            <label for="nombre-familiar">Nombre de familiar que no vive con usted:</label>
+            <input type="text" placeholder="Nombre Completo" id="nombre-familiar">
+            
+            <label for="direccion">Dirección</label>
+            <input type="text" placeholder="Dirección exacta" id="direccion">
+
+            <label for="telefono">Telefono</label>
+            <input type="text" placeholder="Telefono" id="telefono">
+
 
 
          </fieldset>
@@ -134,11 +149,69 @@
             <legend>Datos de la microempresa</legend>
 
 
-            <label for="nombre">Otro contacto</label>
-            <input type="text" placeholder="Tu nombre" id="nombre">  
+            <label for="nombre">Nombre de la microempresa</label>
+            <input type="text" placeholder="Nombre" id="nombre">  
 
+            <label for="direccion">Dirección</label>
+            <input type="text" placeholder="Dirección exacta" id="direccion">
+
+            <label>Que tipo de Actividad realiza:</label>
+            <textarea name="textarea" rows="5" cols="80" placeholder="Escriba la actividad que realiza su microempresa"></textarea>
+
+            <label for="nEmpleados">Números de empleados</label>
+             <input type="number"  id="empleados"> 
+
+             <label for="actividadRealizada">Que produce, vendeo servicio brinda:</label>
+            <input type="text" placeholder="Servicio brindado" id="nombre">  
+           
+            <label for="motivoActividad">Motivo de inicio de la actividad:</label>
+            <input type="text" placeholder="motivoActividad" id="motivoActividad">  
+
+            <label for="motivoActividad">¿Hace cuanto?:</label>
+            <input type="text" placeholder="Hace cuanto se realiza la actividad" id="motivoActividad"> 
+
+            <label for="motivoActividad">¿Con cuánto Dinero inicio?:</label>
+            <input type="text" placeholder="Hace cuanto se realiza la actividad" id="motivoActividad">
+
+            <label for="motivoActividad">¿Con cuánto Dinero inicio?:</label>
+            <input type="text" placeholder="Escriba el monto" id="motivoActividad">
+
+            <label for="motivoActividad">¿El local donde realiza la actividad es propio?:</label>
+            <input type="checkbox" name="peliculas"> SI
+            <input type="checkbox" name="deportes"> NO<br>
+
+            
+            <label for="motivoActividad">¿A nombre de quien está el local?:</label>
+            <input type="text" placeholder="Nombre del propietario" id="motivoActividad">
+
+            <label for="telefono">Telefono</label>
+            <input type="text" placeholder="Telefono" id="telefono">
+
+         <label for="motivoActividad">¿Hace cuanto utiliza el local?:</label>
+            <input type="text" placeholder="" id="motivoActividad">
+
+            <label for="motivoActividad">¿Cuánto paga de alquiler?:</label>
+            <input type="text" placeholder="Cifra en colones" id="motivoActividad">
+
+            <label for="motivoActividad">¿Quiénes son sus clientes?:</label>
+            <input type="text" placeholder="Ejem agricultores" id="motivoActividad">
+
+            <label for="motivoActividad">Número de clientes:</label>
+            <input type="number"  id="empleados"> 
+
+            <label for="motivoActividad">¿Cuánto vende o recupera?:</label>
+            <label for="motivoActividad">¿Meses buenos?:</label>
+            <input type="text" placeholder="Cifra en colones" id="motivoActividad">
+
+            <label for="motivoActividad">¿Meses malos?:</label>
+            <input type="text" placeholder="Cifra en colones" id="motivoActividad">
+            
+            <label for="motivoActividad">¿Último mes?:</label>
+            <input type="text" placeholder="Cifra en colones" id="motivoActividad">
          </fieldset>
         </form>
+
+        <a class="boton-celeste" href="#">Enviar formulario</a>
     </main>
 
     <footer class="footer seccion">
