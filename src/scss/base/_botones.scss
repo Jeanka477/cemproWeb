@@ -10,9 +10,27 @@
     margin-top:2 ;
     display:block;
    
-    
 }
 
+//BOTON PARA LA SECCION DE CUALIDADES
+.boton-nosotros{
+    background-color:  #419aaa;
+    color: black;
+    border-radius: round($number: 0);
+    font-weight: $bold;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin-top:2 ;
+    display:block;
+    width: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    text-transform: uppercase;
+}
+
+
+//BOTON PARA LA SECCION DE PROPIEDADES
 .bton-ver-propiedades{
     justify-content: flex-end;
 
@@ -29,6 +47,8 @@
    
 }
 
+
+//BOTON PARA LA SECCION DE PROYECTOS
 .bton-ver-proyectos{
      justify-content: flex-end;
     background-color:#00b0e6;
@@ -37,6 +57,22 @@
     padding: 2rem 3rem;
     text-align: center;
     margin-top:2 ;
-  
     
+}
+
+.boton-formulario{
+    background-color:  #419aaa;
+    color: black;
+    border-radius: round($number: 0);
+    font-weight: $bold;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin-top:2 ;
+    display:block;
+    width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+    text-transform: uppercase;
+
 }
