@@ -1,7 +1,8 @@
 .barra{
     display: flex;
     flex-direction: column;
-    padding-top: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     @include tablet{
         flex-direction: row;
         justify-content: space-between;
