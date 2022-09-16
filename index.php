@@ -90,7 +90,7 @@
                      
         </div>
 
-        <a class="boton-nosotros" href="historia.html">Mas sobre nosotros</a>
+        <a class="boton-nosotros" href="historia.php">Mas sobre nosotros</a>
     </main>
     <section class="seccion contenedor">
         <h2> Propiedades a la venta </h2>
