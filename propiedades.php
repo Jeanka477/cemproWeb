@@ -31,7 +31,7 @@
                         </li>
                     </ul>
     
-                    <a href="propiedad.html" class="boton-celeste">
+                    <a href="propiedad.php" class="boton-celeste">
                         Ver Propiedad
                     </a>
                 </div>
@@ -63,7 +63,7 @@
                             </li>
                         </ul>
         
-                        <a href="propiedad.html" class="boton-celeste">
+                        <a href="propiedad.php" class="boton-celeste">
                             Ver Propiedad
                         </a>
                     </div>
@@ -95,7 +95,7 @@
                                 </li>
                             </ul>
             
-                            <a href="propiedad.html" class="boton-celeste">
+                            <a href="propiedad.php" class="boton-celeste">
                                 Ver Propiedad
                             </a>
                         </div>
@@ -128,7 +128,7 @@
                                 </li>
                             </ul>
             
-                            <a href="propiedad.html" class="boton-celeste">
+                            <a href="propiedad.php" class="boton-celeste">
                                 Ver Propiedad
                             </a>
                         </div>
@@ -161,7 +161,7 @@
                                 </li>
                             </ul>
             
-                            <a href="propiedad.html" class="boton-celeste">
+                            <a href="propiedad.php" class="boton-celeste">
                                 Ver Propiedad
                             </a>
                         </div>
@@ -194,7 +194,7 @@
                                 </li>
                             </ul>
             
-                            <a href="propiedad.html" class="boton-celeste">
+                            <a href="propiedad.php" class="boton-celeste">
                                 Ver Propiedad
                             </a>
                         </div>
@@ -202,18 +202,4 @@
                 </div>
     </main>
 
-    <footer class="footer seccion">
-        <div class="contenedor contenedor-footer"> 
-        <nav class="navegacion">
-         <a href="requisitos.html">Formularios</a>
-         <a href="proyectos.html">Proyectos</a>
-         <a href="propiedades.html">Propiedades</a>
-         <a href="historia.html">Historia</a>
-         <a href="contactenos.html"> Contactenos</a>
-        </nav>
-    </div>
-    <p class="copyright">Todos los derechos reservados 2022 &copy;</p>
-</footer>
-    <script src="build/js/bundle.min.js"></script>
-</body>
-</html>
+    <?php include 'includes/templates/footer.php';?>
