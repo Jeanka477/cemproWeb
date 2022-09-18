@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historia</title>
-    <link rel="stylesheet" href="build/css/app.css">
+    <link rel="stylesheet" href="/build/css/app.css">
 </head>
 <body>
 
@@ -15,13 +15,13 @@
                 <a href="/">
                    <!-- <img src="build/img/logo.svg" alt="Logotipo de cemprodeca">-->
 
-                   <img loading="lazy" src="build/img/CEMPRODECA.png" alt="anincio" class="logoCemprodeca">
+                   <img loading="lazy" src="/build/img/CEMPRODECA.png" alt="anincio" class="logoCemprodeca">
                 </a>
                 <div class="movil-menu">
-                    <img src="build/img/barras.svg " alt="ICono de menu para moviles">
+                    <img src="/build/img/barras.svg " alt="ICono de menu para moviles">
                 </div>
                 <div class="derecha"> 
-                    <img class="dark-mode-boton" src="build/img/dark-mode.svg" alt="">
+                    <img class="dark-mode-boton" src="/build/img/dark-mode.svg" alt="">
                     <nav class="navegacion">
                     
                         <a href="requisitos.php">Solicite su credito aqui</a>
