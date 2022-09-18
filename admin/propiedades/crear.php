@@ -3,11 +3,13 @@
 require '../../includes/config/database.php';
 $db =conectarDB();
 
+//Validacion del formulario
+
 
 if ($_SERVER['REQUEST_METHOD'] ==='POST'){
-    echo "<pre>";
-    var_dump($_POST);
-    echo "</pre>";
+  //  echo "<pre>";
+   // var_dump($_POST);
+   // echo "</pre>";
 
     $titulo = $_POST['titulo'];
     $precio = $_POST['precio'];
@@ -19,9 +21,14 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
     // insertar en la base de datos 
     $query =" INSERT INTO propiedades (titulo, precio, descripcion, 
-    luz, agua, vista, vendedorId)  VALUES('$titulo', '$precio', '$descripcion', '$luz', '$agua','$vista')";
+    luz, agua, vista, vendedorId)  VALUES('$titulo', '$precio', '$descripcion', '$luz', '$agua','$vista','$vendedorId')";
 
-    echo $query;
+    //echo $query;
+
+    $resultado = mysqli_query($db, $query);
+    if($resultado){
+        echo "Insertado Correctamente";
+    }
 
 }
     
@@ -48,12 +55,12 @@ incluirTemplate('header');
 
             <br>
             <label for="precio">Precio:</label>
-            <input type="number" id="precio" name="Precio" placeholder="Precio propiedad">
+            <input type="number" id="precio" name="precio" placeholder="Precio propiedad">
 
             <br>
             <label for="imagen">Imagen:</label>
             <input type="file" id="imagen" accept="image.jpeg, image/png" >
-<br>
+            <br>
             <label for="descripcion">Descripcion</label>
             <br>
             <textarea id="descripcion"  name="descripcion"placeholder="Escriba una descripcion de la propiedad "cols="60" rows="10"></textarea>
@@ -78,8 +85,9 @@ incluirTemplate('header');
 
         <fieldset>
             <legend>Vendedor</legend>
-            <select  name="Vendedor">
-                <option value="Cemprodeca" >CemProdeca</option>
+            <select  name="vendedor">
+                <option id="vendedor" value="1" >CemProdeca</option>
+                <option id="vendedor" value="2" >IMAS</option>
             </select>
         </fieldset>
 
