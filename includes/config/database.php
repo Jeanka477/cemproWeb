@@ -1,6 +1,6 @@
 <?php
 function conectarDB() : mysqli {
-    $db = mysqli_connect('localhost','root','7370543jJ','bdcemproWeb');
+    $db = mysqli_connect('localhost','root','root','bdcemproWeb');
 
 
     if(!$db){
