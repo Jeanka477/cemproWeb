@@ -30,7 +30,7 @@ require 'includes/funciones.php';
                 </picture>
                 
                 <div class="contenido-historia">
-                    <h3>Fundador</h3>
+                    <p>Fundador</p>
                   
                     
     
