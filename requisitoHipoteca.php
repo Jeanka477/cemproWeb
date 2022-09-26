@@ -16,7 +16,7 @@ require 'includes/funciones.php';
                 <li>Requisito 3</li>
                 <li>Requisito 4</li>
               </ul>
-              <a class="boton-formulario" href="formularios.php"> Llenar Formulario</a>
+              <a class="boton-formulario" href="hdatosP.php"> Llenar Formulario</a>
         
 
         
