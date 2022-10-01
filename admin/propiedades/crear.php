@@ -5,6 +5,7 @@ $db =conectarDB();
 
 //Validacion del formulario
 
+$errores = [];
 
 if ($_SERVER['REQUEST_METHOD'] ==='POST'){
   //  echo "<pre>";
@@ -19,17 +20,54 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
     $vista = $_POST['vista'];
     $vendedorId = $_POST['vendedor'];
 
-    // insertar en la base de datos 
-    $query =" INSERT INTO propiedades (titulo, precio, descripcion, 
-    luz, agua, vista, vendedorId)  VALUES('$titulo', '$precio', '$descripcion', '$luz', '$agua','$vista','$vendedorId')";
 
-    //echo $query;
-
-    $resultado = mysqli_query($db, $query);
-    if($resultado){
-        echo "Insertado Correctamente";
+    // validador de campos 
+    if(!$titulo){
+        $errores[] = "Debes ponerle un titulo a la propiedad";
     }
 
+    if(!$precio){
+        $errores[] = "Debes agregar un precio para la propiedad";
+    }
+
+    if(!$descripcion){
+        $errores[] = "La propiedad debe de ser descrita";
+    }
+    if(!$luz){
+        $errores[] = "El campo de luz no puede ir vacio";
+    }
+    if(!$agua){
+        $errores[] = "El campo de agua no puede ir vacio";
+    }
+    if(!$vista){
+        $errores[] = "El campo de Panorama no puede ir vacio";
+    }
+    if(!$vendedorId){
+        $errores[] = "La propiedad debe de tener un vendedor";
+    }
+
+    //echo "<pre>";
+    //var_dump($errores);
+    //echo "</pre>";
+    
+
+
+    if(empty($errores)){
+ // insertar en la base de datos 
+ $query =" INSERT INTO propiedades (titulo, precio, descripcion, 
+ luz, agua, vista, vendedorId)  VALUES('$titulo', '$precio', '$descripcion', '$luz', '$agua','$vista','$vendedorId')";
+
+ //echo $query;
+
+ $resultado = mysqli_query($db, $query);
+ if($resultado){
+     echo "Insertado Correctamente";
+ }
+
+    }
+
+
+   
 }
     
 
@@ -46,6 +84,18 @@ incluirTemplate('header');
     <a href="/admin" class="boton bton-ver-propiedades">Volver</a> <br>
 
 <br>
+
+
+<?php foreach($errores as $error):?>
+    <div class="alerta error">
+    <?php echo $error; ?>
+    </div>
+
+   
+    <?php endforeach; ?>
+
+
+
     <form class="formulario" method="POST" action="/admin/propiedades/crear.php">
         <fieldset>
             <legend>Informacion general</legend>
