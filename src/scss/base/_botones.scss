@@ -76,3 +76,27 @@
     text-transform: uppercase;
 
 }
+
+
+.boton-eliminar{
+    justify-content: flex-end;
+    background-color:#b33445;
+    color: rgb(255, 255, 255);
+    font-weight: $bold;
+    padding: 2rem 3rem;
+    text-align: center;
+    margin-top:2 ;
+    
+}
+
+.boton-Actualizar{
+    
+    justify-content: flex-end;
+    background-color:#0a7fc4;
+    color: rgb(255, 255, 255);
+    font-weight: $bold;
+    padding: 2rem 3rem;
+    text-align: center;
+    margin-top:2 ;
+    
+}

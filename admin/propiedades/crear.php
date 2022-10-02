@@ -101,19 +101,19 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
       
        
         move_uploaded_file($imagen['tmp_name'], $carpetaImagenes  . $nombreImagen );
-      exit;
+      
 
 
 
  // insertar en la base de datos 
- $query =" INSERT INTO propiedades (titulo, precio, descripcion, 
- luz, agua, vista, vendedorId)  VALUES('$titulo', '$precio', '$descripcion', '$luz', '$agua','$vista','$vendedorId')";
+ $query =" INSERT INTO propiedades (titulo, precio,imagen, descripcion, 
+ luz, agua, vista, vendedorId)  VALUES('$titulo', '$precio','$nombreImagen', '$descripcion', '$luz', '$agua','$vista','$vendedorId')";
 
  //echo $query;
 
  $resultado = mysqli_query($db, $query);
  if($resultado){
-    header('location: /admin');
+    header('location: /admin?resultado=1');
  }
 
     }
