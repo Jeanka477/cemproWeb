@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
     // validador de campos 
     if(!$cod_proyecto){
-        $errores[] = "Debes ponerle un titulo a la propiedad";
+        $errores[] = "Debes ponerle un codigo al proyecto";
     }
 
     if(!$nom_proyecto){
@@ -101,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
 
  // insertar en la base de datos 
- $query =" INSERT INTO propiedades (cod_proyecto, nom_proyecto,ubicacion_proyecto, fecha_inicio, 
+ $query =" INSERT INTO proyectos (cod_proyecto, nom_proyecto,ubicacion_proyecto, fecha_inicio, 
  fecha_fin, descripcion, imagen_proyecto)  VALUES('$cod_proyecto', '$nom_proyecto', '$ubicacion_proyecto', '$fecha_inicio', '$fecha_fin','$nombreImagen')";
 
  //echo $query;
