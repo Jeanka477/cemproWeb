@@ -1,4 +1,4 @@
-<!-- <?php 
+<?php 
 //Base de datos
 require '../../includes/config/database.php';
 $db =conectarDB();
@@ -153,7 +153,7 @@ incluirTemplate('header');
             <br>
             <label for="nom_proyecto">Nombre:</label>
             <input type="text" id="nom_proyecto" name="nom_proyecto" value="<?php echo $nom_proyecto; ?>">
-
+            <br>
             <label for="ubicacion_proyecto" >Ubicacion:</label>
         <input type="text" id="ubicacion_proyecto" name="ubicacion_proyecto" value="<?php echo $ubicacion_proyecto; ?>">
 <br>
@@ -191,4 +191,4 @@ incluirTemplate('header');
 
 <?php
     incluirTemplate('footer');
-?> -->
+?> 
