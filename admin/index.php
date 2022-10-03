@@ -50,6 +50,41 @@ incluirTemplate('header');
             </tr>
         </tbody>
 </table>
+
+<a href="/admin/proyectos/crear.php" class="boton bton-ver-propiedades">Crear una nuevo proyecto</a>
+
+
+
+    <table class= "propiedades">  
+        <thead>
+            <tr>
+
+            <th>Codigo proyecto</th>
+            <th>Nombre Proyecto</th>
+            <th>Ubicacion</th>
+            <th>Fecha de inicio</th>
+            <th>fecha de final</th>
+            <th>descripcion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>1</td>
+                <td>proyecto kks</td>
+                <td><img src="/imagenes/archivo.jpg" class="imagen-tabla">  </td>
+                <td>$30000000</td>
+                <td>
+<br>
+                <a href="#"class="boton-eliminar">Eliminar</a>
+                <br>
+                <br>
+                <br>
+                <a href="#" class="boton-Actualizar">Actualizar</a>
+
+                </td>
+            </tr>
+        </tbody>
+</table>
 </main>
 
 <?php
