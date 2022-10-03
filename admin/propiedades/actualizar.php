@@ -40,7 +40,7 @@ $agua = $propiedad ['agua'];
 $vista = $propiedad ['vista'];
 $vendedorId = $propiedad ['vendedorId'];
 
-if ($_SERVER['REQUEST_METHOD'] ==='POST'){
+if ($_SERVER['REQUEST_METHOD'] ==='POST'){ 
 
 
   // echo "<pre>";
