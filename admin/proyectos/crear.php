@@ -13,7 +13,6 @@ $ubicacion_proyecto = '';
 $fecha_inicio = '';
 $fecha_fin = '';
 $descripcion = '';
-$categoria = '';
 $imagen_proyecto = '';
 
 
@@ -30,11 +29,11 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
    
 
-    $cod_proyecto = mysqli_real_escape_string( $db, $_POST['codigo']);
-    $nom_proyecto =  mysqli_real_escape_string( $db, $_POST['nombre']);
-    $ubicacion_proyecto  =  mysqli_real_escape_string( $db, $_POST['ubicacion']);
-    $fecha_inicio =  mysqli_real_escape_string( $db, $_POST['inicio']);
-    $fecha_fin =  mysqli_real_escape_string( $db, $_POST['final']);
+    $cod_proyecto = mysqli_real_escape_string( $db, $_POST['cod_proyecto']);
+    $nom_proyecto =  mysqli_real_escape_string( $db, $_POST['nom_proyecto']);
+    $ubicacion_proyecto  =  mysqli_real_escape_string( $db, $_POST['ubicacion_proyecto']);
+    $fecha_inicio =  mysqli_real_escape_string( $db, $_POST['fecha_inicio']);
+    $fecha_fin =  mysqli_real_escape_string( $db, $_POST['fecha_fin']);
     $descripcion =  mysqli_real_escape_string( $db, $_POST['descripcion']);
 
 
@@ -49,17 +48,20 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
     }
 
     if(!$nom_proyecto){
-        $errores[] = "Debes agregar un precio para la propiedad";
+        $errores[] = "Debes agregar nombre al proyecto";
     }
 
     if(!$ubicacion_proyecto){
-        $errores[] = "La propiedad debe de ser descrita";
+        $errores[] = "El proyecto debe tener una ubicacion";
     }
     if(!$fecha_inicio){
-        $errores[] = "El campo de luz no puede ir vacio";
+        $errores[] = "Debe agregar una fecha de inicio";
     }
     if(!$fecha_fin){
-        $errores[] = "El campo de agua no puede ir vacio";
+        $errores[] = "Debe agregar una fecha de final";
+    }
+    if(!$fecha_fin){
+        $errores[] = "Debe agregar una descripcion al proyecto";
     }
 
    if(!$imagen_proyecto['name']){
