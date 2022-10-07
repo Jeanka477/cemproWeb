@@ -43,13 +43,14 @@ $vendedorId =$prpiedad ['vendedorId'];
 if ($_SERVER['REQUEST_METHOD'] ==='POST'){ 
 
 
- // echo "<pre>";
-   // var_dump($_POST);
-    //echo "</pre>";
+  //echo "<pre>";
+  // var_dump($_POST);
+   // echo "</pre>";
+    
 
-   echo "<pre>";
-   var_dump($_FILES);
-    echo "</pre>";
+   //echo "<pre>";
+   //var_dump($_FILES);
+    //echo "</pre>";
 
    
 
@@ -92,9 +93,6 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
         $errores[] = "La propiedad debe de tener un vendedor";
     }
 
-   if(!$imagen['name']){
-       $errores[] = 'Es obligatorio poner una imagen';
-   }
 
 
     //Tamano de las imagenes 
@@ -114,38 +112,46 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
         $carpetaImagenes = '../../imagenes/';
 
-        if(!is_dir($carpetaImagenes)){
+       if(!is_dir($carpetaImagenes)){
 
-            mkdir($carpetaImagenes);
+           mkdir($carpetaImagenes);
         }
 
+        $nombreImagen ="";
 
-        // Renombramiento de imagenes 
-
-        $nombreImagen = md5(uniqid(rand(),true)) . ".jpg";
+       if($imagen['name']){
+       //Eliminamos la imagen que subimos antes
+       unlink($carpetaImagenes . $prpiedad['imagen']);
+       // Renombramiento de imagenes 
+       
+       $nombreImagen = md5(uniqid(rand(),true)) . ".jpg";
       
        
-        move_uploaded_file($imagen['tmp_name'], $carpetaImagenes  . $nombreImagen );
+       move_uploaded_file($imagen['tmp_name'], $carpetaImagenes  . $nombreImagen );
+      
+       }else{
+        $nombreImagen = $prpiedad['imagen'];
+       }
+
+       
+
       
 
 
 
  // insertar en la base de datos 
- $query =" INSERT INTO propiedades (titulo, precio,imagen, descripcion, 
- luz, agua, vista, vendedorId)  VALUES('$titulo', '$precio','$nombreImagen', '$descripcion', '$luz', '$agua','$vista','$vendedorId')";
+ $query =" UPDATE propiedades SET titulo = '${titulo}', precio = '${precio}',imagen = '${nombreImagen}', descripcion = '${descripcion}' , 
+ luz = ${luz} , agua = ${agua}, vista = ${vista} , vendedorId = ${vendedorId}  WHERE id = ${id}";
 
  //echo $query;
 
+
  $resultado = mysqli_query($db, $query);
  if($resultado){
-    header('location: /admin?resultado=1');
+    header('location: /admin?resultado=2');
  }
-
-    }
-
-
-   
-}
+    }   
+        }
     
 
 
@@ -173,7 +179,7 @@ incluirTemplate('header');
 
 
 
-    <form class="formulario" method="POST" action="/admin/propiedades/crear.php" enctype="multipart/form-data">
+    <form class="formulario" method="POST" enctype="multipart/form-data">
         <fieldset>
             <legend>Informacion general</legend>
 

@@ -25,7 +25,8 @@ incluirTemplate('header');
 
     <?php if(intval($resultado)  === 1): ?>
         <p class="alerta exito" >La propiedad de agrego Correctamente </p>
-
+        <?php elseif(intval($resultado)  === 2): ?>
+            <p class="alerta exito" >La propiedad de actualizo Correctamente </p>
         <?php endif; ?>
 
 
@@ -75,8 +76,7 @@ incluirTemplate('header');
             <?php  endwhile;?>
         </tbody>
 </table>
-
-<a href="/admin/proyectos/crear.php" class="boton bton-ver-propiedades">Crear una nuevo proyecto</a>
+ <!--<a href="/admin/proyectos/crear.php" class="boton bton-ver-propiedades">Crear una nuevo proyecto</a>
 
 
 
@@ -96,13 +96,13 @@ incluirTemplate('header');
 
         <tbody>
             <tr>
-                <td> <?php echo $proyecto['id']; ?></td>
-                <td><?php echo $proyecto['cod_proyecto']; ?></td>
-                <td><?php echo $proyecto['nom_proyecto']; ?></td>
-                <td><img src="/imagenes/<?php echo $proyecto['imagen']; ?>" class="imagen-tabla">  </td>
-                <td><?php echo $proyecto['fecha_inicio']; ?></td>
-                <td><?php echo $proyecto['fecha_fin']; ?></td>
-                <td><?php echo $proyecto['descripcion']; ?></td>
+                <td> <?php// echo $proyecto['id']; ?></td>
+                <td><?php //echo $proyecto['cod_proyecto']; ?></td>
+                <td><?php //echo $proyecto['nom_proyecto']; ?></td>
+                <td><img src="/imagenes/<?php //echo $proyecto['imagen']; ?>" class="imagen-tabla">  </td>
+                <td><?php// echo $proyecto['fecha_inicio']; ?></td>
+                <td><?php //echo $proyecto['fecha_fin']; ?></td>
+                <td><?php //echo $proyecto['descripcion']; ?></td>
                 <td></td>
                 <td>
             
@@ -117,7 +117,10 @@ incluirTemplate('header');
             </tr>
           
         </tbody>
-</table>
+    </table>
+-->
+
+
 </main>
 
 
