@@ -29,7 +29,7 @@ incluirTemplate('header');
         <?php endif; ?>
 
 
-    <a href="/admin/propiedades/crear.php" class="boton bton-ver-propiedades">Crear una nueva propiedad</a>
+
 
 
 
@@ -43,8 +43,11 @@ incluirTemplate('header');
             <th>Precio</th>
             <th>Acciones</th>
             </tr>
+            <a href="/admin/propiedades/crear.php" class="boton bton-ver-propiedades">Crear una nueva propiedad</a>
         </thead>
+     
         <tbody>
+               
 
         <tbody> <!--mostrar los resultados-->
             <?php  while($propiedad = mysqli_fetch_assoc($reultadoConsulta)): ?>
@@ -64,11 +67,8 @@ incluirTemplate('header');
                 <br>
                 <br>
                 <br>
-                
-
                 <a href="admin/propiedades/actualizar.php?id=<?php echo $propiedad['id'];?>" 
                 class="boton-Actualizar">Actualizar</a>
-
                 </td>
             </tr>
 
