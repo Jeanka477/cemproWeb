@@ -90,14 +90,20 @@ incluirTemplate('header');
             <th>Fecha de inicio</th>
             <th>fecha de final</th>
             <th>descripcion</th>
+            <th>Acciones</th>
             </tr>
         </thead>
+
         <tbody>
             <tr>
-            <td>1</td>
-                <td>Finca</td>
-                <td><img src="/imagenes/archivo.jpg" class="imagen-tabla">  </td>
-                <td>$30000000</td>
+                <td> <?php echo $proyecto['id']; ?></td>
+                <td><?php echo $proyecto['cod_proyecto']; ?></td>
+                <td><?php echo $proyecto['nom_proyecto']; ?></td>
+                <td><img src="/imagenes/<?php echo $proyecto['imagen']; ?>" class="imagen-tabla">  </td>
+                <td><?php echo $proyecto['fecha_inicio']; ?></td>
+                <td><?php echo $proyecto['fecha_fin']; ?></td>
+                <td><?php echo $proyecto['descripcion']; ?></td>
+                <td></td>
                 <td>
             
 <br>
@@ -109,6 +115,7 @@ incluirTemplate('header');
 
                 </td>
             </tr>
+          
         </tbody>
 </table>
 </main>

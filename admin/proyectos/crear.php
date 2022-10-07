@@ -13,7 +13,7 @@ $ubicacion_proyecto = '';
 $fecha_inicio = '';
 $fecha_fin = '';
 $descripcion = '';
-$imagen_proyecto = '';
+// imagen no lleva $imagen_proyecto = '';
 
 
 if ($_SERVER['REQUEST_METHOD'] ==='POST'){
@@ -103,8 +103,8 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
 
  // insertar en la base de datos 
- $query =" INSERT INTO proyectos (cod_proyecto, nom_proyecto,ubicacion_proyecto, fecha_inicio, 
- fecha_fin, descripcion, imagen_proyecto)  VALUES('$cod_proyecto', '$nom_proyecto', '$ubicacion_proyecto', '$fecha_inicio', '$fecha_fin','$nombreImagen')";
+ $query =" INSERT INTO proyectos (cod_proyecto, nom_proyecto, imagen_proyecto,ubicacion_proyecto, fecha_inicio, 
+ fecha_fin, descripcion)  VALUES('$cod_proyecto', '$nom_proyecto','$nombreImagen', '$ubicacion_proyecto', '$fecha_inicio', '$fecha_fin')";
 
  //echo $query;
 
@@ -156,6 +156,10 @@ incluirTemplate('header');
             <label for="nom_proyecto">Nombre:</label>
             <input type="text" id="nom_proyecto" name="nom_proyecto" value="<?php echo $nom_proyecto; ?>">
             <br>
+            <br>
+            <label for="imagen_proyecto">Imagen:</label>
+            <input type="file" id="imagen_proyecto" accept="image.jpeg, image/png" name="imagen_proyecto" >
+            <br>
             <label for="ubicacion_proyecto" >Ubicacion:</label>
         <input type="text" id="ubicacion_proyecto" name="ubicacion_proyecto" value="<?php echo $ubicacion_proyecto; ?>">
 <br>
@@ -176,10 +180,7 @@ incluirTemplate('header');
         <label for="descripcion">Descripcion</label >
         <br>
         <textarea id="descripcion"  name="descripcion"placeholder="Escriba una descripcion del proyecto "cols="60" rows="10" ><?php echo $descripcion; ?></textarea>
-<br>
-            <label for="imagen_proyecto">Imagen:</label>
-            <input type="file" id="imagen_proyecto" accept="image.jpeg, image/png" name="imagen_proyecto" >
-            <br>
+
         </fieldset>
 
 
