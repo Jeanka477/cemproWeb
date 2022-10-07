@@ -32,24 +32,24 @@ $prpiedad = mysqli_fetch_assoc($resultado);
 
 $errores = [];
 
-$titulo = $propiedad ['titulo'];
-$precio = $propiedad ['precio'];
-$descripcion = $propiedad ['descarpcion'];
-$luz = $propiedad ['luz'];
-$agua = $propiedad ['agua'];
-$vista = $propiedad ['vista'];
-$vendedorId = $propiedad ['vendedorId'];
+$titulo =$prpiedad ['titulo'];
+$precio =$prpiedad ['precio'];
+$descripcion = $prpiedad ['descripcion'];
+$luz = $prpiedad ['luz'];
+$agua =$prpiedad ['agua'];
+$vista = $prpiedad ['vista'];
+$vendedorId =$prpiedad ['vendedorId'];
 
 if ($_SERVER['REQUEST_METHOD'] ==='POST'){ 
 
 
-  // echo "<pre>";
+ // echo "<pre>";
    // var_dump($_POST);
     //echo "</pre>";
 
-   // echo "<pre>";
-   //var_dump($_FILES);
-   // echo "</pre>";
+   echo "<pre>";
+   var_dump($_FILES);
+    echo "</pre>";
 
    
 
@@ -187,6 +187,8 @@ incluirTemplate('header');
             <br>
             <label for="imagen">Imagen:</label>
             <input type="file" id="imagen" accept="image.jpeg, image/png" name="imagen" >
+
+            <img src="/imagenes/<?php echo $imagenPropiedad;?>" class="imagen-Actualizar">
             <br>
             <label for="descripcion">Descripcion</label >
             <br>
