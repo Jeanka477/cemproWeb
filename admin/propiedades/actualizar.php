@@ -1,5 +1,6 @@
 <?php 
 
+
 //Validar la URL por ID válido
 
 $id = $_GET['id'];
@@ -7,7 +8,7 @@ $id = filter_var($id, FILTER_VALIDATE_INT);
 if(!$id){
     header('Location: /admin');
 }
-
+var_dump($id);
 
 
 
@@ -20,13 +21,12 @@ $db =conectarDB();
 
 //Obtener los datos de la propiedad 
 $consulta = "SELECT * FROM propiedades WHERE id = ${id}";
+
 $resultado = mysqli_query($db, $consulta);
 $prpiedad = mysqli_fetch_assoc($resultado);
 
 
-echo "<pre>";
-var_dump($propiedad);
-echo "</pre>";
+
 
 //Validacion del formulario
 
