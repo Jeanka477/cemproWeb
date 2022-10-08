@@ -232,11 +232,11 @@ incluirTemplate('header');
             <legend>Informacion general</legend>
 
             <label for="titulo">Titulo:</label>
-            <input type="text" id="titulo" name="titulo" placeholder="Titulo de la propiedad" value="<?php// echo $titulo; ?>">
+            <input type="text" id="titulo" name="titulo" placeholder="Titulo de la propiedad" value="<?// echo $titulo; ?>">
 
             <br>
             <label for="precio">Precio:</label>
-            <input type="number" id="precio" name="precio" value="<?php// echo $precio; ?>">
+            <input type="number" id="precio" name="precio" value="// echo $precio; ?>">
 
             <br>
             <label for="imagen">Imagen:</label>
@@ -256,10 +256,10 @@ incluirTemplate('header');
         <input type="text" id="luz" name="luz" value="<?php //echo $luz; ?>">
 <br>
             <label for="agua">Agua:</label >
-            <input type="text" id="agua" name="agua"  value="<?php// echo $agua; ?>">
+            <input type="text" id="agua" name="agua"  value="<// echo $agua; ?>">
 <br>
             <label for="vista">Panorama:</label >
-            <input type="text" id="vista" name="vista" value="<?php// echo $vista; ?>" >
+            <input type="text" id="vista" name="vista" value="<?// echo $vista; ?>" >
 
 
         </fieldset>
