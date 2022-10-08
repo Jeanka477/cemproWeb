@@ -9,7 +9,7 @@ $errores = [];
 
 $cod_proyecto = '';
 $nom_proyecto = '';
-$ubicación_proyecto = '';
+$ubicacion_proyecto = '';
 $fecha_inicio = '';
 $fecha_fin = '';
 $descripcion = '';
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
     $cod_proyecto = mysqli_real_escape_string( $db, $_POST['cod_proyecto']);
     $nom_proyecto =  mysqli_real_escape_string( $db, $_POST['nom_proyecto']);
-    $ubicación_proyecto  =  mysqli_real_escape_string( $db, $_POST['ubicación_proyecto']);
+    $ubicacion_proyecto  =  mysqli_real_escape_string( $db, $_POST['ubicacion_proyecto']);
     $fecha_inicio =  mysqli_real_escape_string( $db, $_POST['fecha_inicio']);
     $fecha_fin =  mysqli_real_escape_string( $db, $_POST['fecha_fin']);
     $descripcion =  mysqli_real_escape_string( $db, $_POST['descripcion']);
@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
         $errores[] = "Debes agregar nombre al proyecto";
     }
 
-    if(!$ubicación_proyecto){
+    if(!$ubicacion_proyecto){
         $errores[] = "El proyecto debe tener una ubicacion";
     }
     if(!$fecha_inicio){
@@ -103,8 +103,8 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
 
  // insertar en la base de datos 
- $query =" INSERT INTO proyecto (cod_proyecto, nom_proyecto, imagen_proyecto,ubicación_proyecto, fecha_inicio, 
- fecha_fin, descripcion)  VALUES('$cod_proyecto', '$nom_proyecto','$nombreImagen', '$ubicación_proyecto', '$fecha_inicio', '$fecha_fin','$descripcion')";
+ $query =" INSERT INTO proyecto (cod_proyecto, nom_proyecto, imagen_proyecto,ubicacion_proyecto, fecha_inicio, 
+ fecha_fin, descripcion)  VALUES('$cod_proyecto', '$nom_proyecto','$nombreImagen', '$ubicacion_proyecto', '$fecha_inicio', '$fecha_fin','$descripcion')";
 
  //echo $query;
 
@@ -160,8 +160,8 @@ incluirTemplate('header');
             <label for="imagen_proyecto">Imagen:</label>
             <input type="file" id="imagen_proyecto" accept="image.jpeg, image/png" name="imagen_proyecto" >
             <br>
-            <label for="ubicación_proyecto" >Ubicacion:</label>
-        <input type="text" id="ubicación_proyecto" name="ubicación_proyecto" value="<?php echo $ubicación_proyecto; ?>">
+            <label for="ubicacion_proyecto" >Ubicacion:</label>
+        <input type="text" id="ubicacion_proyecto" name="ubicacion_proyecto" value="<?php echo $ubicacion_proyecto; ?>">
 <br>
 
             <label for="fecha_inicio">Fecha de inicio:</label >

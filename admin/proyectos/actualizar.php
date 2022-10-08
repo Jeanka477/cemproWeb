@@ -3,9 +3,9 @@
 
 //Validar la URL por ID válido
 
-$cod_propiedad = $_GET['cod_propiedad'];
-$cod_propiedad = filter_var($cod_propiedad, FILTER_VALIDATE_INT);
-if(!$cod_propiedad ){
+$cod_proyecto = $_GET['cod_proyecto'];
+$cod_proyecto = filter_var($cod_proyecto, FILTER_VALIDATE_INT);
+if(!$cod_proyecto ){
     header('Location: /admin');
 }
 //var_dump($cod_propiedad);
@@ -20,7 +20,7 @@ $db =conectarDB();
 
 
 //Obtener los datos de la propiedad 
-$consulta = "SELECT * FROM propiedades WHERE cod_propiedad = ${cod_propiedad}";
+$consulta = "SELECT * FROM proyecto WHERE cod_proyecto = ${cod_proyecto}";
 
 $resultado = mysqli_query($db, $consulta);
 $prpiedad = mysqli_fetch_assoc($resultado);
@@ -34,11 +34,13 @@ $prpiedad = mysqli_fetch_assoc($resultado);
 
 $errores = [];
 
-$precio =$prpiedad ['precio'];
-$ubicacion =$prpiedad ['ubicacion'];
-$tamano = $prpiedad ['tamano'];
-$descripcion = $prpiedad ['descripcion'];
-$id_administrador =$prpiedad ['id_administrador'];
+
+$nom_proyecto =$proyecto ['nom_proyecto'];
+$ubicacion_proyecto =$proyecto ['ubicacion_proyecto'];
+$fecha_inicio = $proyecto ['fecha_inicio'];
+$fecha_fin = $proyecto ['fecha_fin'];
+$fecha_fin =$proyecto ['fecha_fin'];
+$descripcion =$proyecto ['descripcion'];
 $errores = [];
 
 // $titulo =$prpiedad ['titulo'];
@@ -69,17 +71,18 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
     // $vista =  mysqli_real_escape_string( $db, $_POST['vista']);
     // $vendedorId =  mysqli_real_escape_string( $db, $_POST['vendedor']);
 
-    $precio = mysqli_real_escape_string( $db, $_POST['precio']);
-    $ubicacion =  mysqli_real_escape_string( $db, $_POST['ubicacion']);
-    $tamano  =  mysqli_real_escape_string( $db, $_POST['tamano']);
+ 
+    $nom_proyecto =  mysqli_real_escape_string( $db, $_POST['nom_proyecto']);
+    $ubicacion_proyecto  =  mysqli_real_escape_string( $db, $_POST['ubicacion_proyecto']);
+    $fecha_inicio =  mysqli_real_escape_string( $db, $_POST['fecha_inicio']);
+    $fecha_fin =  mysqli_real_escape_string( $db, $_POST['fecha_fin']);
     $descripcion =  mysqli_real_escape_string( $db, $_POST['descripcion']);
-    $id_administrador =  mysqli_real_escape_string( $db, $_POST['id_administrador']);
   
 
 
     // asignar files hacia una variable 
 
-    $imagen = $_FILES['imagen'];
+    $imagen_proyecto = $_FILES['imagen_proyecto'];
    
 
     // validador de campos 
@@ -108,24 +111,30 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
     // }
 
   
-    if(!$precio){
-        $errores[] = "Debes agregar un precio para la propiedad";
+    if(!$cod_proyecto){
+        $errores[] = "Debes ponerle un codigo al proyecto";
     }
 
-    if(!$ubicacion){
-        $errores[] = "Debes agregar una ubicacion";
-    }
-    if(!$tamano){
-        $errores[] = "Agrega un tamano en metros cuadrados";
-    }
-    if(!$descripcion){
-        $errores[] = "Agrega una descripcion";
-    }
-  
-    if(!$id_administrador){
-        $errores[] = "La propiedad debe de tener un administrador ";
+    if(!$nom_proyecto){
+        $errores[] = "Debes agregar nombre al proyecto";
     }
 
+    if(!$ubicacion_proyecto){
+        $errores[] = "El proyecto debe tener una ubicacion";
+    }
+    if(!$fecha_inicio){
+        $errores[] = "Debe agregar una fecha de inicio";
+    }
+    if(!$fecha_fin){
+        $errores[] = "Debe agregar una fecha de final";
+    }
+    if(!$fecha_fin){
+        $errores[] = "Debe agregar una descripcion al proyecto";
+    }
+
+   if(!$imagen_proyecto['name']){
+       $errores[] = 'Es obligatorio poner una imagen';
+   }
     //Tamano de las imagenes 
     $medida = 1000 * 1000;
     if ($imagen['size'] > $medida ){
@@ -150,18 +159,18 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
         $nombreImagen ="";
 
-       if($imagen['name']){
+       if($imagen_proyecto['name']){
        //Eliminamos la imagen que subimos antes
-       unlink($carpetaImagenes . $prpiedad['imagen']);
+       unlink($carpetaImagenes . $prpiedad['imagen_proyecto']);
        // Renombramiento de imagenes 
        
        $nombreImagen = md5(uniqid(rand(),true)) . ".jpg";
       
        
-       move_uploaded_file($imagen['tmp_name'], $carpetaImagenes  . $nombreImagen );
+       move_uploaded_file($imagen_proyecto['tmp_name'], $carpetaImagenes  . $nombreImagen );
       
        }else{
-        $nombreImagen = $prpiedad['imagen'];
+        $nombreImagen = $proyecto['imagen_proyecto'];
        }
 
        
@@ -171,9 +180,8 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
 
  // insertar en la base de datos 
- $query =" UPDATE propiedades SET precio = '${precio}', ubicacion = '${ubicacion}',tamano = '${tamano}', imagen = '${nombreImagen}' , 
-   id_administrador = ${id_administrador}  WHERE cod_propiedad  = ${cod_propiedad}";
-
+ $query =" INSERT INTO proyecto (cod_proyecto, nom_proyecto, imagen_proyecto,ubicacion_proyecto, fecha_inicio, 
+ fecha_fin, descripcion)  VALUES('$cod_proyecto', '$nom_proyecto','$nombreImagen', '$ubicacion_proyecto', '$fecha_inicio', '$fecha_fin','$descripcion')";
 
 // $query =" UPDATE propiedades SET titulo = '${titulo}', precio = '${precio}',imagen = '${nombreImagen}', descripcion = '${descripcion}' , 
 // luz = ${luz} , agua = ${agua}, vista = ${vista} , vendedorId = ${vendedorId}  WHERE id = ${id}";
@@ -217,37 +225,46 @@ incluirTemplate('header');
  
     <form class="formulario" method="POST" enctype="multipart/form-data">
         <fieldset>
-            <legend>Informacion general</legend>
+        <legend>Informacion general</legend>
 
-            <label for="precio">Precio de la propiedad:</label>
-            <input type="number" id="precio" name="precio"  value="<?php echo $precio; ?>">
+<label for="cod_proyecto">Codigo:</label>
+<input type="number" id="cod_proyecto" name="cod_proyecto" placeholder="Codigo del proyecto" value="<?php echo $cod_proyecto; ?>">
 
-            <br>
-            <label for="ubicacion">Ubicacion:</label>
-            <input type="text" id="ubicacion" name="ubicacion" value="<?php echo $ubicacion; ?>">
-            <br>
-            <label for="tamano">Tamano de la propiedad:</label>
-            <input type="number" id="tamano" name="tamano"  value="<?php echo $tamano; ?>">
-            <br>
-            <label for="imagen">Imagen:</label>
-            <input type="file" id="imagen" accept="image.jpeg, image/png" name="imagen" >
-            <br>
-            <label for="descripcion">Descripcion</label >
-            <br>
-            <textarea id="descripcion"  name="descripcion"placeholder="Escriba una descripcion de la propiedad "cols="60" rows="10" ><?php echo $descripcion; ?></textarea>
+<br>
+<label for="nom_proyecto">Nombre:</label>
+<input type="text" id="nom_proyecto" name="nom_proyecto" value="<?php echo $nom_proyecto; ?>">
+<br>
+<br>
+<label for="imagen_proyecto">Imagen:</label>
+<input type="file" id="imagen_proyecto" accept="image.jpeg, image/png" name="imagen_proyecto" >
+<br>
+<label for="ubicacion_proyecto" >Ubicacion:</label>
+<input type="text" id="ubicacion_proyecto" name="ubicacion_proyecto" value="<?php echo $ubicacion_proyecto; ?>">
+<br>
+
+<label for="fecha_inicio">Fecha de inicio:</label >
+<input type="date" id="fecha_inicio" name="fecha_inicio" value="<?php echo $fecha_inicio; ?>" >
+
+
+<br>
+
+<label for="fecha_fin">Fecha de final:</label >
+<input type="date" id="fecha_fin" name="fecha_fin" value="<?php echo $fecha_fin; ?>" >
+
+
+<br>
+
+<br>
+<label for="descripcion">Descripcion</label >
+<br>
+<textarea id="descripcion"  name="descripcion"placeholder="Escriba una descripcion del proyecto "cols="60" rows="10" ><?php echo $descripcion; ?></textarea>
+
         </fieldset>
 
-
-       
-
-        <fieldset>
-            <legend>Administrador</legend >
-            <select  name="id_administrador">
-                <option id="id_administrador" value="1" >Haikel</option>
                
             </select>
         </fieldset>
-        <input type="submit" value="Actualizar Propiedad" class="boton bton-ver-propiedades">
+        <input type="submit" value="Actualizar Proyecto" class="boton bton-ver-propiedades">
 
 
 

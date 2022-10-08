@@ -59,7 +59,7 @@ incluirTemplate('header');
                 
                 <td><?php echo $proyecto['cod_proyecto']; ?></td>
                 <td><?php echo $proyecto['nom_proyecto']; ?></td>
-                <td><?php echo $proyecto['ubicación_proyecto']; ?></td>
+                <td><?php echo $proyecto['ubicacion_proyecto']; ?></td>
                 <td> <?php echo $proyecto['fecha_inicio']; ?></td>
                 <td> <?php echo $proyecto['fecha_fin']; ?></td>
                 <td><img src="/imagenes/<?php echo $proyecto['imagen_proyecto']; ?>" class="imagen-tabla">  </td>
@@ -67,7 +67,7 @@ incluirTemplate('header');
 
                 <a href="#"class="boton-eliminar">Eliminar</a>
               
-                <a href="admin/propiedades/actualizar.php?cod_propiedad=<?php echo $propiedad['cod_proyecto'];?>" 
+                <a href="admin/proyectos/actualizar.php?cod_proyecto=<?php echo $proyecto['cod_proyecto'];?>" 
                 class="boton-Actualizar">Actualizar</a>
                 </td>
             </tr>
