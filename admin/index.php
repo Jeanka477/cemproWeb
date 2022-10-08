@@ -38,36 +38,32 @@ incluirTemplate('header');
         <thead>
             <tr>
 
-            <th>ID</th>
-            <th>Titulo</th>
-            <th>Imagen</th>
+            <th>Codigo Propiedad</th>
             <th>Precio</th>
-            <th>Acciones</th>
+            <th>ubicacion</th>
+            <th>tamano</th>
+            <th>imagen</th>
+            <th>acciones</th>
             </tr>
             <a href="/admin/propiedades/crear.php" class="boton bton-ver-propiedades">Crear una nueva propiedad</a>
         </thead>
      
-        <tbody>
+      
                
 
         <tbody> <!--mostrar los resultados-->
             <?php  while($propiedad = mysqli_fetch_assoc($reultadoConsulta)): ?>
             <tr>
                 
-                <td><?php echo $propiedad['id']; ?></td>
-                <td><?php echo $propiedad['titulo']; ?></td>
+                <td><?php echo $propiedad['cod_propiedad']; ?></td>
+                <td>₡<?php echo $propiedad['precio']; ?></td>
+                <td><?php echo $propiedad['ubicacion']; ?></td>
+                <td> <?php echo $propiedad['tamano']; ?>m²</td>
                 <td><img src="/imagenes/<?php echo $propiedad['imagen']; ?>" class="imagen-tabla">  </td>
-                <td> ₡<?php echo $propiedad['precio']; ?></td>
-                
                 <td>
 
-                
-
-<br>
                 <a href="#"class="boton-eliminar">Eliminar</a>
-                <br>
-                <br>
-                <br>
+              
                 <a href="admin/propiedades/actualizar.php?id=<?php echo $propiedad['id'];?>" 
                 class="boton-Actualizar">Actualizar</a>
                 </td>

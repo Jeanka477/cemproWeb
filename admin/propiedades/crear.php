@@ -4,16 +4,25 @@ require '../../includes/config/database.php';
 $db =conectarDB();
 
 //Validacion del formulario
-
 $errores = [];
 
-$titulo = '';
 $precio = '';
+$ubicacion = '';
+$tamano = '';
 $descripcion = '';
-$luz = '';
-$agua = '';
-$vista = '';
-$vendedorId = '';
+$id_administrador = '';
+
+
+
+//$errores = [];
+
+//$titulo = '';
+//$precio = '';
+//$descripcion = '';
+//$luz = '';
+//$agua = '';
+//$vista = '';
+//$vendedorId = '';
 
 if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
@@ -26,15 +35,19 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
    //var_dump($_FILES);
    // echo "</pre>";
 
-   
+   $precio = mysqli_real_escape_string( $db, $_POST['precio']);
+   $ubicacion=  mysqli_real_escape_string( $db, $_POST['ubicacion']);
+   $tamano   =  mysqli_real_escape_string( $db, $_POST['tamano ']);
+   $descripcion =  mysqli_real_escape_string( $db, $_POST['descripcion']);
+   $id_administrador =  mysqli_real_escape_string( $db, $_POST['id_administrador']);
 
-    $titulo = mysqli_real_escape_string( $db, $_POST['titulo']);
-    $precio =  mysqli_real_escape_string( $db, $_POST['precio']);
-    $descripcion  =  mysqli_real_escape_string( $db, $_POST['descripcion']);
-    $luz =  mysqli_real_escape_string( $db, $_POST['luz']);
-    $agua =  mysqli_real_escape_string( $db, $_POST['agua']);
-    $vista =  mysqli_real_escape_string( $db, $_POST['vista']);
-    $vendedorId =  mysqli_real_escape_string( $db, $_POST['vendedor']);
+    //$titulo = mysqli_real_escape_string( $db, $_POST['titulo']);
+    //$precio =  mysqli_real_escape_string( $db, $_POST['precio']);
+    //$descripcion  =  mysqli_real_escape_string( $db, $_POST['descripcion']);
+    //$luz =  mysqli_real_escape_string( $db, $_POST['luz']);
+    //$agua =  mysqli_real_escape_string( $db, $_POST['agua']);
+    //$vista =  mysqli_real_escape_string( $db, $_POST['vista']);
+    //$vendedorId =  mysqli_real_escape_string( $db, $_POST['vendedor']);
 
 
     // asignar files hacia una variable 
@@ -43,33 +56,56 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
    
 
     // validador de campos 
-    if(!$titulo){
-        $errores[] = "Debes ponerle un titulo a la propiedad";
-    }
-
+   
     if(!$precio){
         $errores[] = "Debes agregar un precio para la propiedad";
     }
 
+    if(!$ubicacion){
+        $errores[] = "Debes poner donde se ubica la propiedad";
+    }
+    //if(!$tamano){
+       // $errores[] = "Debes poner el tamano en metros cuadrados";
+   // }
     if(!$descripcion){
-        $errores[] = "La propiedad debe de ser descrita";
+        $errores[] = "Debes poner una amplia descripcion de la propiedad";
     }
-    if(!$luz){
-        $errores[] = "El campo de luz no puede ir vacio";
-    }
-    if(!$agua){
-        $errores[] = "El campo de agua no puede ir vacio";
-    }
-    if(!$vista){
-        $errores[] = "El campo de Panorama no puede ir vacio";
-    }
-    if(!$vendedorId){
-        $errores[] = "La propiedad debe de tener un vendedor";
+ 
+    if(!$id_administrador){
+        $errores[] = "La propiedad debe de tener administrador";
     }
 
    if(!$imagen['name']){
        $errores[] = 'Es obligatorio poner una imagen';
    }
+
+   //if(!$titulo){
+   // $errores[] = "Debes ponerle un titulo a la propiedad";
+//}
+
+//if(!$precio){
+  //  $errores[] = "Debes agregar un precio para la propiedad";
+//}
+
+//if(!$descripcion){
+  //  $errores[] = "La propiedad debe de ser descrita";
+//}
+//if(!$luz){
+  //  $errores[] = "El campo de luz no puede ir vacio";
+//}
+//if(!$agua){
+  //  $errores[] = "El campo de agua no puede ir vacio";
+//}
+//if(!$vista){
+  //  $errores[] = "El campo de Panorama no puede ir vacio";
+//}
+//if(!$vendedorId){
+  //  $errores[] = "La propiedad debe de tener un vendedor";
+//}
+
+//if(!$imagen['name']){
+  // $errores[] = 'Es obligatorio poner una imagen';
+//}
 
 
     //Tamano de las imagenes 
@@ -106,9 +142,14 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
 
  // insertar en la base de datos 
- $query =" INSERT INTO propiedades (titulo, precio,imagen, descripcion, 
- luz, agua, vista, vendedorId)  VALUES('$titulo', '$precio','$nombreImagen', '$descripcion', '$luz', '$agua','$vista','$vendedorId')";
+ $query =" INSERT INTO propiedades (precio, ubicacion,tamano,imagen, 
+ descripcion,id_administrador)  VALUES('$precio', '$ubicacion','$tamano', '$descripcion', '$id_administrador')";
 
+
+
+ // insertar en la base de datos 
+ //$query =" INSERT INTO propiedades (titulo, precio,imagen, descripcion, 
+ //luz, agua, vista, vendedorId)  VALUES('$titulo', '$precio','$nombreImagen', '$descripcion', '$luz', '$agua','$vista','$vendedorId')";
  //echo $query;
 
  $resultado = mysqli_query($db, $query);
@@ -147,8 +188,46 @@ incluirTemplate('header');
     <?php endforeach; ?>
 
 
-
     <form class="formulario" method="POST" action="/admin/propiedades/crear.php" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Informacion general</legend>
+
+            <label for="precio">Precio de la propiedad:</label>
+            <input type="number" id="precio" name="precio"  value="<?php echo $precio; ?>">
+
+            <br>
+            <label for="ubicacion">Ubicacion:</label>
+            <input type="text" id="ubicacion" name="ubicacion" value="<?php echo $ubicacion; ?>">
+            <br>
+            <label for="tam ano">Tamano de la propiedad:</label>
+            <input type="number" id="tam ano" name="tamano"  value="<?php echo $tamano; ?>">
+            <br>
+            <label for="imagen">Imagen:</label>
+            <input type="file" id="imagen" accept="image.jpeg, image/png" name="imagen" >
+            <br>
+            <label for="descripcion">Descripcion</label >
+            <br>
+            <textarea id="descripcion"  name="descripcion"placeholder="Escriba una descripcion de la propiedad "cols="60" rows="10" ><?php echo $descripcion; ?></textarea>
+        </fieldset>
+
+
+       
+
+        <fieldset>
+            <legend>Administrador</legend >
+            <select  name="id_administrador">
+                <option id="id_administrador" value="1" >Haikel</option>
+               
+            </select>
+        </fieldset>
+        <input type="submit" value="Crear Propiedad" class="boton bton-ver-propiedades">
+
+
+
+
+
+
+  <!--  <form class="formulario" method="POST" action="/admin/propiedades/crear.php" enctype="multipart/form-data">
         <fieldset>
             <legend>Informacion general</legend>
 
@@ -196,7 +275,7 @@ incluirTemplate('header');
         <input type="submit" value="Crear Propiedad" class="boton bton-ver-propiedades">
     </form>
 
-
+-->
 
 </main>
 
