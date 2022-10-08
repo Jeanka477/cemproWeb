@@ -103,8 +103,8 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
 
  // insertar en la base de datos 
- $query =" INSERT INTO proyectos (cod_proyecto, nom_proyecto, imagen_proyecto,ubicacion_proyecto, fecha_inicio, 
- fecha_fin, descripcion)  VALUES('$cod_proyecto', '$nom_proyecto','$nombreImagen', '$ubicacion_proyecto', '$fecha_inicio', '$fecha_fin')";
+ $query =" INSERT INTO proyecto (cod_proyecto, nom_proyecto, imagen_proyecto,ubicacion_proyecto, fecha_inicio, 
+ fecha_fin, descripcion)  VALUES('$cod_proyecto', '$nom_proyecto','$nombreImagen', '$ubicacion_proyecto', '$fecha_inicio', '$fecha_fin','descripcion')";
 
  //echo $query;
 
