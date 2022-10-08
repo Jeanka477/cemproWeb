@@ -172,7 +172,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
  // insertar en la base de datos 
  $query =" UPDATE propiedades SET precio = '${precio}', ubicacion = '${ubicacion}',tamano = '${tamano}', imagen = '${nombreImagen}' , 
-   id_administrador = ${id_administrador}  WHERE $cod_propiedad  = ${cod_propiedad}";
+   id_administrador = ${id_administrador}  WHERE cod_propiedad  = ${cod_propiedad}";
 
 
 // $query =" UPDATE propiedades SET titulo = '${titulo}', precio = '${precio}',imagen = '${nombreImagen}', descripcion = '${descripcion}' , 
@@ -215,7 +215,7 @@ incluirTemplate('header');
 
 
  
-    <form class="formulario" method="POST" action="/admin/propiedades/actualizar.php" enctype="multipart/form-data">
+    <form class="formulario" method="POST" enctype="multipart/form-data">
         <fieldset>
             <legend>Informacion general</legend>
 
