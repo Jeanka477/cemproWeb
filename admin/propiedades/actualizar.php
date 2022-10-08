@@ -30,15 +30,24 @@ $prpiedad = mysqli_fetch_assoc($resultado);
 
 //Validacion del formulario
 
+
+
 $errores = [];
 
-$titulo =$prpiedad ['titulo'];
-$precio =$prpiedad ['precio'];
+$precio =$propiedad ['precio'];
+$ubicacion =$prpiedad ['ubicacion'];
+$tamano = $prpiedad ['tamano'];
 $descripcion = $prpiedad ['descripcion'];
-$luz = $prpiedad ['luz'];
-$agua =$prpiedad ['agua'];
-$vista = $prpiedad ['vista'];
-$vendedorId =$prpiedad ['vendedorId'];
+$id_administrador =$prpiedad ['id_administrador'];
+$errores = [];
+
+// $titulo =$prpiedad ['titulo'];
+// $precio =$prpiedad ['precio'];
+// $descripcion = $prpiedad ['descripcion'];
+// $luz = $prpiedad ['luz'];
+// $agua =$prpiedad ['agua'];
+// $vista = $prpiedad ['vista'];
+// $vendedorId =$prpiedad ['vendedorId'];
 
 if ($_SERVER['REQUEST_METHOD'] ==='POST'){ 
 
@@ -52,15 +61,20 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
    //var_dump($_FILES);
     //echo "</pre>";
 
-   
+    // $titulo = mysqli_real_escape_string( $db, $_POST['titulo']);
+    // $precio =  mysqli_real_escape_string( $db, $_POST['precio']);
+    // $descripcion  =  mysqli_real_escape_string( $db, $_POST['descripcion']);
+    // $luz =  mysqli_real_escape_string( $db, $_POST['luz']);
+    // $agua =  mysqli_real_escape_string( $db, $_POST['agua']);
+    // $vista =  mysqli_real_escape_string( $db, $_POST['vista']);
+    // $vendedorId =  mysqli_real_escape_string( $db, $_POST['vendedor']);
 
-    $titulo = mysqli_real_escape_string( $db, $_POST['titulo']);
-    $precio =  mysqli_real_escape_string( $db, $_POST['precio']);
-    $descripcion  =  mysqli_real_escape_string( $db, $_POST['descripcion']);
-    $luz =  mysqli_real_escape_string( $db, $_POST['luz']);
-    $agua =  mysqli_real_escape_string( $db, $_POST['agua']);
-    $vista =  mysqli_real_escape_string( $db, $_POST['vista']);
-    $vendedorId =  mysqli_real_escape_string( $db, $_POST['vendedor']);
+    $precio = mysqli_real_escape_string( $db, $_POST['precio']);
+    $ubicacion =  mysqli_real_escape_string( $db, $_POST['ubicacion']);
+    $tamano  =  mysqli_real_escape_string( $db, $_POST['tamano']);
+    $descripcion =  mysqli_real_escape_string( $db, $_POST['descripcion']);
+    $id_administrador =  mysqli_real_escape_string( $db, $_POST['id_administrador']);
+  
 
 
     // asignar files hacia una variable 
@@ -69,31 +83,48 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
    
 
     // validador de campos 
-    if(!$titulo){
-        $errores[] = "Debes ponerle un titulo a la propiedad";
-    }
+    // if(!$titulo){
+    //     $errores[] = "Debes ponerle un titulo a la propiedad";
+    // }
 
+    // if(!$precio){
+    //     $errores[] = "Debes agregar un precio para la propiedad";
+    // }
+
+    // if(!$descripcion){
+    //     $errores[] = "La propiedad debe de ser descrita";
+    // }
+    // if(!$luz){
+    //     $errores[] = "El campo de luz no puede ir vacio";
+    // }
+    // if(!$agua){
+    //     $errores[] = "El campo de agua no puede ir vacio";
+    // }
+    // if(!$vista){
+    //     $errores[] = "El campo de Panorama no puede ir vacio";
+    // }
+    // if(!$vendedorId){
+    //     $errores[] = "La propiedad debe de tener un vendedor";
+    // }
+
+  
     if(!$precio){
         $errores[] = "Debes agregar un precio para la propiedad";
     }
 
+    if(!$ubicacion){
+        $errores[] = "Debes agregar una ubicacion";
+    }
+    if(!$tamano){
+        $errores[] = "Agrega un tamano en metros cuadrados";
+    }
     if(!$descripcion){
-        $errores[] = "La propiedad debe de ser descrita";
+        $errores[] = "Agrega una descripcion";
     }
-    if(!$luz){
-        $errores[] = "El campo de luz no puede ir vacio";
+  
+    if(!$id_administrador){
+        $errores[] = "La propiedad debe de tener un administrador ";
     }
-    if(!$agua){
-        $errores[] = "El campo de agua no puede ir vacio";
-    }
-    if(!$vista){
-        $errores[] = "El campo de Panorama no puede ir vacio";
-    }
-    if(!$vendedorId){
-        $errores[] = "La propiedad debe de tener un vendedor";
-    }
-
-
 
     //Tamano de las imagenes 
     $medida = 1000 * 1000;
@@ -140,8 +171,12 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
 
  // insertar en la base de datos 
- $query =" UPDATE propiedades SET titulo = '${titulo}', precio = '${precio}',imagen = '${nombreImagen}', descripcion = '${descripcion}' , 
- luz = ${luz} , agua = ${agua}, vista = ${vista} , vendedorId = ${vendedorId}  WHERE id = ${id}";
+ $query =" UPDATE propiedades SET precio = '${precio}', ubicacion = '${ubicacion}',tamano = '${tamano}', imagen = '${nombreImagen}' , 
+   id_administrador = ${id_administrador}  WHERE id = ${cod_propiedad}";
+
+
+// $query =" UPDATE propiedades SET titulo = '${titulo}', precio = '${precio}',imagen = '${nombreImagen}', descripcion = '${descripcion}' , 
+// luz = ${luz} , agua = ${agua}, vista = ${vista} , vendedorId = ${vendedorId}  WHERE id = ${id}";
 
  //echo $query;
 
@@ -179,22 +214,63 @@ incluirTemplate('header');
 
 
 
-    <form class="formulario" method="POST" enctype="multipart/form-data">
+ 
+    <form class="formulario" method="POST" action="/admin/propiedades/crear.php" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Informacion general</legend>
+
+            <label for="precio">Precio de la propiedad:</label>
+            <input type="number" id="precio" name="precio"  value="<?php echo $precio; ?>">
+
+            <br>
+            <label for="ubicacion">Ubicacion:</label>
+            <input type="text" id="ubicacion" name="ubicacion" value="<?php echo $ubicacion; ?>">
+            <br>
+            <label for="tamano">Tamano de la propiedad:</label>
+            <input type="number" id="tamano" name="tamano"  value="<?php echo $tamano; ?>">
+            <br>
+            <label for="imagen">Imagen:</label>
+            <input type="file" id="imagen" accept="image.jpeg, image/png" name="imagen" >
+            <br>
+            <label for="descripcion">Descripcion</label >
+            <br>
+            <textarea id="descripcion"  name="descripcion"placeholder="Escriba una descripcion de la propiedad "cols="60" rows="10" ><?php echo $descripcion; ?></textarea>
+        </fieldset>
+
+
+       
+
+        <fieldset>
+            <legend>Administrador</legend >
+            <select  name="id_administrador">
+                <option id="id_administrador" value="1" >Haikel</option>
+               
+            </select>
+        </fieldset>
+        <input type="submit" value="Crear Propiedad" class="boton bton-ver-propiedades">
+
+
+
+
+
+
+
+    <!-- <form class="formulario" method="POST" enctype="multipart/form-data">
         <fieldset>
             <legend>Informacion general</legend>
 
             <label for="titulo">Titulo:</label>
-            <input type="text" id="titulo" name="titulo" placeholder="Titulo de la propiedad" value="<?php echo $titulo; ?>">
+            <input type="text" id="titulo" name="titulo" placeholder="Titulo de la propiedad" value="<?php //echo $titulo; ?>">
 
             <br>
             <label for="precio">Precio:</label>
-            <input type="number" id="precio" name="precio" value="<?php echo $precio; ?>">
+            <input type="number" id="precio" name="precio" value="<?php //echo $precio; ?>">
 
             <br>
             <label for="imagen">Imagen:</label>
             <input type="file" id="imagen" accept="image.jpeg, image/png" name="imagen" >
 
-            <img src="/imagenes/<?php echo $imagenPropiedad;?>" class="imagen-Actualizar">
+            <img src="/imagenes/<?php //echo $imagenPropiedad;?>" class="imagen-Actualizar">
             <br>
             <label for="descripcion">Descripcion</label >
             <br>
@@ -207,13 +283,13 @@ incluirTemplate('header');
         <legend>Informacion de la propiedad</legend>
 
         <label for="luz" >electricidad:</label>
-        <input type="text" id="luz" name="luz" value="<?php echo $luz; ?>">
+        <input type="text" id="luz" name="luz" value="<?php// echo $luz; ?>">
 <br>
             <label for="agua">Agua:</label >
-            <input type="text" id="agua" name="agua"  value="<?php echo $agua; ?>">
+            <input type="text" id="agua" name="agua"  value="<?php //echo $agua; ?>">
 <br>
             <label for="vista">Panorama:</label >
-            <input type="text" id="vista" name="vista" value="<?php echo $vista; ?>" >
+            <input type="text" id="vista" name="vista" value="<?php// echo $vista; ?>" >
 
 
         </fieldset>
@@ -227,9 +303,7 @@ incluirTemplate('header');
         </fieldset>
 
         <input type="submit" value="Actualizar Propiedad" class="boton bton-ver-propiedades">
-    </form>
-
-
+    </form> -->
 
 </main>
 

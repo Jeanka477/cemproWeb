@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
    $precio = mysqli_real_escape_string( $db, $_POST['precio']);
    $ubicacion=  mysqli_real_escape_string( $db, $_POST['ubicacion']);
-   $tamano   =  mysqli_real_escape_string( $db, $_POST['tamano ']);
+   $tamano=  mysqli_real_escape_string( $db, $_POST['tamano']);
    $descripcion =  mysqli_real_escape_string( $db, $_POST['descripcion']);
    $id_administrador =  mysqli_real_escape_string( $db, $_POST['id_administrador']);
 
@@ -64,9 +64,9 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
     if(!$ubicacion){
         $errores[] = "Debes poner donde se ubica la propiedad";
     }
-    //if(!$tamano){
-       // $errores[] = "Debes poner el tamano en metros cuadrados";
-   // }
+    if(!$tamano){
+        $errores[] = "Debes poner el tamano en metros cuadrados";
+    }
     if(!$descripcion){
         $errores[] = "Debes poner una amplia descripcion de la propiedad";
     }
@@ -143,7 +143,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
  // insertar en la base de datos 
  $query =" INSERT INTO propiedades (precio, ubicacion,tamano,imagen, 
- descripcion,id_administrador)  VALUES('$precio', '$ubicacion','$tamano', '$descripcion', '$id_administrador')";
+ descripcion,id_administrador)  VALUES('$precio', '$ubicacion','$tamano','$imagen' ,'$descripcion', '$id_administrador')";
 
 
 
@@ -199,8 +199,8 @@ incluirTemplate('header');
             <label for="ubicacion">Ubicacion:</label>
             <input type="text" id="ubicacion" name="ubicacion" value="<?php echo $ubicacion; ?>">
             <br>
-            <label for="tam ano">Tamano de la propiedad:</label>
-            <input type="number" id="tam ano" name="tamano"  value="<?php echo $tamano; ?>">
+            <label for="tamano">Tamano de la propiedad:</label>
+            <input type="number" id="tamano" name="tamano"  value="<?php echo $tamano; ?>">
             <br>
             <label for="imagen">Imagen:</label>
             <input type="file" id="imagen" accept="image.jpeg, image/png" name="imagen" >
@@ -232,11 +232,11 @@ incluirTemplate('header');
             <legend>Informacion general</legend>
 
             <label for="titulo">Titulo:</label>
-            <input type="text" id="titulo" name="titulo" placeholder="Titulo de la propiedad" value="<?php echo $titulo; ?>">
+            <input type="text" id="titulo" name="titulo" placeholder="Titulo de la propiedad" value="<?php// echo $titulo; ?>">
 
             <br>
             <label for="precio">Precio:</label>
-            <input type="number" id="precio" name="precio" value="<?php echo $precio; ?>">
+            <input type="number" id="precio" name="precio" value="<?php// echo $precio; ?>">
 
             <br>
             <label for="imagen">Imagen:</label>
@@ -253,13 +253,13 @@ incluirTemplate('header');
         <legend>Informacion de la propiedad</legend>
 
         <label for="luz" >electricidad:</label>
-        <input type="text" id="luz" name="luz" value="<?php echo $luz; ?>">
+        <input type="text" id="luz" name="luz" value="<?php //echo $luz; ?>">
 <br>
             <label for="agua">Agua:</label >
-            <input type="text" id="agua" name="agua"  value="<?php echo $agua; ?>">
+            <input type="text" id="agua" name="agua"  value="<?php// echo $agua; ?>">
 <br>
             <label for="vista">Panorama:</label >
-            <input type="text" id="vista" name="vista" value="<?php echo $vista; ?>" >
+            <input type="text" id="vista" name="vista" value="<?php// echo $vista; ?>" >
 
 
         </fieldset>

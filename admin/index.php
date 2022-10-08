@@ -64,7 +64,7 @@ incluirTemplate('header');
 
                 <a href="#"class="boton-eliminar">Eliminar</a>
               
-                <a href="admin/propiedades/actualizar.php?id=<?php echo $propiedad['id'];?>" 
+                <a href="admin/propiedades/actualizar.php?id=<?php echo $propiedad['cod_propiedad'];?>" 
                 class="boton-Actualizar">Actualizar</a>
                 </td>
             </tr>
