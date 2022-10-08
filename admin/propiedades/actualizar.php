@@ -3,12 +3,12 @@
 
 //Validar la URL por ID válido
 
-$id = $_GET['id'];
-$id = filter_var($id, FILTER_VALIDATE_INT);
-if(!$id){
+$cod_propiedad = $_GET['cod_propiedad'];
+$cod_propiedad = filter_var($cod_propiedad, FILTER_VALIDATE_INT);
+if(!$cod_propiedad ){
     header('Location: /admin');
 }
-var_dump($id);
+//var_dump($cod_propiedad);
 
 
 
@@ -20,7 +20,7 @@ $db =conectarDB();
 
 
 //Obtener los datos de la propiedad 
-$consulta = "SELECT * FROM propiedades WHERE id = ${id}";
+$consulta = "SELECT * FROM propiedades WHERE cod_propiedad = ${cod_propiedad}";
 
 $resultado = mysqli_query($db, $consulta);
 $prpiedad = mysqli_fetch_assoc($resultado);
@@ -34,7 +34,7 @@ $prpiedad = mysqli_fetch_assoc($resultado);
 
 $errores = [];
 
-$precio =$propiedad ['precio'];
+$precio =$prpiedad ['precio'];
 $ubicacion =$prpiedad ['ubicacion'];
 $tamano = $prpiedad ['tamano'];
 $descripcion = $prpiedad ['descripcion'];
@@ -172,7 +172,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
  // insertar en la base de datos 
  $query =" UPDATE propiedades SET precio = '${precio}', ubicacion = '${ubicacion}',tamano = '${tamano}', imagen = '${nombreImagen}' , 
-   id_administrador = ${id_administrador}  WHERE id = ${cod_propiedad}";
+   id_administrador = ${id_administrador}  WHERE $cod_propiedad  = ${cod_propiedad}";
 
 
 // $query =" UPDATE propiedades SET titulo = '${titulo}', precio = '${precio}',imagen = '${nombreImagen}', descripcion = '${descripcion}' , 
