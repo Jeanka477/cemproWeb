@@ -10,6 +10,8 @@ require 'includes/funciones.php';
             <h2> Propiedades a la venta </h2>
             <div class="contenedor-anuncios">
                 <div class="anuncio">
+
+                
     
                 <picture>
                     <source srcset="build/img/propiedad1.webp" type="image/webp"> 

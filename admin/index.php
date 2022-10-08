@@ -47,6 +47,8 @@ incluirTemplate('header');
             </tr>
             <a href="/admin/propiedades/crear.php" class="boton bton-ver-propiedades">Crear una nueva propiedad</a>
         </thead>
+
+        <a href="/admin/proyectos/crear.php" class="boton bton-ver-propiedades">Crear una nuevo proyecto</a>
      
       
                
@@ -92,11 +94,11 @@ incluirTemplate('header');
 
         <tbody>
             <tr>
-                <td> <?php// echo $proyecto['id']; ?></td>
+                <td> /<?// echo $proyecto['id']; ?></td>
                 <td><?php //echo $proyecto['cod_proyecto']; ?></td>
                 <td><?php //echo $proyecto['nom_proyecto']; ?></td>
                 <td><img src="/imagenes/<?php //echo $proyecto['imagen']; ?>" class="imagen-tabla">  </td>
-                <td><?php// echo $proyecto['fecha_inicio']; ?></td>
+                <td><?// echo $proyecto['fecha_inicio']; ?></td>
                 <td><?php //echo $proyecto['fecha_fin']; ?></td>
                 <td><?php //echo $proyecto['descripcion']; ?></td>
                 <td></td>
