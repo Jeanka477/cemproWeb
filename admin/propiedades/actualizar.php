@@ -215,7 +215,7 @@ incluirTemplate('header');
 
 
  
-    <form class="formulario" method="POST" action="/admin/propiedades/crear.php" enctype="multipart/form-data">
+    <form class="formulario" method="POST" action="/admin/propiedades/actualizar.php" enctype="multipart/form-data">
         <fieldset>
             <legend>Informacion general</legend>
 
@@ -247,7 +247,7 @@ incluirTemplate('header');
                
             </select>
         </fieldset>
-        <input type="submit" value="Crear Propiedad" class="boton bton-ver-propiedades">
+        <input type="submit" value="Actualizar Propiedad" class="boton bton-ver-propiedades">
 
 
 

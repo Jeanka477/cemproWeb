@@ -143,7 +143,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
  // insertar en la base de datos 
  $query =" INSERT INTO propiedades (precio, ubicacion,tamano,imagen, 
- descripcion,id_administrador)  VALUES('$precio', '$ubicacion','$tamano','$nombreimagen' ,'$descripcion', '$id_administrador')";
+ descripcion,id_administrador)  VALUES('$precio', '$ubicacion','$tamano','$nombreImagen' ,'$descripcion', '$id_administrador')";
 
 
 
