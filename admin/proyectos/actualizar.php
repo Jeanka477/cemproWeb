@@ -23,7 +23,7 @@ $db =conectarDB();
 $consulta = "SELECT * FROM proyecto WHERE cod_proyecto = ${cod_proyecto}";
 
 $resultado = mysqli_query($db, $consulta);
-$prpiedad = mysqli_fetch_assoc($resultado);
+$proyecto = mysqli_fetch_assoc($resultado);
 
 
 
@@ -161,7 +161,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
        if($imagen_proyecto['name']){
        //Eliminamos la imagen que subimos antes
-       unlink($carpetaImagenes . $prpiedad['imagen_proyecto']);
+       unlink($carpetaImagenes . $proyecto['imagen_proyecto']);
        // Renombramiento de imagenes 
        
        $nombreImagen = md5(uniqid(rand(),true)) . ".jpg";
@@ -180,8 +180,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
 
  // insertar en la base de datos 
- $query =" INSERT INTO proyecto (cod_proyecto, nom_proyecto, imagen_proyecto,ubicacion_proyecto, fecha_inicio, 
- fecha_fin, descripcion)  VALUES('$cod_proyecto', '$nom_proyecto','$nombreImagen', '$ubicacion_proyecto', '$fecha_inicio', '$fecha_fin','$descripcion')";
+ $query =" UPDATE proyecto SET nom_proyecto = '${nom_proyecto}', imagen_proyecto = '${nombreImagen}',ubicacion_proyecto = '${ubicacion_proyecto}', fecha_inicio = '${fecha_inicio}' , fecha_fin = '${fecha_fin}' , descripcion = '${descripcion}' WHERE cod_proyecto  = ${cod_proyecto}";
 
 // $query =" UPDATE propiedades SET titulo = '${titulo}', precio = '${precio}',imagen = '${nombreImagen}', descripcion = '${descripcion}' , 
 // luz = ${luz} , agua = ${agua}, vista = ${vista} , vendedorId = ${vendedorId}  WHERE id = ${id}";
