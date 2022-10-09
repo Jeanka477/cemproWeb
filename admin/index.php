@@ -6,7 +6,7 @@
 
 
  //Escribir el Query
- $query = "SELECT * FROM proyecto"; 
+ $query = "SELECT * FROM propiedades"; 
 
 
  //Consultar la BD 
@@ -38,14 +38,14 @@ incluirTemplate('header');
         <thead>
             <tr>
 
-            <th>Codigo Proyecto</th>
-            <th>Nombre</th>
+            <th>Codigo Propiedad</th>
+            <th>Precio</th>
             <th>ubicacion</th>
-            <th>Fecha Inicio</th>
-            <th>Fecha Fin</th>
-            <th>Acciones</th>
+            <th>tamano</th>
+            <th>imagen</th>
+            <th>acciones</th>
             </tr>
-            <a href="/admin/proyectos/crear.php" class="boton bton-ver-propiedades">Crear una nueva propiedad</a>
+            <a href="/admin/propiedades/crear.php" class="boton bton-ver-propiedades">Crear una nueva propiedad</a>
         </thead>
 
         <a href="/admin/proyectos/crear.php" class="boton bton-ver-propiedades">Crear una nuevo proyecto</a>
@@ -54,20 +54,19 @@ incluirTemplate('header');
                
 
         <tbody> <!--mostrar los resultados-->
-            <?php  while($proyecto = mysqli_fetch_assoc($reultadoConsulta)): ?>
+        <?php  while($propiedad = mysqli_fetch_assoc($reultadoConsulta)): ?>
             <tr>
                 
-                <td><?php echo $proyecto['cod_proyecto']; ?></td>
-                <td><?php echo $proyecto['nom_proyecto']; ?></td>
-                <td><?php echo $proyecto['ubicacion_proyecto']; ?></td>
-                <td> <?php echo $proyecto['fecha_inicio']; ?></td>
-                <td> <?php echo $proyecto['fecha_fin']; ?></td>
-                <td><img src="/imagenes/<?php echo $proyecto['imagen_proyecto']; ?>" class="imagen-tabla">  </td>
+            <td><?php echo $propiedad['cod_propiedad']; ?></td>
+                <td>₡<?php echo $propiedad['precio']; ?></td>
+                <td><?php echo $propiedad['ubicacion']; ?></td>
+                <td> <?php echo $propiedad['tamano']; ?>m²</td>
+                <td><img src="/imagenes/<?php echo $propiedad['imagen']; ?>" class="imagen-tabla">  </td>
                 <td>
 
                 <a href="#"class="boton-eliminar">Eliminar</a>
               
-                <a href="admin/proyectos/actualizar.php?cod_proyecto=<?php echo $proyecto['cod_proyecto'];?>" 
+                <a href="admin/propiedades/actualizar.php?cod_propiedad=<?php echo $propiedad['cod_propiedad'];?>" 
                 class="boton-Actualizar">Actualizar</a>
                 </td>
             </tr>
