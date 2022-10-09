@@ -1,5 +1,7 @@
 <?php 
 
+
+
  // Importar la conexion
  require '../includes/config/database.php';
  $db =conectarDB();
@@ -63,9 +65,14 @@ incluirTemplate('header');
                 <td> <?php echo $propiedad['tamano']; ?>m²</td>
                 <td><img src="/imagenes/<?php echo $propiedad['imagen']; ?>" class="imagen-tabla">  </td>
                 <td>
+                <!--Eliminar-->
+                <form method="POST" class="w-100">
 
-                <a href="#"class="boton-eliminar">Eliminar</a>
-              
+                <input type="hidden" name="cod_propiedad" value="<?php echo $propiedad['cod_prpiedad'];?>">
+                <input type="submit"class="boton-eliminar"value="Eliminar">
+                </form>
+
+                 <!--Actualizar-->
                 <a href="admin/propiedades/actualizar.php?cod_propiedad=<?php echo $propiedad['cod_propiedad'];?>" 
                 class="boton-Actualizar">Actualizar</a>
                 </td>
