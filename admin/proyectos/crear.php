@@ -7,7 +7,7 @@ $db =conectarDB();
 
 $errores = [];
 
-$cod_proyecto = '';
+// $cod_proyecto = '';
 $nom_proyecto = '';
 $ubicacion_proyecto = '';
 $fecha_inicio = '';
@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
    
 
-    $cod_proyecto = mysqli_real_escape_string( $db, $_POST['cod_proyecto']);
+    // $cod_proyecto = mysqli_real_escape_string( $db, $_POST['cod_proyecto']);
     $nom_proyecto =  mysqli_real_escape_string( $db, $_POST['nom_proyecto']);
     $ubicacion_proyecto  =  mysqli_real_escape_string( $db, $_POST['ubicacion_proyecto']);
     $fecha_inicio =  mysqli_real_escape_string( $db, $_POST['fecha_inicio']);
@@ -42,10 +42,10 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
     $imagen_proyecto = $_FILES['imagen_proyecto'];
    
 
-    // validador de campos 
-    if(!$cod_proyecto){
-        $errores[] = "Debes ponerle un codigo al proyecto";
-    }
+    // // validador de campos 
+    // if(!$cod_proyecto){
+    //     $errores[] = "Debes ponerle un codigo al proyecto";
+    // }
 
     if(!$nom_proyecto){
         $errores[] = "Debes agregar nombre al proyecto";
@@ -103,10 +103,10 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
 
  // insertar en la base de datos 
- $query =" INSERT INTO proyecto (cod_proyecto, nom_proyecto, imagen_proyecto,ubicacion_proyecto, fecha_inicio, 
- fecha_fin, descripcion)  VALUES('$cod_proyecto', '$nom_proyecto','$nombreImagen', '$ubicacion_proyecto', '$fecha_inicio', '$fecha_fin','$descripcion')";
+ $query =" INSERT INTO proyecto ( nom_proyecto, imagen_proyecto,ubicacion_proyecto, fecha_inicio, 
+ fecha_fin, descripcion)  VALUES( '$nom_proyecto','$nombreImagen', '$ubicacion_proyecto', '$fecha_inicio', '$fecha_fin','$descripcion')";
 
- //echo $query;
+ //echo $query;   cod_proyecto, '$cod_proyecto',
 
  $resultado = mysqli_query($db, $query);
  if($resultado){
@@ -149,10 +149,10 @@ incluirTemplate('header');
         <fieldset>
             <legend>Informacion general</legend>
 
-            <label for="cod_proyecto">Codigo:</label>
+            <!-- <label for="cod_proyecto">Codigo:</label>
             <input type="number" id="cod_proyecto" name="cod_proyecto" placeholder="Codigo del proyecto" value="<?php echo $cod_proyecto; ?>">
 
-            <br>
+            <br> -->
             <label for="nom_proyecto">Nombre:</label>
             <input type="text" id="nom_proyecto" name="nom_proyecto" value="<?php echo $nom_proyecto; ?>">
             <br>

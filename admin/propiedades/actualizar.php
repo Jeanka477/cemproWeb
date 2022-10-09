@@ -38,7 +38,7 @@ $precio =$prpiedad ['precio'];
 $ubicacion =$prpiedad ['ubicacion'];
 $tamano = $prpiedad ['tamano'];
 $descripcion = $prpiedad ['descripcion'];
-$id_administrador =$prpiedad ['id_administrador'];
+// $id_administrador =$prpiedad ['id_administrador'];
 $errores = [];
 
 // $titulo =$prpiedad ['titulo'];
@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
     $ubicacion =  mysqli_real_escape_string( $db, $_POST['ubicacion']);
     $tamano  =  mysqli_real_escape_string( $db, $_POST['tamano']);
     $descripcion =  mysqli_real_escape_string( $db, $_POST['descripcion']);
-    $id_administrador =  mysqli_real_escape_string( $db, $_POST['id_administrador']);
+    // $id_administrador =  mysqli_real_escape_string( $db, $_POST['id_administrador']);
   
 
 
@@ -122,9 +122,9 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
         $errores[] = "Agrega una descripcion";
     }
   
-    if(!$id_administrador){
-        $errores[] = "La propiedad debe de tener un administrador ";
-    }
+    // if(!$id_administrador){
+    //     $errores[] = "La propiedad debe de tener un administrador ";
+    // }
 
     //Tamano de las imagenes 
     $medida = 1000 * 1000;
@@ -171,9 +171,10 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
 
  // insertar en la base de datos 
- $query =" UPDATE propiedades SET precio = '${precio}', ubicacion = '${ubicacion}',tamano = '${tamano}', imagen = '${nombreImagen}' , 
-   id_administrador = ${id_administrador}  WHERE cod_propiedad  = ${cod_propiedad}";
+ $query =" UPDATE propiedades SET precio = '${precio}', ubicacion = '${ubicacion}',tamano = '${tamano}', imagen = '${nombreImagen}' WHERE cod_propiedad  = ${cod_propiedad}";
 
+
+// id_administrador = ${id_administrador} 
 
 // $query =" UPDATE propiedades SET titulo = '${titulo}', precio = '${precio}',imagen = '${nombreImagen}', descripcion = '${descripcion}' , 
 // luz = ${luz} , agua = ${agua}, vista = ${vista} , vendedorId = ${vendedorId}  WHERE id = ${id}";
@@ -240,13 +241,13 @@ incluirTemplate('header');
 
        
 
-        <fieldset>
+        <!-- <fieldset>
             <legend>Administrador</legend >
             <select  name="id_administrador">
                 <option id="id_administrador" value="1" >Haikel</option>
                
             </select>
-        </fieldset>
+        </fieldset> -->
         <input type="submit" value="Actualizar Propiedad" class="boton bton-ver-propiedades">
 
 

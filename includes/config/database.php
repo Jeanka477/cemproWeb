@@ -1,7 +1,7 @@
 <?php
 function conectarDB() : mysqli {
 
-    $db = mysqli_connect('localhost','root','root','BDCemprowebPruebas2');
+    $db = mysqli_connect('localhost','root','root','cemprodeca');
    // $db = mysqli_connect('localhost','root','root','pruebas_crudImagenPropiedadProyecto2');
 
     if(!$db){

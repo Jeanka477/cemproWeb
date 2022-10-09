@@ -10,7 +10,7 @@ $precio = '';
 $ubicacion = '';
 $tamano = '';
 $descripcion = '';
-$id_administrador = '';
+// $id_administrador = '';
 
 
 
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
    $ubicacion=  mysqli_real_escape_string( $db, $_POST['ubicacion']);
    $tamano=  mysqli_real_escape_string( $db, $_POST['tamano']);
    $descripcion =  mysqli_real_escape_string( $db, $_POST['descripcion']);
-   $id_administrador =  mysqli_real_escape_string( $db, $_POST['id_administrador']);
+//    $id_administrador =  mysqli_real_escape_string( $db, $_POST['id_administrador']);
 
     //$titulo = mysqli_real_escape_string( $db, $_POST['titulo']);
     //$precio =  mysqli_real_escape_string( $db, $_POST['precio']);
@@ -71,9 +71,9 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
         $errores[] = "Debes poner una amplia descripcion de la propiedad";
     }
  
-    if(!$id_administrador){
-        $errores[] = "La propiedad debe de tener administrador";
-    }
+    // if(!$id_administrador){
+    //     $errores[] = "La propiedad debe de tener administrador";
+    // }
 
    if(!$imagen['name']){
        $errores[] = 'Es obligatorio poner una imagen';
@@ -143,11 +143,11 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
  // insertar en la base de datos 
  $query =" INSERT INTO propiedades (precio, ubicacion,tamano,imagen, 
- descripcion,id_administrador)  VALUES('$precio', '$ubicacion','$tamano','$nombreImagen' ,'$descripcion', '$id_administrador')";
+ descripcion)  VALUES('$precio', '$ubicacion','$tamano','$nombreImagen' ,'$descripcion')";
 
 
 
- // insertar en la base de datos 
+ // insertar en la base de datos  ,id_administrador   ,'$id_administrador'
  //$query =" INSERT INTO propiedades (titulo, precio,imagen, descripcion, 
  //luz, agua, vista, vendedorId)  VALUES('$titulo', '$precio','$nombreImagen', '$descripcion', '$luz', '$agua','$vista','$vendedorId')";
  //echo $query;
@@ -213,13 +213,13 @@ incluirTemplate('header');
 
        
 
-        <fieldset>
+        <!-- <fieldset>
             <legend>Administrador</legend >
             <select  name="id_administrador">
                 <option id="id_administrador" value="1" >Haikel</option>
                
             </select>
-        </fieldset>
+        </fieldset> -->
         <input type="submit" value="Crear Propiedad" class="boton bton-ver-propiedades">
 
 
