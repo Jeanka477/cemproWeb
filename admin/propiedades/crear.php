@@ -109,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
 
     //Tamano de las imagenes 
-    $medida = 1000 * 1000;
+    $medida = 1000 * 6000;
     if ($imagen['size'] > $medida ){
        $errores[] = 'La imagen es muy pesada';
     }
