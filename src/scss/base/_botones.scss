@@ -79,6 +79,7 @@
 
 
 .boton-eliminar{
+    width: 100%;
     justify-content: flex-end;
     background-color:#b33445;
     color: rgb(255, 255, 255);
@@ -91,9 +92,9 @@
 }
 
 .boton-Actualizar{
-    
+    width: 100%;
     justify-content: flex-end;
-    background-color:#0a7fc4;
+    background-color:#1d11a3;
     color: rgb(255, 255, 255);
     font-weight: $bold;
     padding: 2rem 3rem;

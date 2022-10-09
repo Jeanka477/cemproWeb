@@ -1,5 +1,7 @@
 <?php 
 
+
+
  // Importar la conexion
  require '../includes/config/database.php';
  $db =conectarDB();
@@ -12,27 +14,7 @@
  //Consultar la BD 
  $reultadoConsulta = mysqli_query($db, $query);
 
-    $resultado = $_GET ['mensaje'] ?? null;
-
-
- 
-    
-    if($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $id =  $_POST['cod_propiedad'];
-        $id = filter_var($id, FILTER_VALIDATE_INT);
-
-        if($id){
-            $query = "DELETE FROM propiedades WHERE cod_propiedad = ${id}";
-
-            $resultado = mysqli_query($db, $query);
-
-            if($resultado) {
-                header('location: /admin');
-            }
-        }
-
-        
-    }
+    $resultado = $_GET ['resultado'] ?? null;
 
    
 
@@ -47,6 +29,8 @@ incluirTemplate('header');
         <p class="alerta exito" >La propiedad de agrego Correctamente </p>
         <?php elseif(intval($resultado)  === 2): ?>
             <p class="alerta exito" >La propiedad de actualizo Correctamente </p>
+            <?php elseif(intval($resultado)  === 3): ?>
+            <p class="alerta exito" >La propiedad se eliminada correctamente Correctamente </p>
         <?php endif; ?>
 
 
@@ -65,10 +49,11 @@ incluirTemplate('header');
             <th>imagen</th>
             <th>acciones</th>
             </tr>
+            <br>
             <a href="/admin/propiedades/crear.php" class="boton bton-ver-propiedades">Crear una nueva propiedad</a>
         </thead>
 
-        <a href="/admin/proyectos/crear.php" class="boton bton-ver-propiedades">Crear una nuevo proyecto</a>
+       <!-- <a href="/admin/proyectos/crear.php" class="boton bton-ver-propiedades">Crear una nuevo proyecto</a>-->
      
       
                
@@ -84,16 +69,9 @@ incluirTemplate('header');
                 <td><img src="/imagenes/<?php echo $propiedad['imagen']; ?>" class="imagen-tabla">  </td>
                 <td>
 
-                <form method="POST" class="w-100">
-
-                <input type="hidden" name="cod_propiedad" value="<?php echo $propiedad['cod_propiedad'];?>">
-
-                <input type="submit" class="boton-eliminar" value="Eliminar">
-                </form>
-
+                <a href="#"class="boton-eliminar">Eliminar</a>
+              
                 <a href="admin/propiedades/actualizar.php?cod_propiedad=<?php echo $propiedad['cod_propiedad'];?>" 
-
-
                 class="boton-Actualizar">Actualizar</a>
                 </td>
             </tr>
@@ -119,31 +97,21 @@ incluirTemplate('header');
             </tr>
         </thead>
 
-        <tbody>
-            <tr>
-                <td> /<?// echo $proyecto['id']; ?></td>
-                <td><?php //echo $proyecto['cod_proyecto']; ?></td>
-                <td><?php //echo $proyecto['nom_proyecto']; ?></td>
-                <td><img src="/imagenes/<?php //echo $proyecto['imagen']; ?>" class="imagen-tabla">  </td>
-                <td><?// echo $proyecto['fecha_inicio']; ?></td>
-                <td><?php //echo $proyecto['fecha_fin']; ?></td>
-                <td><?php //echo $proyecto['descripcion']; ?></td>
-                <td></td>
-                <td>
-            
-<br>
-                <a href="#"class="boton-eliminar">Eliminar</a>
+                   <input type="submit"class="boton-eliminar"value="Eliminar">
+                   </form>
+                  
+                   <br>
+                   
+                <a href="admin/propiedades/actualizar.php?cod_propiedad=<?php echo $propiedad['cod_propiedad'];?>" 
+                class="boton-Actualizar" class="w-100">Actualizar</a>
                 <br>
-                <br>
-                <br>
-                <a href="#" class="boton-Actualizar">Actualizar</a>
-
+                
                 </td>
             </tr>
-          
+
+            <?php  endwhile;?>
         </tbody>
-    </table>
--->
+</table>
 
 
 </main>
