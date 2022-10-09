@@ -109,7 +109,7 @@ incluirTemplate('header');
                 </td>
             </tr>
 
-            <?php  endwhile;?>
+          
         </tbody>
 </table>
 
