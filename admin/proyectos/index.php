@@ -14,6 +14,26 @@
 
     $resultado = $_GET ['mensaje'] ?? null;
 
+
+
+    if($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $id =  $_POST['cod_proyecto'];
+        $id = filter_var($id, FILTER_VALIDATE_INT);
+
+        if($id){
+            $query = "DELETE FROM proyecto WHERE cod_proyecto = ${id}";
+
+            $resultado = mysqli_query($db, $query);
+
+            if($resultado) {
+                header('location: /admin');
+            }
+        }
+
+        
+    }
+
+
    
 
 require '../includes/funciones.php';
@@ -65,7 +85,13 @@ incluirTemplate('header');
                 <td><img src="/imagenes/<?php echo $proyecto['imagen_proyecto']; ?>" class="imagen-tabla">  </td>
                 <td>
 
-                <a href="#"class="boton-eliminar">Eliminar</a>
+                <form method="POST" class="w-100">
+
+                <input type="hidden" name="cod_proyecto" value="<?php echo $proyecto['cod_proyecto'];?>">
+
+                <input type="submit" class="boton-eliminar" value="Eliminar">
+                </form>
+                
               
                 <a href="admin/proyectos/actualizar.php?cod_proyecto=<?php echo $proyecto['cod_proyecto'];?>" 
                 class="boton-Actualizar">Actualizar</a>
