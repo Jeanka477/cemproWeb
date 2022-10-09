@@ -16,6 +16,23 @@
 
     $resultado = $_GET ['resultado'] ?? null;
 
+
+    if($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $id =  $_POST['cod_propiedad'];
+        $id = filter_var($id, FILTER_VALIDATE_INT);
+
+        if($id){
+            $query = "DELETE FROM propiedades WHERE cod_propiedad = ${id}";
+
+            $resultado = mysqli_query($db, $query);
+
+            if($resultado) {
+                header('location: /admin');
+            }
+        }
+
+        
+    }
    
 
 require '../includes/funciones.php';
@@ -69,7 +86,17 @@ incluirTemplate('header');
                 <td><img src="/imagenes/<?php echo $propiedad['imagen']; ?>" class="imagen-tabla">  </td>
                 <td>
 
-                <a href="#"class="boton-eliminar">Eliminar</a>
+
+
+
+                <form method="POST" class="w-100">
+
+                <input type="hidden" name="cod_propiedad" value="<?php echo $propiedad['cod_propiedad'];?>">
+
+                <input type="submit" class="boton-eliminar" value="Eliminar">
+                </form>
+
+                
               
                 <a href="admin/propiedades/actualizar.php?cod_propiedad=<?php echo $propiedad['cod_propiedad'];?>" 
                 class="boton-Actualizar">Actualizar</a>
