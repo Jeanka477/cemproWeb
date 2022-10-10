@@ -5,7 +5,7 @@
          <a href="proyectos.php">Proyectos</a>
          <a href="propiedades.php">Propiedades</a>
          <a href="historia.php">Historia</a>
-         <a href="contactenos.php"> Contactenos</a>
+         <a href="contactenos.php"> Contáctenos</a>
         </nav>
     </div>
 

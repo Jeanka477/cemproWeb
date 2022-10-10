@@ -58,17 +58,17 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
     // validador de campos 
    
     if(!$precio){
-        $errores[] = "Debes agregar un precio para la propiedad";
+        $errores[] = "Debe agregar un precio para la propiedad";
     }
 
     if(!$ubicacion){
-        $errores[] = "Debes poner donde se ubica la propiedad";
+        $errores[] = "Debe poner dónde se ubica la propiedad";
     }
     if(!$tamano){
-        $errores[] = "Debes poner el tamano en metros cuadrados";
+        $errores[] = "Debe poner el tamaño en metros cuadrados";
     }
     if(!$descripcion){
-        $errores[] = "Debes poner una amplia descripcion de la propiedad";
+        $errores[] = "Debe poner una amplia descripción de la propiedad";
     }
  
     // if(!$id_administrador){
@@ -190,22 +190,22 @@ incluirTemplate('header');
 
     <form class="formulario" method="POST" action="/admin/propiedades/crear.php" enctype="multipart/form-data">
         <fieldset>
-            <legend>Informacion general</legend>
+            <legend>Información general</legend>
 
             <label for="precio">Precio de la propiedad:</label>
             <input type="number" id="precio" name="precio"  value="<?php echo $precio; ?>">
 
             <br>
-            <label for="ubicacion">Ubicacion:</label>
+            <label for="ubicacion">Ubicación:</label>
             <input type="text" id="ubicacion" name="ubicacion" value="<?php echo $ubicacion; ?>">
             <br>
-            <label for="tamano">Tamano de la propiedad:</label>
+            <label for="tamano">Tamaño de la propiedad:</label>
             <input type="number" id="tamano" name="tamano"  value="<?php echo $tamano; ?>">
             <br>
             <label for="imagen">Imagen:</label>
             <input type="file" id="imagen" accept="image.jpeg, image/png" name="imagen" >
             <br>
-            <label for="descripcion">Descripcion</label >
+            <label for="descripcion">Descripción</label >
             <br>
             <textarea id="descripcion"  name="descripcion"placeholder="Escriba una descripcion de la propiedad "cols="60" rows="10" ><?php echo $descripcion; ?></textarea>
         </fieldset>

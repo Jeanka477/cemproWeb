@@ -109,17 +109,17 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
   
     if(!$precio){
-        $errores[] = "Debes agregar un precio para la propiedad";
+        $errores[] = "Debe agregar un precio para la propiedad";
     }
 
     if(!$ubicacion){
-        $errores[] = "Debes agregar una ubicacion";
+        $errores[] = "Debe agregar una ubicacion";
     }
     if(!$tamano){
-        $errores[] = "Agrega un tamano en metros cuadrados";
+        $errores[] = "Agrega un tamaño en metros cuadrados";
     }
     if(!$descripcion){
-        $errores[] = "Agrega una descripcion";
+        $errores[] = "Agrega una descripción";
     }
   
     // if(!$id_administrador){
@@ -224,16 +224,16 @@ incluirTemplate('header');
             <input type="number" id="precio" name="precio"  value="<?php echo $precio; ?>">
 
             <br>
-            <label for="ubicacion">Ubicacion:</label>
+            <label for="ubicacion">Ubicación:</label>
             <input type="text" id="ubicacion" name="ubicacion" value="<?php echo $ubicacion; ?>">
             <br>
-            <label for="tamano">Tamano de la propiedad:</label>
+            <label for="tamano">Tamaño de la propiedad:</label>
             <input type="number" id="tamano" name="tamano"  value="<?php echo $tamano; ?>">
             <br>
             <label for="imagen">Imagen:</label>
             <input type="file" id="imagen" accept="image.jpeg, image/png" name="imagen" >
             <br>
-            <label for="descripcion">Descripcion</label >
+            <label for="descripcion">Descripción</label >
             <br>
             <textarea id="descripcion"  name="descripcion"placeholder="Escriba una descripcion de la propiedad "cols="60" rows="10" ><?php echo $descripcion; ?></textarea>
         </fieldset>

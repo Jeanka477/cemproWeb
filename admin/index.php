@@ -57,11 +57,11 @@ incluirTemplate('header');
     <h1>Administrador de cemproweb</h1>    
 
     <?php if(intval($resultado)  === 1): ?>
-        <p class="alerta exito" >La propiedad de agrego Correctamente </p>
+        <p class="alerta exito" >La propiedad de agregó correctamente </p>
         <?php elseif(intval($resultado)  === 2): ?>
-            <p class="alerta exito" >La propiedad de actualizo Correctamente </p>
+            <p class="alerta exito" >La propiedad de actualizó correctamente </p>
             <?php elseif(intval($resultado)  === 3): ?>
-            <p class="alerta exito" >La propiedad se elimino correctamente </p>
+            <p class="alerta exito" >La propiedad se eliminó correctamente </p>
         <?php endif; ?>
 
 
@@ -73,12 +73,12 @@ incluirTemplate('header');
         <thead>
             <tr>
 
-            <th>Codigo Propiedad</th>
+            <th>Código Propiedad</th>
             <th>Precio</th>
-            <th>ubicacion</th>
-            <th>tamano</th>
-            <th>imagen</th>
-            <th>acciones</th>
+            <th>Ubicación</th>
+            <th>Tamaño</th>
+            <th>Imagen</th>
+            <th>Acciones</th>
             </tr>
             <br>
             <a href="/admin/propiedades/crear.php" class="boton bton-ver-propiedades">Crear una nueva propiedad</a>

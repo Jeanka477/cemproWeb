@@ -11,11 +11,11 @@ require 'includes/funciones.php';
 
             <h2>Requisitos para solicitar un préstamo</h2>
 
-            <h2>Prestamo Por fiador</h2>
+            <h2>Préstamo por Fiador</h2>
               <a class="boton-formulario" href=" RequisitoFiador.php"> Leer requisitos</a>
                
                    <br>
-                   <h2>Prestamo con hipoteca</h2>
+                   <h2>Préstamo con Hipoteca</h2>
                    <a class="boton-formulario" href="requisitoHipoteca.php"> Leer requisitos</a>
 
                 

@@ -24,11 +24,11 @@
                     <img class="dark-mode-boton" src="/build/img/dark-mode.svg" alt="">
                     <nav class="navegacion">
                     
-                        <a href="requisitos.php">Solicite su credito aqui</a>
+                        <a href="requisitos.php">Solicite su crédito aquí</a>
                         <a href="proyectos.php">Proyectos</a>
                         <a href="propiedades.php">Propiedades</a>
                         <a href="historia.php">Historia</a>
-                        <a href="contactenos.php"> Contactenos</a>
+                        <a href="contactenos.php"> Contáctenos</a>
                        </nav>
                 </div>
 
