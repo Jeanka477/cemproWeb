@@ -12,7 +12,7 @@
  //Consultar la BD 
  $reultadoConsulta = mysqli_query($db, $query);
 
-    $resultado = $_GET ['mensaje'] ?? null;
+    $resultado = $_GET ['resultado'] ?? null;
 
 
 
@@ -21,12 +21,25 @@
         $id = filter_var($id, FILTER_VALIDATE_INT);
 
         if($id){
+
+             //eliminar archivo
+             $query =  "SELECT imagen_proyecto FROM  proyecto WHERE cod_proyecto = ${id}";
+
+             $resultado = mysqli_query($db, $query);
+             $proyecto = mysqli_fetch_assoc($resultado);
+            
+ 
+             unlink('../imagenes/' . $propiedad['imagen_proyecto']);
+
+
+
+             //eliminar proyecto
             $query = "DELETE FROM proyecto WHERE cod_proyecto = ${id}";
 
             $resultado = mysqli_query($db, $query);
 
             if($resultado) {
-                header('location: /admin');
+                header('location: /admin?resultado=3');
             }
         }
 
@@ -44,9 +57,11 @@ incluirTemplate('header');
     <h1>Administrador de cemproweb</h1>    
 
     <?php if(intval($resultado)  === 1): ?>
-        <p class="alerta exito" >La propiedad de agrego Correctamente </p>
+        <p class="alerta exito" >El pryecto se agrego Correctamente </p>
         <?php elseif(intval($resultado)  === 2): ?>
-            <p class="alerta exito" >La propiedad de actualizo Correctamente </p>
+            <p class="alerta exito" >El pryecto se actualizo Correctamente </p>
+            <?php elseif(intval($resultado)  === 3): ?>
+            <p class="alerta exito" >El pryecto se elimino Correctamente </p>
         <?php endif; ?>
 
 
