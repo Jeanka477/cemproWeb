@@ -83,10 +83,6 @@ incluirTemplate('header');
             <br>
             <a href="/admin/propiedades/crear.php" class="boton bton-ver-propiedades">Crear una nueva propiedad</a>
         </thead>
-
-       <!-- <a href="/admin/proyectos/crear.php" class="boton bton-ver-propiedades">Crear una nuevo proyecto</a>-->
-     
-      
                
 
         <tbody> <!--mostrar los resultados-->
@@ -120,44 +116,7 @@ incluirTemplate('header');
             <?php  endwhile;?>
         </tbody>
 </table>
- <!--<a href="/admin/proyectos/crear.php" class="boton bton-ver-propiedades">Crear una nuevo proyecto</a>
-
-
-
-    <table class= "propiedades">  
-        <thead>
-            <tr>
-
-            <th>Codigo proyecto</th>
-            <th>Nombre Proyecto</th>
-            <th>Ubicacion</th>
-            <th>Fecha de inicio</th>
-            <th>fecha de final</th>
-            <th>descripcion</th>
-            <th>Acciones</th>
-            </tr>
-        </thead>
-
-                   <input type="submit"class="boton-eliminar"value="Eliminar">
-                   </form>
-                  
-                   <br>
-                   
-                <a href="admin/propiedades/actualizar.php?cod_propiedad=<?php echo $propiedad['cod_propiedad'];?>" 
-                class="boton-Actualizar" class="w-100">Actualizar</a>
-                <br>
-                
-                </td>
-            </tr>
-
-          
-        </tbody>
-</table>
-
-
-</main>
-
-
+ 
 <?php
 
 //Cerar conexion
