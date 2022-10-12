@@ -33,14 +33,14 @@ require 'includes/funciones.php';
 
 
     <main class="contenedor seccion contenido-centrado">
-        <h1><?php echo $propiedad['nom_propiedad']; ?></h1>
+        <h1>Nombre de la propiedad<?php echo $propiedad['nom_propiedad']; ?></h1>
 
         <picture>
             <img loading="lazy" src="/imagenes/<?php echo $propiedad['imagen']; ?>" alt="Imagen de la propiedad">
         </picture>
 
         <div class="resumen-propiedad ">
-            <p class="precio">$<?php echo $propiedad['precio']; ?></p>
+            <p class="precio">Precio $<?php echo $propiedad['precio']; ?></p>
           
 
             <?php echo $propiedad['descripcion']; ?>

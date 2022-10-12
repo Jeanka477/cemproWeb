@@ -65,7 +65,7 @@ require 'includes/funciones.php';
         $limite = 3;
         include 'includes/templates/anuncios.php';
         ?>
-            
+            <br>
             <div class="ver-todas">
                 <a class="bton-ver-propiedades" href="propiedades.php"> Ver Todas las Propiedades</a>
             </div>
@@ -132,7 +132,7 @@ require 'includes/funciones.php';
             </div>
 
             <br>
-            <br>
+           
             <div class="ver-todas">
                 <a class="bton-ver-propiedades" href="proyectos.php"> Ver Todos los Proyectos</a>
             </div>
