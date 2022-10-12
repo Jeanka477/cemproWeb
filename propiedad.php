@@ -1,56 +1,55 @@
 <?php
 
+$id = $_GET['id'];
+$id = filter_var($id, FILTER_VALIDATE_INT);
+
+if(!$id){
+    header('Location: /');
+}
+
+
+//importar la conexion
+require 'includes/config/database.php';
+$db = conectarDB();
+
+// consultar
+$query = "SELECT * FROM propiedades WHERE cod_propiedad = ${id}";
+
+//obtener resultados
+$resultado = mysqli_query($db, $query);
+
+if(!$resultado->num_rows){
+    header('Location: /');
+}
+
+$propiedad = mysqli_fetch_assoc($resultado);
+
+
 require 'includes/funciones.php';
 
  incluirTemplate('header');
  ?>
 
+
+
     <main class="contenedor seccion contenido-centrado">
-        <h1>Montaña </h1>
+        <h1><?php echo $propiedad['nom_propiedad']; ?></h1>
 
         <picture>
-            <source srcset="build/img/Propiedad1.webp" type="image/webp">
-            <source srcset="build/img/Propiedad1.jpg" type="image/jpeg">
-            <img loading="lazy" src="build/img/Propiedad 2.jpg" alt="Imagen de la propiedad">
+            <img loading="lazy" src="/imagenes/<?php echo $propiedad['imagen']; ?>" alt="Imagen de la propiedad">
         </picture>
 
         <div class="resumen-propiedad ">
-            <p class="precio">3,000,000</p>
-            <ul class="iconos-cararteristicas">
-                <li>
-                    <img loading="lazy" src="build/img/IconoAgua.svg" alt="">
-                    <p>   No</p>
-                </li>
-                <li>
-                    <img loading="lazy" src="build/img/Electricidad.svg" alt="">
-                    <p>No</p>
-                </li>
-                <li>
-                    <img loading="lazy" src="build/img/Paisaje.svg" alt="">
-                    <p>SI</p>
-                </li>
-            </ul>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                In nisi ut consequuntur dolorem sapiente, magni ipsam 
-                soluta optio aperiam ipsum nihil eius consequatur rem minus 
-                reiciendis! Dolorem, tenetur. Ipsam, at.
-               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Repellendus porro molestias ducimus culpa, veniam a est
-                 aliquam quaerat cum obcaecati rem ab tempora aut minus
-                  dolore iste fugiat aliquid eveniet?
-           </p>
-           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Architecto modi qui doloremque ex sequi minima tempora 
-                dicta porro eaque alias ipsam doloribus sint odit minus 
-                vero nobis eligendi, illo accusamus? Lorem ipsum dolor, 
-                sit amet consectetur adipisicing elit. A obcaecati maxime 
-                omnis magni officia temporibus neque impedit consectetur 
-                reiciendis quae ex dolore modi dolorum iusto repellendus,
-                 amet quidem! Fugit, animi.
-               </p>
+            <p class="precio">$<?php echo $propiedad['precio']; ?></p>
+          
+
+            <?php echo $propiedad['descripcion']; ?>
 
 
         </div>
     </main>
 
-    <?php incluirTemplate('footer');?>
+    <?php 
+    mysqli_close($db);
+
+    incluirTemplate('footer');?>
