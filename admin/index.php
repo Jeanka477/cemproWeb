@@ -1,5 +1,12 @@
 <?php 
 
+require '../includes/funciones.php';
+$auth = estarAutenticado();
+
+
+if (!$auth){
+    header('Location: /');
+}
 
 
  // Importar la conexion
@@ -49,7 +56,6 @@
     }
    
 
-require '../includes/funciones.php';
 incluirTemplate('header');
 ?>
 
