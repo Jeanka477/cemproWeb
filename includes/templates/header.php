@@ -29,6 +29,7 @@
                         <a href="propiedades.php">Propiedades</a>
                         <a href="historia.php">Historia</a>
                         <a href="contactenos.php"> Contáctenos</a>
+                        <a href="login.php"> Iniciar Sesión</a>
                        </nav>
                 </div>
 
