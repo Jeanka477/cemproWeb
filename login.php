@@ -48,6 +48,9 @@ if ($_SERVER['REQUEST_METHOD']==='POST'){
             $_SESSION['login'] = true;
 
 
+            header('Location: /admin');
+
+
           
            
 
