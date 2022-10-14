@@ -1,16 +1,14 @@
 <?php 
 
-require '../../includes/funciones.php';
+require '../../includes/app.php';
+
+use App\Propiedad;
+
+
+
 $auth = estarAutenticado();
 
 
-if (!$auth){
-    header('Location: /');
-}
-
-
-//Base de datos
-require '../../includes/config/database.php';
 $db =conectarDB();
 
 //Validacion del formulario
