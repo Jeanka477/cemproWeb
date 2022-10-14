@@ -1,0 +1,19 @@
+{
+    "name": "jeanka/cempro-web",
+    "description": "Cemproweb",
+    "type": "proyect",
+   
+    "authors": [
+        {
+            "name": "Jeanka477",
+            "email": "98825823+Jeanka477@users.noreply.github.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\":"./classes"
+        }
+    }
+    
+}
