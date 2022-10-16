@@ -32,10 +32,10 @@ $proyecto = mysqli_fetch_assoc($resultado);
 
 
     <main class="contenedor seccion contenido-centrado">
-        <h1>Nombre del proyecto<?php echo $proyecto['nom_proyecto']; ?></h1>
+        <h1><?php echo $proyecto['nom_proyecto']; ?></h1>
 
         <picture>
-            <img loading="lazy" src="/imagenes/<?php echo $proyecto['imagen']; ?>" alt="Imagen de la proyecto">
+            <img loading="lazy" src="/imagenes/<?php echo $proyecto['imagen']; ?>" alt="Imagen del proyecto">
         </picture>
 
         <div class="resumen-proyecto ">
