@@ -18,7 +18,7 @@ $resultado = mysqli_query($db, $query);
             <div class="anuncio">
 
 
-            <img loading="lazy" src="/imagenes/<?php echo $proyecto['imagen']; ?>" alt="anuncio">
+            <img loading="lazy" src="/imagenes/<?php echo $proyecto['imagen_proyecto']; ?>" alt="anuncio">
             </picture>
             
             <div class="contenido-anuncio">

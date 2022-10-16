@@ -35,7 +35,7 @@ $proyecto = mysqli_fetch_assoc($resultado);
         <h1><?php echo $proyecto['nom_proyecto']; ?></h1>
 
         <picture>
-            <img loading="lazy" src="/imagenes/<?php echo $proyecto['imagen']; ?>" alt="Imagen del proyecto">
+            <img loading="lazy" src="/imagenes/<?php echo $proyecto['imagen_proyecto']; ?>" alt="Imagen del proyecto">
         </picture>
 
         <div class="resumen-proyecto ">
