@@ -1,12 +1,6 @@
 <footer class="footer seccion">
         <div class="contenedor contenedor-footer"> 
-        <nav class="navegacion">
-         <a href="requisitos.php">Formularios</a>
-         <a href="proyectos.php">Proyectos</a>
-         <a href="propiedades.php">Propiedades</a>
-         <a href="historia.php">Historia</a>
-         <a href="contactenos.php"> Contáctenos</a>
-        </nav>
+        
     </div>
 
 
