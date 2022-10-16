@@ -32,14 +32,18 @@ $propiedad = mysqli_fetch_assoc($resultado);
 
 
     <main class="contenedor seccion contenido-centrado">
-        <h1>Nombre de la propiedad<?php echo $propiedad['nom_propiedad']; ?></h1>
+        <h1>Ubicación: <?php echo $propiedad['ubicacion']; ?></h1>
 
+
+        <p></p>
         <picture>
             <img loading="lazy" src="/imagenes/<?php echo $propiedad['imagen']; ?>" alt="Imagen de la propiedad">
         </picture>
 
         <div class="resumen-propiedad ">
-            <p class="precio">Precio $<?php echo $propiedad['precio']; ?></p>
+            
+        <p>Tamaño: <?php echo $propiedad['tamano']; ?></p>
+        <p class="precio">Precio: $<?php echo $propiedad['precio']; ?></p>
           
 
             <?php echo $propiedad['descripcion']; ?>

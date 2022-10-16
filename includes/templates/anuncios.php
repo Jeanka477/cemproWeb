@@ -23,7 +23,7 @@ $resultado = mysqli_query($db, $query);
             
             <div class="contenido-anuncio">
                 
-                <p><?php echo $propiedad['descripcion']; ?></p>
+                <p><?php echo $propiedad['ubicacion']; ?></p>
                 <p class="precio"><?php echo $propiedad['precio']; ?></p>
 
 
