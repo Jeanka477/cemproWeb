@@ -39,7 +39,7 @@ $proyecto = mysqli_fetch_assoc($resultado);
         </picture>
 
         <div class="resumen-proyecto ">
-            <p class="ubicacion">Ubicación: $<?php echo $proyecto['ubicacion']; ?></p>
+            <p class="ubicacion">Ubicación: <?php echo $proyecto['ubicacion_proyecto']; ?></p>
 
             <p class="fecha_inicio">Fecha de inicio: <?php echo $proyecto['fecha_inicio']; ?></p>
           

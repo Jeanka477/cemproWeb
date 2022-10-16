@@ -23,7 +23,7 @@ $resultado = mysqli_query($db, $query);
             
             <div class="contenido-anuncio">
                 
-                <p><?php echo $proyecto['descripcion']; ?></p>
+                <p><?php echo $proyecto['nom_proyecto']; ?></p>
                 <p class="precio"><?php echo $proyecto['precio']; ?></p>
 
                 <a href="proyecto.php?id=<?php echo $proyecto['cod_proyecto']; ?>" class="boton-celeste">
