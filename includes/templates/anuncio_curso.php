@@ -17,8 +17,8 @@ $resultado = mysqli_query($db, $query);
     <?php while($curso = mysqli_fetch_assoc($resultado)): ?>
             <div class="anuncio">
 
-
-            <img loading="lazy" src="/imagenes/<?php echo $curso['imagen']; ?>" alt="anuncio">
+            
+            <img loading="lazy" src="/imagenes/<?php echo $curso['imagen_curso']; ?>" alt="anuncio">
             </picture>
             
             <div class="contenido-anuncio">
