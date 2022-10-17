@@ -1,19 +1,19 @@
 {
-    "name": "ariana/cempro-web",
-    "description": "cemprodeca",
+    "name": "jeanka/cempro-web",
+    "description": "Cemproweb",
+    "type": "proyect",
+   
     "authors": [
         {
-            "name": "ArianaP-24",
-            "email": "112780864+ArianaP-24@users.noreply.github.com"
+            "name": "Jeanka477",
+            "email": "98825823+Jeanka477@users.noreply.github.com"
         }
-        
-        
     ],
     "require": {},
     "autoload": {
         "psr-4": {
-            "App\\": "./clases"
+            "App\\":"./classes"
         }
-}
-
+    }
+    
 }
