@@ -39,6 +39,7 @@ $auth = $_SESSION['login'] ?? false;
                         <a href="requisitos.php">Solicitar crédito</a>
                         <a href="proyectos.php">Proyectos</a>
                         <a href="propiedades.php">Propiedades</a>
+                        <a href="cursos.php">Cursos</a>
                         <a href="historia.php">Historia</a>
                         <a href="contactenos.php"> Contáctenos</a>
                         <a href="login.php"> Iniciar Sesión</a>
