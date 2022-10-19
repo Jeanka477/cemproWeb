@@ -45,7 +45,13 @@ $curso = mysqli_fetch_assoc($resultado);
             <?php echo $curso['descripcion']; ?>
 
 
+            
+
+
         </div>
+        <br>
+        <br>
+        <a href="/cursos.php" class="boton bton-ver-propiedades">Volver</a> <br>
     </main>
 
     <?php 

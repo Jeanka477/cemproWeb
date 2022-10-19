@@ -26,7 +26,7 @@ $resultado = mysqli_query($db, $query);
                 <p><?php echo $curso['descripcion']; ?></p>
                 
 
-                <a href="curso.php?id=<?php echo $curso['cod_curso']; ?>" class="boton-celeste">
+                <a href="curso.php?id=<?php echo $curso['cod_curso']; ?>" class="boton_detalles">
                     Ver curso </a>
 
                 </div><!--.contenido anuncio-->

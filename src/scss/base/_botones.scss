@@ -1,7 +1,7 @@
 
 .boton-celeste {
     background-color:  #2EC4F4;
-
+    
     color: black;
     border-radius: round($number: 0);
     font-weight: $bold;
@@ -9,7 +9,7 @@
     text-align: center;
     margin-top:2 ;
     display:block;
-   
+    border-radius: 5px;
 }
 
 //BOTON PARA LA SECCION DE CUALIDADES
@@ -58,6 +58,43 @@
     text-align: center;
     margin-top:2 ;
     
+}
+
+    .boton_detalles {
+        background-color:  #2EC4F4;
+        
+        color: #fff;
+        border-radius: 5px;
+        font-weight: $bold;
+        padding: 1rem 3rem;
+        text-align: center;
+        margin-top:2 ;
+        display:block;
+        border:none;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+// margin-top: .5rem;
+//     padding: .5rem 3rem;
+//     border-radius: 5px;
+//     font-weight: 700;
+//     text-decoration: none;
+//     text-transform: uppercase;
+//     font-size: 1.2rem;
+//     border:none;
+
+.boton {
+
+    color: var(--blanco);
+    margin-top: .5rem;
+    padding: .5rem 3rem;
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border:none;
 }
 
 .boton-formulario{
