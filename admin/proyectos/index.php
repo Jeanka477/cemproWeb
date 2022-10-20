@@ -1,7 +1,7 @@
 <?php 
 
  // Importar la conexion
- require '../includes/config/database.php';
+ require '../../includes/config/database.php';
  $db =conectarDB();
 
 
@@ -29,7 +29,7 @@
              $proyecto = mysqli_fetch_assoc($resultado);
             
  
-             unlink('../imagenes/' . $propiedad['imagen_proyecto']);
+             unlink('../../imagenes/' . $propiedad['imagen_proyecto']);
 
 
 
@@ -49,7 +49,7 @@
 
    
 
-require '../includes/funciones.php';
+require '../../includes/funciones.php';
 incluirTemplate('header');
 ?>
 

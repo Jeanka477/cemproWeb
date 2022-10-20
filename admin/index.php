@@ -88,6 +88,8 @@ incluirTemplate('header');
             </tr>
             <br>
             <a href="/admin/propiedades/crear.php" class="boton bton-ver-propiedades">Crear una nueva propiedad</a>
+            <a href="/admin/proyectos" class="boton bton-ver-propiedades">Crear un nuevo proyecto</a>
+            <a href="/admin/cusos/" class="boton bton-ver-propiedades">Crear una nuevo curso</a>
         </thead>
                
 

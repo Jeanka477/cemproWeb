@@ -13,7 +13,7 @@ if(!$auth){
 }
 
  // Importar la conexion
- require '../includes/config/database.php';
+ require '../../includes/config/database.php';
  $db =conectarDB();
 
 
@@ -28,7 +28,7 @@ if(!$auth){
 
    
 
-require '../includes/funciones.php';
+require '../../includes/funciones.php';
 incluirTemplate('header');
 ?>
 
