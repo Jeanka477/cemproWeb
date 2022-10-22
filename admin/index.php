@@ -62,13 +62,20 @@ incluirTemplate('header');
 <main class="contenedor seccion">
     <h1>Administrador de cemproweb</h1>    
 
-    <?php if(intval($resultado)  === 1): ?>
-        <p class="alerta exito" >La propiedad de agregó correctamente </p>
-        <?php elseif(intval($resultado)  === 2): ?>
-            <p class="alerta exito" >La propiedad de actualizó correctamente </p>
-            <?php elseif(intval($resultado)  === 3): ?>
-            <p class="alerta exito" >La propiedad se eliminó correctamente </p>
-        <?php endif; ?>
+    <div class="ver-todas">
+                <a class="bton-ver-propiedades" href="admin/proyectos/index.php"> Crear un proyecto</a>
+            </div>
+            <br>
+
+            <br>
+            <div class="ver-todas">
+                <a class="bton-ver-propiedades" href="admin/propiedades/index.php">Publicar una propiedad</a>
+            </div>
+            <br>
+            <br>
+            <div class="ver-todas">
+                <a class="bton-ver-propiedades" href="admin/cursos/index.php"> Agregar un curso</a>
+            </div>
 
 
 
@@ -77,53 +84,7 @@ incluirTemplate('header');
 
     <table class= "propiedades">  
         <thead>
-            <tr>
-
-            <th>Código Propiedad</th>
-            <th>Precio</th>
-            <th>Ubicación</th>
-            <th>Tamaño</th>
-            <th>Imagen</th>
-            <th>Acciones</th>
-            </tr>
-            <br>
-            <a href="/admin/propiedades/crear.php" class="boton bton-ver-propiedades">Crear una nueva propiedad</a>
-            <a href="/admin/proyectos" class="boton bton-ver-propiedades">Crear un nuevo proyecto</a>
-            <a href="/admin/cusos/" class="boton bton-ver-propiedades">Crear una nuevo curso</a>
-        </thead>
-               
-
-        <tbody> <!--mostrar los resultados-->
-        <?php  while($propiedad = mysqli_fetch_assoc($reultadoConsulta)): ?>
-            <tr>
-                
-            <td><?php echo $propiedad['cod_propiedad']; ?></td>
-                <td>₡<?php echo $propiedad['precio']; ?></td>
-                <td><?php echo $propiedad['ubicacion']; ?></td>
-                <td> <?php echo $propiedad['tamano']; ?>m²</td>
-                <td><img src="/imagenes/<?php echo $propiedad['imagen']; ?>" class="imagen-tabla">  </td>
-                <td>
-
-
-
-
-                <form method="POST" class="w-100">
-
-                <input type="hidden" name="cod_propiedad" value="<?php echo $propiedad['cod_propiedad'];?>">
-
-                <input type="submit" class="boton-eliminar" value="Eliminar">
-                </form>
-
-                
-              
-                <a href="admin/propiedades/actualizar.php?cod_propiedad=<?php echo $propiedad['cod_propiedad'];?>" 
-                class="boton-Actualizar">Actualizar</a>
-                </td>
-            </tr>
-
-            <?php  endwhile;?>
-        </tbody>
-</table>
+      
  
 <?php
 
