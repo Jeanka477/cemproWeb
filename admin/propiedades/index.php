@@ -55,9 +55,10 @@ incluirTemplate('header');
             <th>acciones</th>
             </tr>
             <a href="/admin/propiedades/crear.php" class="boton bton-ver-propiedades">Crear una nueva propiedad</a>
+            <a href="/admin" class="boton bton-ver-propiedades">Volver</a>
         </thead>
 
-        <a href="/admin/proyectos/crear.php" class="boton bton-ver-propiedades">Crear una nuevo proyecto</a>
+        
      
       
                
@@ -84,7 +85,7 @@ incluirTemplate('header');
                 class="boton-Actualizar">Actualizar</a>
                 </td>
             </tr>
-            <a href="/admin/proyectos/crear.php" class="boton bton-ver-propiedades">Crear una nuevo proyecto</a>
+          
             <?php  endwhile;?>
 
             

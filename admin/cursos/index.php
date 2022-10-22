@@ -56,6 +56,7 @@ incluirTemplate('header');
             <th>Estado</th>
             </tr>
             <a href="/admin/cursos/crear.php" class="boton bton-ver-propiedades">Crear un nuevo curso</a>
+            <a href="/admin" class="boton bton-ver-propiedades">Volver</a>
         </thead>
                      
 
