@@ -49,7 +49,8 @@
    
    
 
-
+require '../../includes/funciones.php';
+incluirTemplate('header');
 ?>
 <script>    
 function confirmation(){
