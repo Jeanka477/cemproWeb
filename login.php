@@ -85,19 +85,21 @@ incluirTemplate('header');
 
 
     <form method="POST" class="formulario">
-        <fieldset>
-            <legend>Email y Password</legend>
+        <fieldset class="login">
+
 
             <label for="email">Email</label>
-            <input type="email" name="email" placeholder="Tu Email" id="email">
+            <input class="input" type="email" name="email" placeholder="Tu Email" id="email">
 
             <label for="password">Password</label>
-            <input type="password" name="password" placeholder="Tu Password" id="password" >
+            <input class="input" type="password" name="password" placeholder="Tu Password" id="password" >
+
+            <br>
+        <input type="submit" value="Iniciar Sesión" class="boton-login" >
 
         </fieldset>
 
-        <br>
-        <input type="submit" value="Iniciar Sesión" class="boton-celeste">
+       
     </form>
 </main>
 

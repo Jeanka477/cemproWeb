@@ -127,3 +127,41 @@ border-radius: 5px 5px 5px 5px;
 
 
 //FIn index textos
+
+
+
+//login estilos
+.login{
+    background-color: #a3dcef;
+    box-shadow: 5px 5px 5px;
+    padding: 80px;
+    border-radius: 7px;
+}
+
+.input{
+    display: block;
+    border: 2px solid black;
+    width: 95%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.boton-login{
+    float: right;
+    background-color: #085544;
+    padding: .5rem;
+    color: white;
+    border: none;
+    width: 60%;
+    border-radius: 5px;
+    margin-right: 10px;
+    text-decoration: none;
+
+}
+
+.boton-login:hover{
+    background-color: #011b15;
+    cursor: pointer;
+
+}
