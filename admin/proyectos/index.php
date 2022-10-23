@@ -80,10 +80,11 @@ incluirTemplate('header');
             <th>Fecha Fin</th>
             <th>Acciones</th>
             </tr>
-            <a href="/admin/proyectos/crear.php" class="boton bton-ver-propiedades">Crear una nueva propiedad</a>
+            <a href="/admin/proyectos/crear.php" class="boton bton-ver-propiedades">Publicar un nuevo proyecto</a>
+            <a href="/admin/" class="boton bton-ver-propiedades">Volver</a>
         </thead>
 
-        <a href="/admin/proyectos/crear.php" class="boton bton-ver-propiedades">Crear una nuevo proyecto</a>
+      
      
       
                

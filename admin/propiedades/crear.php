@@ -103,7 +103,7 @@ incluirTemplate('header');
     <h1>Crear</h1>   
     
     
-    <a href="/admin" class="boton bton-ver-propiedades">Volver</a> <br>
+    <a href="/admin/propiedades" class="boton bton-ver-propiedades">Volver</a> <br>
 
 <br>
 
