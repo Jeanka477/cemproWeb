@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
 
     //Tamano de las imagenes 
-    $medida = 1000 * 1000;
+    $medida = 1000 * 6000;
     if ($imagen_proyecto['size'] > $medida ){
        $errores[] = 'La imagen es muy pesada';
     }
@@ -130,7 +130,7 @@ incluirTemplate('header');
     <h1>Crear</h1>   
     
     
-    <a href="/admin/proyectos" class="boton bton-ver-propiedades">Volver</a> <br>
+    <a href="/admin/proyectos/crear" class="boton bton-ver-propiedades">Volver</a> <br>
 
 <br>
 

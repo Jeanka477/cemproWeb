@@ -120,12 +120,14 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
 
  // insertar en la base de datos 
+
+ //Actualizar la propiedad
  $query =" UPDATE propiedades SET precio = '${precio}', ubicacion = '${ubicacion}',tamano = '${tamano}', imagen = '${nombreImagen}' WHERE cod_propiedad  = ${cod_propiedad}";
 
 
  $resultado = mysqli_query($db, $query);
  if($resultado){
-    header('location: /admin?resultado=2');
+    header('location: /admin/propiedades/index?resultado=2');
  }
     }   
         }

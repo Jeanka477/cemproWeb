@@ -6,6 +6,8 @@ use App\Propiedad;
 
 
 
+
+
 $auth = estarAutenticado();
 
 
@@ -20,6 +22,13 @@ $tamano = '';
 $descripcion = '';
 
 if ($_SERVER['REQUEST_METHOD'] ==='POST'){
+
+  
+
+
+   
+
+
 
 
    $precio = mysqli_real_escape_string( $db, $_POST['precio']);

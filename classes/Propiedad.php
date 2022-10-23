@@ -22,5 +22,6 @@ class Propiedad{
         $this->id_administrador = $args =['id_administrador']?? '';
 
     }
+
     
 }

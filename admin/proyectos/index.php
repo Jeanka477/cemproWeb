@@ -39,19 +39,28 @@
             $resultado = mysqli_query($db, $query);
 
             if($resultado) {
-                header('location: /admin?resultado=3');
+                header('location: /admin/proyectos/index?resultado=3');
             }
         }
 
         
     }
 
-
+   
    
 
-require '../../includes/funciones.php';
-incluirTemplate('header');
+
 ?>
+<script>    
+function confirmation(){
+    var respuesta = confirm("Esta seguro de eliminar esta Propiedad?");
+    if(respuesta == true){
+        return true;
+    }else{
+        return false;
+    }
+}
+</script>
 
 <main class="contenedor seccion">
     <h1>Administrador de cemproweb</h1>    
@@ -81,7 +90,7 @@ incluirTemplate('header');
             <th>Acciones</th>
             </tr>
             <a href="/admin/proyectos/crear.php" class="boton bton-ver-propiedades">Publicar un nuevo proyecto</a>
-            <a href="/admin/" class="boton bton-ver-propiedades">Volver</a>
+            <a href="/admin" class="boton bton-ver-propiedades">Volver</a>
         </thead>
 
       
@@ -105,11 +114,11 @@ incluirTemplate('header');
 
                 <input type="hidden" name="cod_proyecto" value="<?php echo $proyecto['cod_proyecto'];?>">
 
-                <input type="submit" class="boton-eliminar" value="Eliminar">
+                <input type="submit" class="boton-eliminar" value="Eliminar" onclick='return confirmation()'>
                 </form>
                 
               
-                <a href="admin/proyectos/actualizar.php?cod_proyecto=<?php echo $proyecto['cod_proyecto'];?>" 
+                <a href="actualizar.php?cod_proyecto=<?php echo $proyecto['cod_proyecto'];?>" 
                 class="boton-Actualizar">Actualizar</a>
                 </td>
             </tr>
