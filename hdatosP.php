@@ -4,6 +4,10 @@ require 'includes/app.php';
 
  incluirTemplate('header');
  ?>
+ <br>
+ <br>
+ <br>
+ <br>
 
     <main class="contenedor seccion">
         
@@ -103,6 +107,7 @@ require 'includes/app.php';
         </form>
 
         <a class="boton-celeste" href="hdatosF.php">Siguiente</a>
+        <link href="/BizPage/assets/css/style.css" rel="stylesheet">
     </main>
 
     <?php incluirTemplate('footer');?>

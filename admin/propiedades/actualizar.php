@@ -137,6 +137,10 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
 incluirTemplate('header');
 ?>
+<br>
+<br>
+<br>
+<br>
 
 <main class="contenedor seccion">
     <h1>Actualizar</h1>   
@@ -186,7 +190,7 @@ incluirTemplate('header');
 
 </main>
 
-
+<link href="/BizPage/assets/css/style.css" rel="stylesheet">
 <?php
     incluirTemplate('footer');
 ?>

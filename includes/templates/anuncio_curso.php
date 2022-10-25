@@ -1,5 +1,6 @@
 <?php
 
+
 //importar la conexion
 
 $db =   conectarDB();
