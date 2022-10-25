@@ -70,10 +70,6 @@ if ($_SERVER['REQUEST_METHOD']==='POST'){
 
 incluirTemplate('header');
 ?>
-<br>
-<br>
-<br>
-<br>
 
 <main class="contenedor seccion contenido-centrado">
     <h1>Iniciar Sesión</h1>    
@@ -89,27 +85,25 @@ incluirTemplate('header');
 
 
     <form method="POST" class="formulario">
-        <fieldset class="login">
+        <fieldset>
             <legend>Email y Password</legend>
 
+
+
+
             <label for="email">Email</label>
-            <input class="input" type="email" name="email" placeholder="Tu Email" id="email">
+            <input type="email" name="email" placeholder="Tu Email" id="email">
 
             <label for="password">Password</label>
-            <input class="input" type="password" name="password" placeholder="Tu Password" id="password" >
-
-            <input type="submit" value="Iniciar Sesión" class="boton-login">
+            <input type="password" name="password" placeholder="Tu Password" id="password" >
 
         </fieldset>
 
-    </form> 
-
-
-
-
+        <br>
+        <input type="submit" value="Iniciar Sesión" class="boton-celeste">
+    </form>
 </main>
 
-<link href="/BizPage/assets/css/style.css" rel="stylesheet">
 <?php
     incluirTemplate('footer');
 ?>
