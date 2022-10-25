@@ -16,28 +16,37 @@ if (!$auth){
 
 incluirTemplate('header');
 ?>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>Administrador de cemproweb</h1>  
 <main class="contenedor seccion">
-    <h1>Administrador de cemproweb</h1>    
+      
 
-    <div class="ver-todas">
-                <a class="bton-ver-propiedades" href="admin/proyectos/index.php"> Crear un proyecto</a>
+    <div class="botones-admin">
+                <a class="btn btn-success" href="admin/proyectos/index.php"> Crear un proyecto</a>
             </div>
             <br>
 
             <br>
-            <div class="ver-todas">
-                <a class="bton-ver-propiedades" href="admin/propiedades/index.php">Publicar una propiedad</a>
+            <div class="botones-admin">
+                <a class="btn btn-success" href="admin/propiedades/index.php">Publicar una propiedad</a>
             </div>
             <br>
             <br>
-            <div class="ver-todas">
-                <a class="bton-ver-propiedades" href="admin/cursos/index.php"> Agregar un curso</a>
+            <div class="botones-admin">
+                <a class="btn btn-success" href="admin/cursos/index.php"> Agregar un curso</a>
             </div>
 
     <table class= "propiedades">  
         <thead>
 <?php
 
-    incluirTemplate('footer');
+
+ 
+    
     ?>
+        <link href="/BizPage/assets/css/style.css" rel="stylesheet">

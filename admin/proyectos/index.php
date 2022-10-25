@@ -52,6 +52,20 @@
 require '../../includes/funciones.php';
 incluirTemplate('header');
 ?>
+<br>
+<br>
+<br>
+<br>
+<head>
+
+
+    
+
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+
+</head>
+
+<body>
 <script>    
 function confirmation(){
     var respuesta = confirm("Esta seguro de eliminar esta Propiedad?");
@@ -79,7 +93,7 @@ function confirmation(){
 
 
 
-    <table class= "propiedades">  
+    <table  class= "table table-bordered table-striped table-hover">  
         <thead>
             <tr>
 
@@ -90,9 +104,15 @@ function confirmation(){
             <th>Fecha Fin</th>
             <th>Acciones</th>
             </tr>
-            <a href="/admin/proyectos/crear.php" class="boton bton-ver-propiedades">Publicar un nuevo proyecto</a>
-            <a href="/admin" class="boton bton-ver-propiedades">Volver</a>
+            <div class="botones-crud ">
+        <a href="/admin/proyectos/crear.php" class="btn btn-success">Publicar un nuevo proyecto</a>
+            <a href="/admin" class="btn btn-success">Volver</a>
+            </div>
         </thead>
+        <br>
+        <br>
+
+        
 
       
      
@@ -108,19 +128,20 @@ function confirmation(){
                 <td><?php echo $proyecto['ubicacion_proyecto']; ?></td>
                 <td> <?php echo $proyecto['fecha_inicio']; ?></td>
                 <td> <?php echo $proyecto['fecha_fin']; ?></td>
-                <td><img src="/imagenes/<?php echo $proyecto['imagen_proyecto']; ?>" class="imagen-tabla">  </td>
+                <td><img style="width: 10rem;" src="/imagenes/<?php echo $proyecto['imagen_proyecto']; ?>" class="imagen-tabla">  </td>
                 <td>
 
                 <form method="POST" class="w-100">
 
                 <input type="hidden" name="cod_proyecto" value="<?php echo $proyecto['cod_proyecto'];?>">
 
-                <input type="submit" class="boton-eliminar" value="Eliminar" onclick='return confirmation()'>
+                <input type="submit" class="btn btn-outline-danger" value="Eliminar" onclick='return confirmation()'>
                 </form>
+                <br>
                 
               
                 <a href="actualizar.php?cod_proyecto=<?php echo $proyecto['cod_proyecto'];?>" 
-                class="boton-Actualizar">Actualizar</a>
+                class="btn btn-primary">Actualizar</a>
                 </td>
             </tr>
 
@@ -182,3 +203,9 @@ function confirmation(){
 mysqli_close($db);
     incluirTemplate('footer');
     ?>
+
+   
+<link href="/BizPage/assets/css/style.css" rel="stylesheet">
+<script src="/bootstrap/js/bootstrap.bundle.js"></script>
+        
+    </body>
