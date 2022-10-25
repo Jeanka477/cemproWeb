@@ -52,6 +52,8 @@ $resultado = mysqli_query($db, $query);
   </header>
 
 
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+</head>
 <div class="contenedor-anuncios">
     <?php while($propiedad = mysqli_fetch_assoc($resultado)): ?>
             <div class="anuncio">

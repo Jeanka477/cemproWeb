@@ -92,6 +92,9 @@ incluirTemplate('header');
         <fieldset class="login">
             <legend>Email y Password</legend>
 
+
+
+
             <label for="email">Email</label>
             <input class="input" type="email" name="email" placeholder="Tu Email" id="email">
 
