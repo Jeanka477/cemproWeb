@@ -90,13 +90,18 @@ incluirTemplate('header');
 
     <form method="POST" class="formulario">
         <fieldset class="login">
+
             <legend>Email y Password</legend>
+
+
+
 
             <label for="email">Email</label>
             <input class="input" type="email" name="email" placeholder="Tu Email" id="email">
 
             <label for="password">Password</label>
             <input class="input" type="password" name="password" placeholder="Tu Password" id="password" >
+
 
             <input type="submit" value="Iniciar Sesión" class="boton-login">
 
@@ -107,6 +112,15 @@ incluirTemplate('header');
 
 
 
+=======
+            <br>
+        <input type="submit" value="Iniciar Sesión" class="boton-login" >
+
+        </fieldset>
+
+       
+    </form>
+>>>>>>> 1041985decf81d1d84081d00c0c2a52e5b950299
 </main>
 
 <link href="/BizPage/assets/css/style.css" rel="stylesheet">
