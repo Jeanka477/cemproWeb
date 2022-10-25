@@ -52,6 +52,17 @@
 require '../../includes/funciones.php';
 incluirTemplate('header');
 ?>
+
+<head>
+
+
+    
+
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+
+</head>
+
+<body>
 <script>    
 function confirmation(){
     var respuesta = confirm("Esta seguro de eliminar esta Propiedad?");
@@ -79,7 +90,7 @@ function confirmation(){
 
 
 
-    <table class= "propiedades">  
+    <table  class= "table table-bordered table-striped table-hover">  
         <thead>
             <tr>
 
@@ -108,7 +119,7 @@ function confirmation(){
                 <td><?php echo $proyecto['ubicacion_proyecto']; ?></td>
                 <td> <?php echo $proyecto['fecha_inicio']; ?></td>
                 <td> <?php echo $proyecto['fecha_fin']; ?></td>
-                <td><img src="/imagenes/<?php echo $proyecto['imagen_proyecto']; ?>" class="imagen-tabla">  </td>
+                <td><img style="width: 10rem;" src="/imagenes/<?php echo $proyecto['imagen_proyecto']; ?>" class="imagen-tabla">  </td>
                 <td>
 
                 <form method="POST" class="w-100">
@@ -182,3 +193,8 @@ function confirmation(){
 mysqli_close($db);
     incluirTemplate('footer');
     ?>
+
+   
+<script src="/bootstrap/js/bootstrap.bundle.js"></script>
+        
+    </body>

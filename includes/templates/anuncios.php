@@ -12,7 +12,15 @@ $resultado = mysqli_query($db, $query);
 
 ?>
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEMPRODECA</title>
+<!-- <> <link rel="stylesheet" href="/build/css/app.css"> -->
 
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+</head>
 <div class="contenedor-anuncios">
     <?php while($propiedad = mysqli_fetch_assoc($resultado)): ?>
             <div class="anuncio">

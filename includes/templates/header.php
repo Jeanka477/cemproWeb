@@ -17,7 +17,9 @@ $auth = $_SESSION['login'] ?? false;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CEMPRODECA</title>
-    <link rel="stylesheet" href="/build/css/app.css">
+<!-- <> <link rel="stylesheet" href="/build/css/app.css"> -->
+
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -32,11 +34,11 @@ $auth = $_SESSION['login'] ?? false;
                 <div class="movil-menu">
                     <img src="/build/img/barras.svg " alt="ICono de menu para moviles">
                 </div>
-                <div class="derecha"> 
+                <div class="text-right"> 
                     <img class="dark-mode-boton" src="/build/img/dark-mode.svg" alt="">
                     <nav class="navegacion">
                     
-                        <a href="requisitos.php">Solicitar crédito</a>
+                        <a class="btn btn-outline-danger" href="requisitos.php">Solicitar crédito</a>
                         <a href="proyectos.php">Proyectos</a>
                         <a href="propiedades.php">Propiedades</a>
                         <a href="cursos.php">Cursos</a>
@@ -55,6 +57,11 @@ $auth = $_SESSION['login'] ?? false;
            
 
         </div>
+       
     </header> 
+ 
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    </body>
+    
 
     

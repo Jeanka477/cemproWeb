@@ -15,9 +15,9 @@ $passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
 //query para crear usuario
 $query = "INSERT INTO usuarios (email, password) VALUES ( '${email}', '${passwordHash}' );";
-
-// echo $query;
-
+echo"<pre>";
+echo $query;
+echo"</pre>";
 
 
 
