@@ -125,10 +125,6 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 require '../../includes/funciones.php';
 incluirTemplate('header');
 ?>
-<br>
-<br>
-<br>
-<br>
 
 <main class="contenedor seccion">
     <h1>Crear</h1>   
@@ -195,9 +191,7 @@ incluirTemplate('header');
 
 </main>
 
-<link href="/BizPage/assets/css/style.css" rel="stylesheet">
-<script src="/bootstrap/js/bootstrap.bundle.js"></script>
-<?php
 
+<?php
     incluirTemplate('footer');
 ?> 

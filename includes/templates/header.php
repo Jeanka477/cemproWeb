@@ -17,53 +17,44 @@ $auth = $_SESSION['login'] ?? false;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CEMPRODECA</title>
-<!-- <> <link rel="stylesheet" href="/build/css/app.css"> -->
-
-<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/build/css/app.css">
 </head>
 <body>
 
-<header id="header" class="fixed-top d-flex align-items-center header-transparent">
-    <div class="container-fluid">
-
-      <div class="row justify-content-center align-items-center">
-        <div class="col-xl-11 d-flex align-items-center justify-content-between">
-        <a href="/">
+    <header class="header <?php echo  $inicio ? 'inicio': '' ?>">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/">
                    <!-- <img src="build/img/logo.svg" alt="Logotipo de cemprodeca">-->
 
-                   <img loading="lazy" src="BizPage/assets/img/CEMPRODECA.png" alt="anincio" class="logoCemprodeca">
+                   <img loading="lazy" src="/build/img/CEMPRODECA.png" alt="anincio" class="logoCemprodeca">
                 </a>
-          <!-- Uncomment below if you prefer to use an image logo -->
-          <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+                <div class="movil-menu">
+                    <img src="/build/img/barras.svg " alt="ICono de menu para moviles">
+                </div>
+                <div class="derecha"> 
+                    <img class="dark-mode-boton" src="/build/img/dark-mode.svg" alt="">
+                    <nav class="navegacion">
+                    
+                        <a href="requisitos.php">Solicitar crédito</a>
+                        <a href="proyectos.php">Proyectos</a>
+                        <a href="propiedades.php">Propiedades</a>
+                        <a href="cursos.php">Cursos</a>
+                        <a href="historia.php">Historia</a>
+                        <a href="contactenos.php"> Contáctenos</a>
+                        <a href="login.php"> Iniciar Sesión</a>
+                        <?php if($auth): ?>
+                            <a href="cerrar-sesion.php"> Cerrar Sesión</a>
 
-          <nav id="navbar" class="navbar">
-            <ul>
-            <li class="dropdown"><a href="#"><span>Solicitar Crédito</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                  <li><a href="requisitoHipoteca.php">Por Hipoteca</a></li>
-                  <li><a href="RequisitoFiador.php">Por Fiador</a></li>
-                  </li>
-                </ul>
-              </li>
-              
-              <li><a class="nav-link scrollto" href="propiedades.php">Propiedades</a></li>
-              <li><a class="nav-link scrollto" href="proyectos.php">Proyectos</a></li>
-              <li><a class="nav-link scrollto " href="cursos.php">Cursos</a></li>
-              <li><a class="nav-link scrollto" href="#team">Team</a></li>
-              <li><a class="nav-link  " href="login.php">Iniciar Sesión</a></li>
+                            <?php endif; ?>
 
-              <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav><!-- .navbar -->
+                       </nav>
+                </div>
+
+            </div> <!--Termina clase barra-->
+           
+
         </div>
-      </div>
-
-    </div>
-  </header>
- 
-    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
-    </body>
-    
+    </header> 
 
     

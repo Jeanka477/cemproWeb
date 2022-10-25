@@ -29,15 +29,9 @@ $propiedad = mysqli_fetch_assoc($resultado);
  incluirTemplate('header');
  ?>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-    <main >
-        <div class="contenido-propiedad">
+
+    <main class="contenedor seccion contenido-centrado">
         <h1>Ubicación: <?php echo $propiedad['ubicacion']; ?></h1>
 
 
@@ -55,14 +49,10 @@ $propiedad = mysqli_fetch_assoc($resultado);
             <?php echo $propiedad['descripcion']; ?>
 
 
-        
+        </div>
     </main>
-</div>
 
-    <link href="/BizPage/assets/css/style.css" rel="stylesheet">
-    <?php
-    
-    
+    <?php 
     mysqli_close($db);
 
     incluirTemplate('footer');?>

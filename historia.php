@@ -76,5 +76,4 @@ require 'includes/app.php';
         </section>
     </main>
 
-        <link href="/BizPage/assets/css/style.css" rel="stylesheet">
     <?php incluirTemplate('footer');?>

@@ -28,14 +28,10 @@ $proyecto = mysqli_fetch_assoc($resultado);
 
  incluirTemplate('header');
  ?>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-    <main class="contenido-proyecto">
+
+
+    <main class="contenedor seccion contenido-centrado">
         <h1><?php echo $proyecto['nom_proyecto']; ?></h1>
 
         <picture>
@@ -55,7 +51,6 @@ $proyecto = mysqli_fetch_assoc($resultado);
         </div>
     </main>
 
-    <link href="/BizPage/assets/css/style.css" rel="stylesheet">
     <?php 
     mysqli_close($db);
 
