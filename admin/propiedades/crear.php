@@ -107,12 +107,16 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
 incluirTemplate('header');
 ?>
+<br>
+<br>
+<br>
+<br>
 
 <main class="contenedor seccion">
     <h1>Crear</h1>   
     
     
-    <a href="/admin/propiedades" class="boton bton-ver-propiedades">Volver</a> <br>
+    <a href="/admin/propiedades" class="boton bton-ver-propiedades">Volver vlosxmdm</a> <br>
 
 <br>
 
@@ -154,7 +158,7 @@ incluirTemplate('header');
 
 </main>
 
-
+<link href="/BizPage/assets/css/style.css" rel="stylesheet">
 <?php
     incluirTemplate('footer');
 ?>
