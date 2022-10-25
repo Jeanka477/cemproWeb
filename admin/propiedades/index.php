@@ -60,13 +60,6 @@ require '../../includes/funciones.php';
 incluirTemplate('header');
 ?>
 
-<head>
-<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-
-</head>
-<body style="badgound-color:blue;">
-    
-
 <script>    
 function confirmation(){
     var respuesta = confirm("Esta seguro de eliminar esta Propiedad?");
@@ -92,7 +85,7 @@ function confirmation(){
 
 
 
-    <table class= "table table-bordered table-striped table-hover">  
+    <table class= "propiedades">  
         <thead>
             <tr>
 
@@ -103,11 +96,14 @@ function confirmation(){
             <th>imagen</th>
             <th>acciones</th>
             </tr>
-            <a href="/admin/propiedades/crear.php" class="boton bton-ver-propiedades">Crear una nueva propiedad</a>
-            <a href="/admin" class="boton bton-ver-propiedades">Volver</a>
+            <div class="botones-crud ">
+            <a href="/admin/propiedades/crear.php" class="btn btn-success">Crear una nueva propiedad</a>
+            <a href="/admin" class="btn btn-success">Volver</a>
+            </div>
+           
         </thead>
 
-        
+        <br><br>
      
       
                
@@ -120,18 +116,19 @@ function confirmation(){
                 <td>₡<?php echo $propiedad['precio']; ?></td>
                 <td><?php echo $propiedad['ubicacion']; ?></td>
                 <td> <?php echo $propiedad['tamano']; ?>m²</td>
-                <td><img style="width: 10rem;" src="/imagenes/<?php echo $propiedad['imagen']; ?>" class="imagen-tabla">  </td>
+                <td><img src="/imagenes/<?php echo $propiedad['imagen']; ?>" class="imagen-tabla">  </td>
                 <td>
                 <!--Eliminar-->
                 <form method="POST" class="w-100">
 
                 <input type="hidden" name="cod_propiedad" value="<?php echo $propiedad['cod_prpiedad'];?>">
-                <input type="submit"class="btn btn-outline-danger"value="Eliminar" onclick='return confirmation()'>
+                <input type="submit"class="boton-eliminar"value="Eliminar" onclick='return confirmation()'>
                 </form>
 
+                <br>
                  <!--Actualizar-->
                 <a href="actualizar.php?cod_propiedad=<?php echo $propiedad['cod_propiedad'];?>" 
-                class="btn btn-outline-danger">Actualizar</a>
+                class="boton-Actualizar">Actualizar</a>
                 </td>
             </tr>
           
@@ -144,9 +141,6 @@ function confirmation(){
 
 </main>
 
-
-<script src="/bootstrap/js/bootstrap.bundle.js"></script>
-</body>
 
 <?php
 

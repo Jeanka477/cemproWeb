@@ -88,6 +88,9 @@ incluirTemplate('header');
         <fieldset>
             <legend>Email y Password</legend>
 
+
+
+
             <label for="email">Email</label>
             <input type="email" name="email" placeholder="Tu Email" id="email">
 

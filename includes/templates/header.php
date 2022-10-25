@@ -17,28 +17,28 @@ $auth = $_SESSION['login'] ?? false;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CEMPRODECA</title>
-<!-- <> <link rel="stylesheet" href="/build/css/app.css"> -->
-
-<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/build/css/app.css">
 </head>
 <body>
 
-    <header class="header <?php echo  $inicio ? 'inicio': '' ?>">
-        <div class="contenedor contenido-header">
-            <div class="barra">
-                <a href="/">
+<header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container-fluid">
+
+      <div class="row justify-content-center align-items-center">
+        <div class="col-xl-11 d-flex align-items-center justify-content-between">
+        <a href="/">
                    <!-- <img src="build/img/logo.svg" alt="Logotipo de cemprodeca">-->
 
-                   <img loading="lazy" src="/build/img/CEMPRODECA.png" alt="anincio" class="logoCemprodeca">
+                   <img loading="lazy" src="BizPage/assets/img/CEMPRODECA.png" alt="anincio" class="logoCemprodeca">
                 </a>
                 <div class="movil-menu">
                     <img src="/build/img/barras.svg " alt="ICono de menu para moviles">
                 </div>
-                <div class="text-right"> 
+                <div class="derecha"> 
                     <img class="dark-mode-boton" src="/build/img/dark-mode.svg" alt="">
                     <nav class="navegacion">
                     
-                        <a class="btn btn-outline-danger" href="requisitos.php">Solicitar crédito</a>
+                        <a href="requisitos.php">Solicitar crédito</a>
                         <a href="proyectos.php">Proyectos</a>
                         <a href="propiedades.php">Propiedades</a>
                         <a href="cursos.php">Cursos</a>
@@ -50,18 +50,17 @@ $auth = $_SESSION['login'] ?? false;
 
                             <?php endif; ?>
 
-                       </nav>
-                </div>
+              <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+        </div>
+      </div>
 
             </div> <!--Termina clase barra-->
            
 
         </div>
-       
     </header> 
- 
-    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
-    </body>
-    
 
     
