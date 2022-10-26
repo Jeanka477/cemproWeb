@@ -26,7 +26,7 @@ if(!$auth){
 require '../../includes/funciones.php';
 incluirTemplate('header');
 ?>
-
+<br><br><br><br>
 <main class="contenedor seccion">
     <h1>Administrador de cemproweb</h1>    
 
@@ -50,8 +50,10 @@ incluirTemplate('header');
             <th>Descripción</th>
             <th>Estado</th>
             </tr>
-            <a href="/admin/cursos/crear.php" class="boton bton-ver-propiedades">Crear un nuevo curso</a>
-            <a href="/admin" class="boton bton-ver-propiedades">Volver</a>
+            <a href="/admin/cursos/crear.php" class="btn btn-success"> Crear un nuevo curso   </a>
+            <br>
+          <br>
+            <a href="/admin" class="btn btn-success">Volver  </a>
         </thead>
                      
 
@@ -85,6 +87,7 @@ incluirTemplate('header');
  
 
 </main>
+<link href="/BizPage/assets/css/style.css" rel="stylesheet">
 
 
 <?php
@@ -92,5 +95,3 @@ incluirTemplate('header');
 //Cerar conexion
 
 mysqli_close($db);
-    incluirTemplate('footer');
-    ?>

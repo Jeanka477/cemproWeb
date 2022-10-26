@@ -116,7 +116,7 @@ incluirTemplate('header');
     <h1>Crear</h1>   
     
     
-    <a href="/admin/propiedades" class="boton bton-ver-propiedades">Volver vlosxmdm</a> <br>
+    <a href="/admin/propiedades" class="btn btn-success">Volver </a> <br>
 
 <br>
 
@@ -130,30 +130,30 @@ incluirTemplate('header');
     <?php endforeach; ?>
 
 
-    <form class="formulario" method="POST" action="/admin/propiedades/crear.php" enctype="multipart/form-data">
+    <form  class="formulario aling text-left" method="POST" action="/admin/propiedades/crear.php" enctype="multipart/form-data">
         <fieldset>
             <legend>Información general</legend>
 
             <label for="precio">Precio de la propiedad:</label>
-            <input type="number" id="precio" name="precio"  value="<?php echo $precio; ?>">
+            <input  class="form-control w-25 aling text-center" type="number" id="precio" name="precio"  value="<?php echo $precio; ?>">
 
             <br>
             <label for="ubicacion">Ubicación:</label>
-            <input type="text" id="ubicacion" name="ubicacion" value="<?php echo $ubicacion; ?>">
+            <input  class="form-control w-25 aling text-center" type="text" id="ubicacion" name="ubicacion" value="<?php echo $ubicacion; ?>">
             <br>
             <label for="tamano">Tamaño de la propiedad:</label>
-            <input type="number" id="tamano" name="tamano"  value="<?php echo $tamano; ?>">
+            <input  class="form-control w-25 aling text-center" type="number" id="tamano" name="tamano"  value="<?php echo $tamano; ?>">
             <br>
             <label for="imagen">Imagen:</label>
-            <input type="file" id="imagen" accept="image.jpeg, image/png" name="imagen" >
+            <input  class="form-control w-25 aling text-center" type="file" id="imagen" accept="image.jpeg, image/png" name="imagen" >
             <br>
             <label for="descripcion">Descripción</label >
             <br>
-            <textarea id="descripcion"  name="descripcion"placeholder="Escriba una descripcion de la propiedad "cols="60" rows="10" ><?php echo $descripcion; ?></textarea>
+            <textarea  class="form-control w-25 aling text-center" id="descripcion"  name="descripcion"placeholder="Escriba una descripcion de la propiedad "cols="60" rows="10" ><?php echo $descripcion; ?></textarea>
         </fieldset>
 
-
-        <input type="submit" value="Crear Propiedad" class="boton bton-ver-propiedades">
+<br>
+        <input type="submit" value="Crear Propiedad" class="btn btn-primary">
 
 
 </main>
