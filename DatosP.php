@@ -70,34 +70,9 @@ if($resultado){
 
   }
 }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
  ?>
-
+<br><br><br><br>
     <main class="contenedor seccion">
         
 
@@ -203,7 +178,7 @@ if($resultado){
             <input type="text" placeholder="Tu nombre" id="nombre">    -->
          </fieldset>
 
-         <input type="submit" value="Crear formulario" class="boton bton-ver-propiedades">
+         <input class="btn btn-primary" type="submit" value="Crear formulario" >
         </form>
 
         
@@ -211,5 +186,5 @@ if($resultado){
         <!-- <a class="boton-celeste" href="hdatosF.php">Siguiente</a> -->
     </main>
 
-    <?php incluirTemplate('footer');
-    ?>
+    <link href="/BizPage/assets/css/style.css" rel="stylesheet">
+    <?php incluirTemplate('footer');?>

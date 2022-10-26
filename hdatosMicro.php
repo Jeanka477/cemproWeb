@@ -5,6 +5,7 @@ require 'includes/app.php';
  incluirTemplate('header');
  ?>
 
+<br><br><br><br>
     <main class="contenedor seccion">
         
 
@@ -92,7 +93,8 @@ require 'includes/app.php';
          </fieldset>
         </form>
 
-        <a class="boton-celeste" href="hhipoteca.php">Siguiente</a>
+        <a class="btn btn-primary" href="hhipoteca.php">Siguiente</a>
     </main>
 
+    <link href="/BizPage/assets/css/style.css" rel="stylesheet">
     <?php incluirTemplate('footer');?>

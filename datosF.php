@@ -4,6 +4,7 @@ require 'includes/app.php';
 
  incluirTemplate('header');
  ?>
+ <br><br><br><br>
 
     <main class="contenedor seccion">
         
@@ -43,4 +44,5 @@ require 'includes/app.php';
         <a class="boton-celeste" href="datosMicro.php">Siguiente</a>
     </main>
 
+    <link href="/BizPage/assets/css/style.css" rel="stylesheet">
     <?php incluirTemplate('footer');?>

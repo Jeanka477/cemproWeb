@@ -4,7 +4,7 @@ require 'includes/app.php';
 
  incluirTemplate('header');
  ?>
-
+<br><br><br><br>
     <main class="contenedor seccion">
         
 
@@ -13,29 +13,28 @@ require 'includes/app.php';
 
 
             <!--Datos personales-->
-         <fieldset class="datos-personales">
+         <fieldset class="datos-personales ">
             
              <legend>Datos personales</legend>
 
              <label for="Monto">Monto a solicitar</label>
-             <input type="number"  id="Monto" placeholder="Monto en colones" >
-             <br>
-
+             <input class="form-control w-25 aling " type="number"  id="Monto" placeholder="Monto en colones" >
+            
              <label for="nombre">Nombre</label>
-             <input type="text" placeholder="Tu nombre" id="nombre">
+             <input class="form-control w-25 aling text-center" type="text" placeholder="Tu nombre" id="nombre">
 
 
              <label for="id">Fecha de nacimiento</label>
-             <input type="date" id="id">
-             <br>
+             <input  class="form-control w-25 aling text-center"type="date" id="id">
+          
 
 
              <label for="edad">Edad</label>
-             <input type="number"  id="edad" min="10" max="100"> 
+             <input class="form-control w-25 aling text-center" type="number"  id="edad" min="10" max="100"> 
              
             
-             <label for="escolaridad">Escolaridad</label>
-             <select name="select" id="escolaridad">
+             <label " for="escolaridad">Escolaridad</label>
+             <select class="form-control w-25 aling text-center" name="select" id="escolaridad">
                 <option value="value1"selected>Seleccione</option>
                 <option value="value2" >Primaria incompleta</option>
                 <option value="value2" >Primaria completa</option>
@@ -46,9 +45,9 @@ require 'includes/app.php';
               </select>
 
 
-              <br>
+          
               <label for="estadoCivil">Estado civil</label>
-             <select name="estadoCivil" id="estadoCivil">
+             <select class="form-control w-25 aling text-center" name="estadoCivil" id="estadoCivil">
                 <option value="value1"selected>Seleccione</option>
                 <option value="value2" >Soltero</option>
                 <option value="value2" >Casado</option>
@@ -57,30 +56,30 @@ require 'includes/app.php';
               </select>
 
               <label for="matrimonio">Números de Matrimonios</label>
-             <input type="number"  id="matrimonio" min="0" max="20"> 
+             <input class="form-control w-25 aling text-center" type="number"  id="matrimonio" min="0" max="20"> 
 
              <label for="cedula">Cedula</label>
-             <input type="text" placeholder="Tu cedula" id="cedula">
+             <input class="form-control w-25 aling text-center" type="text" placeholder="Tu cedula" id="cedula">
 
              <label for="cedula">Profesión u oficio</label>
-             <input type="text" placeholder="Tu cedula" id="cedula">
+             <input class="form-control w-25 aling text-center"type="text" placeholder="Tu cedula" id="cedula">
 
              <br>
             
 
               
              <legend>Direccion exacta</legend>
-             <textarea name="textarea" rows="5" cols="80">Escriba la dirección exacta de su domicilio</textarea>
+             <textarea class="form-control w-25 aling text-center" name="textarea" rows="5" cols="80">Escriba la dirección exacta de su domicilio</textarea>
             <br>
 
 
             <label for="nombre">Cantón</label>
-            <input type="text" placeholder="Tu nombre" id="nombre">
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Tu nombre" id="nombre">
 
 
             <label for="Provincia">Provincia</label>
-            <select name="select" id="provincia">
-                <option value="value1"selected>Seleccione</option>
+            <select class="form-control w-25 aling text-center" name="select" id="provincia">
+                <option class="form-control w-25 aling text-center" value="value1"selected>Seleccione</option>
                 <option value="value2" >San José</option>
                 <option value="value2" >Heredia</option>
                 <option value="value3" >Alajuela</option>
@@ -92,17 +91,18 @@ require 'includes/app.php';
 
 
             <label for="nombre">Telefono propio</label>
-            <input type="text" placeholder="Tu nombre" id="nombre">
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Tu nombre" id="nombre">
 
 
             <label for="nombre">Otro contacto</label>
-            <input type="text" placeholder="Tu nombre" id="nombre">   
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Tu nombre" id="nombre">   
          </fieldset>
 
          
         </form>
-
-        <a class="boton-celeste" href="hdatosF.php">Siguiente</a>
+<br>
+        <a class="btn btn-primary" href="hdatosF.php">Siguiente</a>
     </main>
 
+    <link href="/BizPage/assets/css/style.css" rel="stylesheet">
     <?php incluirTemplate('footer');?>

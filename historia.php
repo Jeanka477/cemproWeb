@@ -4,7 +4,7 @@ require 'includes/app.php';
 
  incluirTemplate('header');
  ?>
-
+<br><br><br><br>
     <main class="contenedor seccion">
         <h1>Historia de CEMPRODECA </h1>
         <h2>Eslogan de CEMPRODECA</h2>
@@ -76,5 +76,5 @@ require 'includes/app.php';
         </section>
     </main>
 
-        <link href="/BizPage/assets/css/style.css" rel="stylesheet">
+    <link href="/BizPage/assets/css/style.css" rel="stylesheet">
     <?php incluirTemplate('footer');?>

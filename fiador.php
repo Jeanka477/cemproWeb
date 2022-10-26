@@ -4,7 +4,7 @@ require 'includes/app.php';
 
  incluirTemplate('header');
  ?>
-
+<br><br><br><br>
     <main class="contenedor seccion">
         
 
@@ -52,7 +52,8 @@ require 'includes/app.php';
             <br>
         </form>
 
-        <a class="boton-celeste" href="#">Enviar formulario</a>
+        <aclass="btn btn-primary" href="#">Enviar formulario</a>
     </main>
 
+    <link href="/BizPage/assets/css/style.css" rel="stylesheet">
     <?php incluirTemplate('footer');?>

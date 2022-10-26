@@ -113,6 +113,4 @@ incluirTemplate('header');
 </main>
 
 <link href="/BizPage/assets/css/style.css" rel="stylesheet">
-<?php
-    incluirTemplate('footer');
-?>
+    <?php incluirTemplate('footer');?>

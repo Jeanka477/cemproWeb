@@ -4,6 +4,12 @@ require 'includes/app.php';
 
  incluirTemplate('header');
  ?>
+<body>
+    
+<br>
+<br>
+<br>
+<br>
 
     <main class="contenedor seccion">
         
@@ -16,10 +22,12 @@ require 'includes/app.php';
                 <li>Requisito 3</li>
                 <li>Requisito 4</li>
               </ul>
-              <a class="boton-formulario" href="DatosP.php"> Llenar Formulario</a>
+              <a  class="btn btn-primary" href="DatosP.php"> Llenar Formulario</a>
         
 
 
-    </main>
+              </main>
 
-    <?php incluirTemplate('footer');?>
+   
+<link href="/BizPage/assets/css/style.css" rel="stylesheet">
+<?php incluirTemplate('footer');?>

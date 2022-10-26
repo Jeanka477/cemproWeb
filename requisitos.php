@@ -4,6 +4,7 @@ require 'includes/app.php';
 
  incluirTemplate('header');
  ?>
+ <br><br><br><br>
 
     <main class="contenedor seccion">
         <div>
@@ -22,4 +23,5 @@ require 'includes/app.php';
         </div>
     </main>
 
+    <link href="/BizPage/assets/css/style.css" rel="stylesheet">
     <?php incluirTemplate('footer');?>
