@@ -2,17 +2,9 @@
 
 require 'includes/app.php';
 
-//  incluirTemplate('header');
+  incluirTemplate('header');
  ?>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
  <main>
     <h2> Propiedades a la venta </h2>
 

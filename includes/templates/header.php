@@ -23,13 +23,15 @@ $auth = $_SESSION['login'] ?? false;
 </head>
 <body>
 
-    <header class="header <?php echo  $inicio ? 'inicio': '' ?>">
-        <div class="contenedor contenido-header">
-            <div class="barra">
-                <a href="/">
+<header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container-fluid">
+
+      <div class="row justify-content-center align-items-center">
+        <div class="col-xl-11 d-flex align-items-center justify-content-between">
+        <a href="/">
                    <!-- <img src="build/img/logo.svg" alt="Logotipo de cemprodeca">-->
 
-                   <img loading="lazy" src="/build/img/CEMPRODECA.png" alt="anincio" class="logoCemprodeca">
+                   <img loading="lazy" src="BizPage/assets/img/CEMPRODECA.png" alt="anincio" class="logoCemprodeca">
                 </a>
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -50,11 +52,15 @@ $auth = $_SESSION['login'] ?? false;
               <li><a class="nav-link scrollto" href="#team">Team</a></li>
               <li><a class="nav-link  " href="login.php">Iniciar Sesión</a></li>
 
-                       </nav>
-                </div>
+              <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav><!-- .navbar -->
+        </div>
+      </div>
 
     </div>
-  </header>
+  </header><!-- End Header -->
  
     <script src="/bootstrap/js/bootstrap.bundle.js"></script>
     </body>

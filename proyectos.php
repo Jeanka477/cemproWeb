@@ -2,8 +2,9 @@
 
 require 'includes/app.php';
 
- incluirTemplate('header');
+incluirTemplate('header');
  ?>
+ 
 <br>
 <br>
 <br>
