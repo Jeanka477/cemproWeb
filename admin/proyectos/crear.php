@@ -133,8 +133,8 @@ incluirTemplate('header');
 <main class="contenedor seccion">
     <h1>Crear</h1>   
     
-    
-    <a href="/admin/proyectos/crear" class="boton bton-ver-propiedades">Volver</a> <br>
+   
+    <a class="btn btn-success" href="/admin/proyectos/crear" class="boton bton-ver-propiedades">Volver</a> <br>
 
 <br>
 
@@ -149,46 +149,35 @@ incluirTemplate('header');
 
 
 
-    <form class="formulario" method="POST" action="/admin/proyectos/crear.php" enctype="multipart/form-data">
-        <fieldset>
+    <form class="formulario aling text-left" method="POST" action="/admin/proyectos/crear.php" enctype="multipart/form-data">
+        <fieldset class="aling text-left">
             <legend>Informacion general</legend>
-
-            <!-- <label for="cod_proyecto">Codigo:</label>
-            <input type="number" id="cod_proyecto" name="cod_proyecto" placeholder="Codigo del proyecto" value="<?php echo $cod_proyecto; ?>">
-
-            <br> -->
-            <label for="nom_proyecto">Nombre:</label>
-            <input type="text" id="nom_proyecto" name="nom_proyecto" value="<?php echo $nom_proyecto; ?>">
             <br>
+            <label for="nom_proyecto">Nombre:</label>
+            <input class="form-control w-25 aling text-center" type="text" id="nom_proyecto" name="nom_proyecto" value="<?php echo $nom_proyecto; ?>">
             <br>
             <label for="imagen_proyecto">Imagen:</label>
-            <input type="file" id="imagen_proyecto" accept="image.jpeg, image/png" name="imagen_proyecto" >
+            <input class="form-control w-25"   type="file" id="imagen_proyecto" accept="image.jpeg, image/png" name="imagen_proyecto" >
             <br>
             <label for="ubicacion_proyecto" >Ubicacion:</label>
         <input type="text" id="ubicacion_proyecto" name="ubicacion_proyecto" value="<?php echo $ubicacion_proyecto; ?>">
-<br>
-
+            <br>
+            <br>
             <label for="fecha_inicio">Fecha de inicio:</label >
-            <input type="date" id="fecha_inicio" name="fecha_inicio" value="<?php echo $fecha_inicio; ?>" >
-
-
+            <input class="form-control w-25" type="date" id="fecha_inicio" name="fecha_inicio" value="<?php echo $fecha_inicio; ?>" >
             <br>
-
             <label for="fecha_fin">Fecha de final:</label >
-            <input type="date" id="fecha_fin" name="fecha_fin" value="<?php echo $fecha_fin; ?>" >
-
-
-            <br>
-            
-<br>
+            <input class="form-control w-25" type="date" id="fecha_fin" name="fecha_fin" value="<?php echo $fecha_fin; ?>" >
+             <br>
         <label for="descripcion">Descripcion</label >
         <br>
-        <textarea id="descripcion"  name="descripcion"placeholder="Escriba una descripcion del proyecto "cols="60" rows="10" ><?php echo $descripcion; ?></textarea>
+        <textarea  class="form-control w-25"id="descripcion"  name="descripcion"placeholder="Escriba una descripcion del proyecto "
+        cols="60" rows="7" ><?php echo $descripcion; ?></textarea>
 
         </fieldset>
 
-
-        <input type="submit" value="Crear Proyecto" class="boton bton-ver-propiedades">
+        <br>
+        <input   class="btn btn-primary" type="submit" value="Crear Proyecto" class="boton bton-ver-propiedades">
     </form>
 
 

@@ -60,6 +60,17 @@ require '../../includes/funciones.php';
 incluirTemplate('header');
 ?>
 
+<br>
+<br>
+<br>
+<br>
+<head>
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+
+</head>
+<body style="badgound-color:blue;">
+    
+
 <script>    
 function confirmation(){
     var respuesta = confirm("Esta seguro de eliminar esta Propiedad?");
@@ -85,7 +96,7 @@ function confirmation(){
 
 
 
-    <table class= "propiedades">  
+    <table class= "table table-bordered table-striped table-hover">  
         <thead>
             <tr>
 
@@ -116,19 +127,19 @@ function confirmation(){
                 <td>₡<?php echo $propiedad['precio']; ?></td>
                 <td><?php echo $propiedad['ubicacion']; ?></td>
                 <td> <?php echo $propiedad['tamano']; ?>m²</td>
-                <td><img src="/imagenes/<?php echo $propiedad['imagen']; ?>" class="imagen-tabla">  </td>
+                <td><img style="width: 10rem;" src="/imagenes/<?php echo $propiedad['imagen']; ?>" class="imagen-tabla">  </td>
                 <td>
                 <!--Eliminar-->
                 <form method="POST" class="w-100">
 
                 <input type="hidden" name="cod_propiedad" value="<?php echo $propiedad['cod_prpiedad'];?>">
-                <input type="submit"class="boton-eliminar"value="Eliminar" onclick='return confirmation()'>
+                <input type="submit"class="btn btn-outline-danger"value="Eliminar" onclick='return confirmation()'>
                 </form>
 
                 <br>
                  <!--Actualizar-->
                 <a href="actualizar.php?cod_propiedad=<?php echo $propiedad['cod_propiedad'];?>" 
-                class="boton-Actualizar">Actualizar</a>
+                class="btn btn-primary">Actualizar</a>
                 </td>
             </tr>
           
@@ -141,6 +152,10 @@ function confirmation(){
 
 </main>
 
+
+<script src="/bootstrap/js/bootstrap.bundle.js"></script>
+<link href="/BizPage/assets/css/style.css" rel="stylesheet">
+</body>
 
 <?php
 
