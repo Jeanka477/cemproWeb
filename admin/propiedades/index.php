@@ -68,7 +68,7 @@ incluirTemplate('header');
 <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 
 </head>
-<body style="badgound-color:blue;">
+<body style="background-color:blue;">
     
 
 <script>    
