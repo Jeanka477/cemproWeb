@@ -41,7 +41,7 @@ incluirTemplate('header');
 
 
 
-    <table class= "propiedades"  id="tblDatos">  
+    <table class= "table table-bordered table-striped table-hover"  id="tblDatos">  
         <thead>
             <tr>
 
@@ -71,12 +71,12 @@ incluirTemplate('header');
                 <form method="POST" class="w-100">
 
                 <input type="hidden" name="cod_curso" value="<?php echo $curso['cod_curso'];?>">
-                <input type="submit"class="boton-eliminar"value="Eliminar">
+                <input type="submit"class="btn btn-outline-danger"value="Eliminar">
                 </form>
 
                  <!--Actualizar-->
                 <a href="admin/cursos/actualizar.php?cod_curso=<?php echo $curso['cod_curso'];?>" 
-                class="boton-Actualizar">Actualizar</a>
+                class="btn btn-primary">Actualizar</a>
                 </td>
             </tr>
             <?php  endwhile;?>
