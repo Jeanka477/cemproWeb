@@ -93,7 +93,7 @@ function confirmation(){
 
 
 
-    <table  class= "table table-bordered table-striped table-hover">  
+    <table  class= "table table-bordered table-striped table-hover" id="tblDatos">  
         <thead>
             <tr>
 
@@ -148,6 +148,7 @@ function confirmation(){
             <?php  endwhile;?>
         </tbody>
 </table>
+<div id="paginador" class=""></div>
  <!--<a href="/admin/proyectos/crear.php" class="boton bton-ver-propiedades">Crear una nuevo proyecto</a>
 
 
@@ -206,6 +207,7 @@ mysqli_close($db);
 
    
 <link href="/BizPage/assets/css/style.css" rel="stylesheet">
+<script src="/BizPage/assets/js/paje.js" ></script>
 <script src="/bootstrap/js/bootstrap.bundle.js"></script>
         
     </body>

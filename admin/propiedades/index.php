@@ -96,7 +96,7 @@ function confirmation(){
 
 
 
-    <table class= "table table-bordered table-striped table-hover">  
+    <table class= "table table-bordered table-striped table-hover" id="tblDatos">  
         <thead>
             <tr>
 
@@ -148,12 +148,16 @@ function confirmation(){
             
         </tbody>
 </table>
+
+<div id="paginador" class=""></div>
  
 
 </main>
 
 
 <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+<!--Este script es el de la paginacion -->
+<script src="/BizPage/assets/js/paje.js" ></script>
 <link href="/BizPage/assets/css/style.css" rel="stylesheet">
 </body>
 

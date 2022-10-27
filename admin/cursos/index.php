@@ -41,7 +41,7 @@ incluirTemplate('header');
 
 
 
-    <table class= "propiedades">  
+    <table class= "propiedades"  id="tblDatos">  
         <thead>
             <tr>
 
@@ -84,9 +84,11 @@ incluirTemplate('header');
             
         </tbody>
 </table>
+<div id="paginador" class=""></div>
  
 
 </main>
+<script src="/BizPage/assets/js/paje.js" ></script>
 <link href="/BizPage/assets/css/style.css" rel="stylesheet">
 
 
