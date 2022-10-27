@@ -68,7 +68,7 @@ incluirTemplate('header');
 <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 
 </head>
-<body style="background-color:blue;">
+<body>
     
 
 <script>    
@@ -92,11 +92,20 @@ function confirmation(){
         <?php endif; ?>
 
 
+        <div class="container-fluid">
+        <form class="d-flex">
+            <input class="form-control me-2 light-table-filter" data-table="table_id" type="text" placeholder="Buscar un Proyecto">
+            <hr>
+        </form>
+        </div>
+
+        <br>
 
 
+    <!-- <table  class= "table table-bordered table-striped table-hover table_id"> -->
 
 
-    <table class= "table table-bordered table-striped table-hover" id="tblDatos">  
+    <table  class= "table table-bordered table-striped table-hover table_id" id="tblDatos">  
         <thead>
             <tr>
 
@@ -159,6 +168,9 @@ function confirmation(){
 <!--Este script es el de la paginacion -->
 <script src="/BizPage/assets/js/paje.js" ></script>
 <link href="/BizPage/assets/css/style.css" rel="stylesheet">
+<!--Este script es el del buscador -->
+<script src="/BizPage/assets/js/buscador.js"></script>
+        
 </body>
 
 <?php

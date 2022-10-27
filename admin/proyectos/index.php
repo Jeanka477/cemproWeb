@@ -90,10 +90,20 @@ function confirmation(){
 
 
 
+        <div class="container-fluid">
+        <form class="d-flex">
+            <input class="form-control me-2 light-table-filter" data-table="table_id" type="text" placeholder="Buscar un Proyecto">
+            <hr>
+        </form>
+        </div>
+
+        <br>
 
 
+    <!-- <table  class= "table table-bordered table-striped table-hover table_id"> -->
 
-    <table  class= "table table-bordered table-striped table-hover" id="tblDatos">  
+
+    <table  class= "table table-bordered table-striped table-hover table_id" id="tblDatos">  
         <thead>
             <tr>
 
@@ -209,5 +219,7 @@ mysqli_close($db);
 <link href="/BizPage/assets/css/style.css" rel="stylesheet">
 <script src="/BizPage/assets/js/paje.js" ></script>
 <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+<!--Este script es el del buscador -->
+<script src="/BizPage/assets/js/buscador.js"></script>
         
     </body>
