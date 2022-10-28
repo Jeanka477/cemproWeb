@@ -100,6 +100,10 @@ function confirmation(){
         </div>
 
         <br>
+        <a href="includes/reporte.php" class="btn btn-primary"><b>PDF</b> </a>
+		</div>
+		<br>
+
 
 
     <!-- <table  class= "table table-bordered table-striped table-hover table_id"> -->
