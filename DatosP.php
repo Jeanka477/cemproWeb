@@ -1,25 +1,25 @@
-<?php 
+<?php
 
-require '../cemproWeb2/includes/app.php';
+require 'includes/app.php';
 $db =conectarDB();
 
-
-$errores = [];
-
-// $cod_curso = '';
-$monto_solicitar = '';
-$nombre_cliente = '';
-$fecha_nac = '';
-$edad = '';
-$escolaridad = '';
-$estado_civil = '';
-$num_matrimonios = '';
-$cedula = '';
-$profesion = '';
-$direccion = '';
+ incluirTemplate('header');
 
 
-if ($_SERVER['REQUEST_METHOD'] ==='POST'){
+ $errores = [];
+
+ $monto_solicitar = '';
+ $nombre_cliente = '';
+ $fecha_nac = '';
+ $edad = '';
+ $escolaridad = '';
+ $estado_civil = '';
+ $num_matrimonios = '';
+ $cedula = '';
+ $profesion = '';
+ $direccion = '';
+
+ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
 
   $monto_solicitar =  mysqli_real_escape_string( $db, $_POST['monto_solicitar']);
@@ -33,21 +33,24 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
   $profesion =  mysqli_real_escape_string( $db, $_POST['profesion']);
   $direccion =  mysqli_real_escape_string( $db, $_POST['direccion']);
 
-
-  // asignar files hacia una variable 
-
- 
-
-
   if(empty($errores)){
-
 // insertar en la base de datos 
-$query =" INSERT INTO formularios_fiador (monto_solicitar, nombre_cliente, fecha_nac, edad, escolaridad, estado_civil, num_matrimonios, 
-cedula, profesion, direccion)  
+$query =" INSERT INTO formularios_hipoteca (monto_solicitar, nombre_cliente, fecha_nac, edad, escolaridad, estado_civil, num_matrimonios, 
+cedula, profesion, direccion, provincia, canton, telefono, otro_telefono, companero, lugar_trabajo,
+familiar_ext, direc_fam, tel_familiar, nombre_emp, direc_emp, tipo_actividad, num_emp, servicio, motivo_origen, 
+dinero_inicial, local_propio, prop_local, tel_prop, uso_local, pago_alquier, clientes, cant_clientes, mes_bueno, ultimo_mes,
+
+
+nombre_fiador, apellido1_fiador, apellido2_fiador, cedula_fiador, trabajo_fiador, tel_fiador, direc_fiador, salarioB_fiador)  
 
 
 VALUES('$monto_solicitar', '$nombre_cliente', '$fecha_nac', '$edad', '$escolaridad', '$estado_civil', '$num_matrimonios', 
-'$cedula', '$profesion', '$direccion')";
+'$cedula', '$profesion', '$direccion', '$provincia', '$canton', '$telefono', '$otro_telefono', '$companero', '$lugar_trabajo', 
+'$familiar_ext', '$direc_fam', '$tel_familiar', '$nombre_emp', '$direc_emp', '$tipo_actividad', '$num_emp', '$servicio', '$motivo_origen',
+'$dinero_inicial', '$local_propio', '$prop_local', '$tel_prop', '$uso_local', '$pago_alquier', '$clientes', '$cant_clientes', '$mes_bueno', '$ultimo_mes',
+
+
+'$nombre_fiador', '$apellido1_fiador', '$apellido2_fiador', '$cedula_fiador', '$trabajo_fiador', '$tel_fiador', '$direc_fiador', '$salarioB_fiador')";
 
 
 
@@ -66,20 +69,24 @@ VALUES('$monto_solicitar', '$nombre_cliente', '$fecha_nac', '$edad', '$escolarid
 $resultado = mysqli_query($db, $query);
 if($resultado){
   header('location: /admin?resultado=1');
-}
+              }
 
-  }
-}
+        }  
+ }
 
  ?>
+
 <br><br><br><br>
+
+
     <main class="contenedor seccion">
         
 
+
+
+
         <h2>Formulario para solicitud de prestamos</h2>
-
-
-        <?php foreach($errores as $error):?>
+       <?php foreach($errores as $error):?>
         <div class="alerta error">
         <?php echo $error; ?>
         </div>
@@ -153,37 +160,168 @@ if($resultado){
              <textarea id="direccion"  name="direccion"placeholder="Escriba una direccion "cols="80" rows="5" ><?php echo $direcccion; ?></textarea>
             <br>
 
-            <!-- <label for="Provincia">Provincia</label>
-            <select name="select" id="provincia">
-                <option value="value"selected>Seleccione</option>
-                <option value="value" >San José</option>
-                <option value="value" >Heredia</option>
-                <option value="value" >Alajuela</option>
-                <option value="value" >Guanacaste</option>
-                <option value="value" >Puntarenas</option>
-                <option value="value" >Limón</option>
-                <option value="value" >Cartago </option>
+
+            <label for="nombre">Cantón</label>
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Tu nombre" id="nombre">
+
+
+            <label for="Provincia">Provincia</label>
+            <select class="form-control w-25 aling text-center" name="select" id="provincia">
+                <option class="form-control w-25 aling text-center" value="value1"selected>Seleccione</option>
+                <option value="value2" >San José</option>
+                <option value="value2" >Heredia</option>
+                <option value="value3" >Alajuela</option>
+                <option value="value3" >Guanacaste</option>
+                <option value="value2" >Puntarenas</option>
+                <option value="value2" >Limón</option>
+                <option value="value2" >Cartago </option>
               </select>
 
-            <label for="canton">Cantón</label>
-            <input type="text" placeholder="Tu canton" id="canton" name="canton" value="<?php  $canton; ?>">
 
-
-            
             <label for="nombre">Telefono propio</label>
-            <input type="text" placeholder="Tu nombre" id="nombre">
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Tu nombre" id="nombre">
 
 
             <label for="nombre">Otro contacto</label>
-            <input type="text" placeholder="Tu nombre" id="nombre">    -->
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Tu nombre" id="nombre">   
          </fieldset>
 
-         <input class="btn btn-primary" type="submit" value="Crear formulario" >
+         <!--Datos familiares-->
+         <fieldset class="datos-familiares">
+            <legend>Datos Familiares</legend>
+            <label for="nombreconyugue">Nombre del conyugue o compañer@</label>
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Nombre de su pareja" id="nombreconyugue">
+            <br>
+
+            <label  for="trabajo">Lugar de trabajo</label>
+           
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Lugar donde labora" id="trabajo">
+
+            <label for="telefono">Telefono</label>
+            <input  class="form-control w-25 aling text-center" type="text" placeholder="Telefono" id="telefono">
+            <br>
+
+            <label for="nombre-familiar">Nombre de familiar que no vive con usted:</label>
+            <input  class="form-control w-25 aling text-center" type="text" placeholder="Nombre Completo" id="nombre-familiar">
+            <br>
+            
+            <label for="direccion">Dirección</label>
+            <input  class="form-control w-25 aling text-center" type="text" placeholder="Dirección exacta" id="direccion">
+
+            <label for="telefono">Telefono</label>
+            <input  class="form-control w-25 aling text-center" type="text" placeholder="Telefono" id="telefono">
+        </fieldset>
+
+
+          <!--Datos de la micro empresa-->
+          <fieldset class="datos-familiares">
+            <legend>Datos de la microempresa</legend>
+
+
+            <label for="nombre">Nombre de la microempresa</label>
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Nombre" id="nombre">  
+            <br>
+
+            <label for="direccion">Dirección</label>
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Dirección exacta" id="direccion">
+            <br>
+
+            <label>Que tipo de Actividad realiza:</label>
+            <br>
+            <textarea name="textarea" rows="3" cols="80" placeholder="Escriba la actividad que realiza su microempresa"></textarea>
+
+            <br>
+            <label for="nEmpleados">Números de empleados</label>
+             <input class="form-control w-25 aling text-center type=" type="number"  id="empleados"> 
+             <br>
+
+             <label for="actividadRealizada">Que produce, vendeo servicio brinda:</label>
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Servicio brindado" id="nombre">  
+            <br>
+           
+            <label for="motivoActividad">Motivo de inicio de la actividad:</label>
+            <input class="form-control w-25 aling text-center" type="text" placeholder="motivoActividad" id="motivoActividad">  
+
+            <label for="motivoActividad">¿Hace cuanto?:</label>
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Hace cuanto se realiza la actividad" id="motivoActividad"> 
+            <br>
+
+            <label for="motivoActividad">¿Con cuánto Dinero inicio?:</label>
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Hace cuanto se realiza la actividad" id="motivoActividad">
+            <br>
+
+            <label for="motivoActividad">¿Con cuánto Dinero inicio?:</label>
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Escriba el monto" id="motivoActividad">
+            <br>
+
+            <label for="motivoActividad">¿El local donde realiza la actividad es propio?:</label>
+            <input  type="checkbox" name="peliculas"> SI
+            <input type="checkbox" name="deportes"> NO
+            <br>
+            <br>
+            <label for="motivoActividad">¿A nombre de quien está el local?:</label>
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Nombre del propietario" id="motivoActividad">
+
+            <label for="telefono">Telefono</label>
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Telefono" id="telefono">
+            <br>
+
+         <label for="motivoActividad">¿Hace cuanto utiliza el local?:</label>
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Aproximado en días, meses o años." id="motivoActividad">
+
+            <label for="motivoActividad">¿Cuánto paga de alquiler?:</label>
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Cifra en colones" id="motivoActividad">
+            <br>
+
+            <label for="motivoActividad">¿Quiénes son sus clientes?:</label>
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Ejem agricultores" id="motivoActividad">
+            <br>
+            <label for="motivoActividad">Número de clientes:</label>
+            <input class="form-control w-25 aling text-center" type="number"  id="empleados"> 
+            <br>
+
+            <label for="motivoActividad">¿Cuánto vende o recupera?:</label>
+            <label for="motivoActividad">¿Meses buenos?:</label>
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Cifra en colones" id="motivoActividad">
+
+            <label for="motivoActividad">¿Meses malos?:</label>
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Cifra en colones" id="motivoActividad">
+            
+            <label for="motivoActividad">¿Último mes?:</label>
+            <input class="form-control w-25 aling text-center" type="text" placeholder="Cifra en colones" id="motivoActividad">
+         </fieldset>
+
+
+
+         <!--Datos hipoteca-->
+         <fieldset class="datos-familiares">
+            <legend>Datos de la Hipoteca </legend>
+
+
+            <label for="nombreconyugue">Número de finca</label>
+            <input class="form-control w-25 aling text-center" type="text"  id="nombreconyugue">
+            <br>
+
+            <label for="nombreconyugue">Numero de plano </label>
+            <input class="form-control w-25 aling text-center" type="text"  id="nombreconyugue">
+            <br>
+            
+            <label for="nombreconyugue">Tiene Hipoteca en primer grado?</label>
+            <input class="form-control w-25 aling text-center" type="text"  id="nombreconyugue">
+            <br>
+
+            <label for="nombreconyugue">Direccion exacta de la propiedad </label>
+            <input class="form-control w-25 aling text-center" type="text"  id="nombreconyugue">
+            <br>
+
+            <label for="trabajo">Tiene Construcciones?</label>
+            <input  type="checkbox" name="construc"> SI
+            <input type="checkbox" name="construc"> NO
+          </fieldset>
+          <input   class="btn btn-primary" type="submit" value="Enviar formulario" >
         </form>
-
-        
-
-        <!-- <a class="boton-celeste" href="hdatosF.php">Siguiente</a> -->
+<br>
+       
     </main>
 
     <link href="/BizPage/assets/css/style.css" rel="stylesheet">
