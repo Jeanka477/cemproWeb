@@ -31,7 +31,7 @@ $auth = $_SESSION['login'] ?? false;
         <a href="/">
                    <!-- <img src="build/img/logo.svg" alt="Logotipo de cemprodeca">-->
 
-                   <img loading="lazy" src="BizPage/assets/img/CEMPRODECA.png" alt="anincio" class="logoCemprodeca">
+                   <img loading="lazy" src="../../BizPage/assets/img/CEMPRODECA.png" alt="anincio" class="logoCemprodeca">
                 </a>
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -46,11 +46,11 @@ $auth = $_SESSION['login'] ?? false;
                 </ul>
               </li>
               
-              <li><a class="nav-link scrollto" href="propiedades.php">Propiedades</a></li>
-              <li><a class="nav-link scrollto" href="proyectos.php">Proyectos</a></li>
-              <li><a class="nav-link scrollto " href="cursos.php">Cursos</a></li>
+              <li><a class="nav-link scrollto" href="../../propiedades.php">Propiedades</a></li>
+              <li><a class="nav-link scrollto" href="../../proyectos.php">Proyectos</a></li>
+              <li><a class="nav-link scrollto " href="../../cursos.php">Cursos</a></li>
               <li><a class="nav-link scrollto" href="#team">Team</a></li>
-              <li><a class="nav-link  " href="login.php">Iniciar Sesión</a></li>
+              <li><a class="nav-link  " href="../../login.php">Iniciar Sesión</a></li>
 
               <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
             </ul>
