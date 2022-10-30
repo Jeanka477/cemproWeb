@@ -97,12 +97,17 @@ function confirmation(){
         </form>
         </div>
 
+
+
         <br>
+        <a href="/pdf-proyecto.php" class="btn btn-primary"><b>PDF</b> </a>
+		</div>
+		<br>
 
 
     <!-- <table  class= "table table-bordered table-striped table-hover table_id"> -->
 
-
+<br>
     <table  class= "table table-bordered table-striped table-hover table_id" id="tblDatos">  
         <thead>
             <tr>

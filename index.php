@@ -60,8 +60,8 @@ require 'includes/app.php';
             <ul>
             <li class="dropdown"><a href="#"><span>Solicitar Crédito</span> <i class="bi bi-chevron-down"></i></a>
                 <ul>
-                  <li><a href="requisitoHipoteca.php">Por Hipoteca</a></li>
-                  <li><a href="RequisitoFiador.php">Por Fiador</a></li>
+                <li><a href="../../requisitoHipoteca.php">Por Hipoteca</a></li>
+                  <li><a href="../../RequisitoFiador.php">Por Fiador</a></li>
                   </li>
                 </ul>
               </li>

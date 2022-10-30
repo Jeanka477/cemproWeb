@@ -100,7 +100,7 @@ function confirmation(){
         </div>
 
         <br>
-        <a href="includes/reporte.php" class="btn btn-primary"><b>PDF</b> </a>
+        <a href="/pdf.php" class="btn btn-primary"><b>PDF</b> </a>
 		</div>
 		<br>
 
