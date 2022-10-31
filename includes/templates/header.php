@@ -49,10 +49,10 @@ $auth = $_SESSION['login'] ?? false;
               <li><a class="nav-link scrollto" href="../../propiedades.php">Propiedades</a></li>
               <li><a class="nav-link scrollto" href="../../proyectos.php">Proyectos</a></li>
               <li><a class="nav-link scrollto " href="../../cursos.php">Cursos</a></li>
-              <li><a class="nav-link scrollto" href="#team">Team</a></li>
+              <!-- <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
               <li><a class="nav-link  " href="../../login.php">Iniciar Sesión</a></li>
-
-              <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+<!-- 
+              <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
           </nav><!-- .navbar -->
