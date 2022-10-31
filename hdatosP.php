@@ -138,7 +138,7 @@ if($resultado){
 
 
 
-        <h2>Formulario para solicitud de prestamos</h2>
+        <h2>Formulario para solicitud de préstamos</h2>
        <?php foreach($errores as $error):?>
         <div class="alerta error">
         <?php echo $error; ?>
@@ -193,13 +193,13 @@ if($resultado){
                 <option value="Soltero" >Soltero</option>
                 <option value="Casado" >Casado</option>
                 <option value="Divorciado">Divorciado</option>
-                <option value=">Union libre">Union libre</option>
+                <option value=">Union libre">Unión libre</option>
               </select>
 
               <label for="num_matrimonios">Números de Matrimonios</label>
              <input class="form-control w-25 aling text-center" type="number"  id="num_matrimonios" min="0" max="20" name="num_matrimonios" value="<?php echo $num_matrimonios; ?>"> 
 
-             <label for="cedula">Cedula</label>
+             <label for="cedula">Cédula</label>
              <input class="form-control w-25 aling text-center" type="text" placeholder="Tu cedula" id="cedula" name="cedula" value="<?php echo $cedula; ?>">
 
              <label for="profesion">Profesión u oficio</label>
@@ -209,7 +209,7 @@ if($resultado){
             
 
               
-             <legend>Direccion exacta</legend>
+             <legend>Dirección exacta</legend>
              <textarea id="direccion"  name="direccion"placeholder="Escriba una direccion "cols="80" rows="5" ><?php echo $direccion; ?></textarea>
             <br>
 
@@ -237,7 +237,7 @@ if($resultado){
               <label for="canton">Cantón</label>
             <input class="form-control w-25 aling text-center" type="text" placeholder="Digite el cantón" id="canton" name="canton" value="<?php echo $canton; ?>">
 
-            <label for="telefono">Telefono propio</label>
+            <label for="telefono">Teléfono propio</label>
             <input class="form-control w-25 aling text-center" type="text" placeholder="Tu nombre" id="nombre" name="telefono" value="<?php echo $telefono; ?>">
 
 
@@ -248,14 +248,14 @@ if($resultado){
          <!--Datos familiares-->
          <fieldset class="datos-familiares">
             <legend>Datos Familiares</legend>
-            <label for="companero">Nombre del conyugue o compañer@</label>
+            <label for="companero">Nombre del cónyugue o compañer@</label>
             <input class="form-control w-25 aling text-center" type="text" placeholder="Nombre de su pareja" id="companero" name="companero" value="<?php echo $companero; ?>">
             <br>
 
             <label  for="lugar_trabajo">Lugar de trabajo</label>
             <input class="form-control w-25 aling text-center" type="text" placeholder="Lugar donde labora" id="lugar_trabajo" name="lugar_trabajo" value="<?php echo $lugar_trabajo; ?>">
 
-            <label for="tel_familiar">Telefono de familiar</label>
+            <label for="tel_familiar">Teléfono de familiar</label>
             <input  class="form-control w-25 aling text-center" type="text" placeholder="Telefono" id="tel_familiar" name="tel_familiar" value="<?php echo $tel_familiar; ?>">
             <br>
 
@@ -267,7 +267,7 @@ if($resultado){
             <br>
             <textarea id="direc_fam"  name="direc_fam"placeholder="Escriba la direccion "cols="80" rows="5" ><?php echo $direc_fam; ?></textarea>
             <br>
-            <label for="tel_familiar">Telefono</label>
+            <label for="tel_familiar">Teléfono</label>
             <input  class="form-control w-25 aling text-center" type="text" placeholder="Telefono" id="tel_familiar" name="tel_familiar" value="<?php echo $tel_familiar; ?>">
         </fieldset>
 
@@ -285,7 +285,7 @@ if($resultado){
             <input class="form-control w-25 aling text-center" type="text" placeholder="Dirección exacta" id="direc_emp" name="direc_emp" value="<?php echo $direc_emp; ?>">
             <br>
 
-            <label>Que tipo de Actividad realiza:</label>
+            <label>Qué tipo de actividad realiza:</label>
             <br>
             <textarea id="tipo_actividad"  name="tipo_actividad"placeholder="Escriba la direccion "cols="80" rows="5" ><?php echo $tipo_actividad; ?></textarea>
 
@@ -294,18 +294,18 @@ if($resultado){
              <input class="form-control w-25 aling text-center type=" type="number"  id="num_emp" name="num_emp" value="<?php echo $num_emp; ?>"> 
              <br>
 
-             <label for="servicio">Que produce, vendeo servicio brinda:</label>
+             <label for="servicio">Qué produce, vende o servicio brinda:</label>
             <input class="form-control w-25 aling text-center" type="text" placeholder="Servicio brindado" id="servicio" name="servicio" value="<?php echo $servicio; ?>">  
             <br>
            
             <label for="motivo_origen">Motivo de inicio de la actividad:</label>
             <input class="form-control w-25 aling text-center" type="text" placeholder="motivoActividad" id="motivo_origen" name="motivo_origen" value="<?php echo $motivo_origen; ?>">  
 
-            <label for="fecha_inicio">¿Hace cuanto?:</label>
+            <label for="fecha_inicio">¿Hace cuánto?:</label>
             <input class="form-control w-25 aling text-center" type="date" placeholder="Hace cuanto se realiza la actividad" id="fecha_inicio" name="fecha_inicio" value="<?php echo $fecha_inicio; ?>"> 
             <br>
 
-            <label for="dinero_inicial">¿Con cuánto Dinero inicio?:</label>
+            <label for="dinero_inicial">¿Con cuánto dinero inició?:</label>
             <input class="form-control w-25 aling text-center" type="number" placeholder="dinero inicial" id="dinero_inicial" name="dinero_inicial" value="<?php echo $dinero_inicial; ?>">
             <br>
 
@@ -317,14 +317,14 @@ if($resultado){
              </select>
             <br>
             <br>
-            <label for="prop_local">¿A nombre de quien está el local?:</label>
+            <label for="prop_local">¿A nombre de quién está el local?:</label>
             <input class="form-control w-25 aling text-center" type="text" placeholder="Nombre del propietario" id="prop_local" name="prop_local" value="<?php echo $prop_local; ?>">
 
-            <label for="tel_prop">Telefono del propietario</label>
+            <label for="tel_prop">Teléfono del propietario</label>
             <input class="form-control w-25 aling text-center" type="text" placeholder="Telefono" id="tel_prop" name="tel_prop" value="<?php echo $tel_prop; ?>">
             <br>
 
-         <label for="uso_local">¿Hace cuanto utiliza el local?:</label>
+         <label for="uso_local">¿Hace cuánto utiliza el local?:</label>
             <input class="form-control w-25 aling text-center" type="date" placeholder="Aproximado en días, meses o años." id="uso_local" name="uso_local" value="<?php echo $uso_local; ?>">
 
             <label for="pago_alquier">¿Cuánto paga de alquiler?:</label>
@@ -359,12 +359,12 @@ if($resultado){
             <input class="form-control w-25 aling text-center" type="number"  id="numero_finca" name="numero_finca" value="<?php echo $numero_finca; ?>">
             <br>
 
-            <label for="numero_plano">Numero de plano </label>
+            <label for="numero_plano">Número de plano </label>
             <input class="form-control w-25 aling text-center"  type="number"  id="numero_plano" name="numero_plano" value="<?php echo $numero_plano; ?>">
             <br>
 
             
-            <label for="hipoteca_primerGrado">¿Tiene Hipoteca en primer grado?</label>
+            <label for="hipoteca_primerGrado">¿Tiene hipoteca en primer grado?</label>
             <select class="form-control w-25 aling text-center" name="hipoteca_primerGrado" id="hipoteca_primerGrado">
                 <option class="form-control w-25 aling text-center" value=""selected>Seleccione</option>
                 <option value="SI" >SI</option>
@@ -372,7 +372,7 @@ if($resultado){
              </select>
 
             <br>
-            <label for="direc_propiedad">Direccion Exacta </label>
+            <label for="direc_propiedad">Dirección Exacta </label>
             <br>
             <textarea id="direc_propiedad"  name="direc_propiedad"placeholder="Escriba la direccion "cols="80" rows="5" ><?php echo $direc_propiedad; ?></textarea>
             <br>

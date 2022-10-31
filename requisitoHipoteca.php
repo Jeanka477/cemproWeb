@@ -14,7 +14,7 @@ require 'includes/app.php';
     <main class="contenedor seccion">
         <div>
 
-        <h2>Requisitos para solicitar un préstamo con una hipoteca como garantia</h2>
+        <h2>Requisitos para solicitar un préstamo con una hipoteca como garantía</h2>
 
             <ul>
                 <li>Requisito 1</li>

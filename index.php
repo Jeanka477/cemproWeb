@@ -288,7 +288,7 @@ require 'includes/app.php';
     <!-- ======= Call To Action Section ======= -->
     <section id="call-to-action">
       <div class="container text-center" data-aos="zoom-in">
-        <h3>Popiedades en Venta</h3>
+        <h3>Propiedades en Venta</h3>
         <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <a class="cta-btn" href="propiedades.php">Ver Todas las Propiedades</a>
       </div>
@@ -299,7 +299,7 @@ require 'includes/app.php';
 
     <section id="call-to-action">
       <div class="container text-center" data-aos="zoom-in">
-        <h3>Poyectos que hemos Financiado</h3>
+        <h3>Proyectos Financiados</h3>
         <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <a class="cta-btn" href="proyectos.php">Ver Todos los Proyectos</a>
       </div>
@@ -667,10 +667,10 @@ require 'includes/app.php';
 
           <div class="col-lg-3 col-md-6">
             <div class="member" data-aos="fade-up" data-aos-delay="100">
-             <img src="BizPage/assets/img/jeankk.jpg" class="img-fluid" alt="">
+             <img src="BizPage/assets/img/Jeank.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>Jean Carlos</h4>
+                  <h4>Jean Carlos Quirós</h4>
                   <span>Chief Executive Officer</span>
                   <div class="social">
                     <a href=""><i class="bi bi-twitter"></i></a>
