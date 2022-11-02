@@ -113,7 +113,7 @@ function confirmation(){
 
     <table  class= "table table-bordered table-striped table-hover table_id" id="tblDatos">  
         <thead>
-            <tr>
+        <tr style="background-color: #bdffdf;">
 
             <th>Codigo Propiedad</th>
             <th>Precio</th>

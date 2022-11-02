@@ -40,6 +40,10 @@ incluirTemplate('header');
             <div class="botones-admin">
                 <a class="btn btn-success" href="admin/cursos/index.php"> Agregar un curso</a>
             </div>
+            <br>
+            <div class="botones-admin">
+                <a class="btn btn-success" href="admin\formularios_fiador\index.php"> Formularios</a>
+            </div>
 
     <table class= "propiedades">  
         <thead>

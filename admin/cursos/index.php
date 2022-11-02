@@ -43,7 +43,7 @@ incluirTemplate('header');
 
     <table class= "table table-bordered table-striped table-hover"  id="tblDatos">  
         <thead>
-            <tr>
+        <tr style="background-color: #bdffdf;">
 
             <th>Código Curso</th>
             <th>Nombre del Curso</th>
