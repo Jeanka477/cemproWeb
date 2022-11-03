@@ -92,9 +92,6 @@ incluirTemplate('header');
         <fieldset class="login">
             <legend>Email y Password</legend>
 
-
-
-
             <label for="email">Email</label>
             <input class="input" type="email" name="email" placeholder="Tu Email" id="email">
 
@@ -106,6 +103,12 @@ incluirTemplate('header');
         </fieldset>
 
     </form> 
+<br>
+    <div    " >
+
+ 
+   <a href="olvideContrasena.php" class="btn btn-success" > Olvide mi password </a>
+    </div>
 
 
 
