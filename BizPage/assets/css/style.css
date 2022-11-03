@@ -773,16 +773,21 @@ section {
 
 .contenido-anuncio{
   padding: 2rem;
+  
 }
 
 .contenedor-anuncios{
   display: grid;
     gap: 2rem;
     grid-template-columns: repeat(3,1fr);
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .anuncio{
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255, 1);
   border: 1px rgb(114, 114, 114);
   box-shadow: 1px 1px 9px;
   display: block;
@@ -791,6 +796,7 @@ section {
 
 .contenido-anuncio{
   padding: 2rem;
+  text-align: center;
   
 }
 h3, p{

@@ -100,9 +100,10 @@ function confirmation(){
 
 
         <br>
-        <a href="/pdf-proyecto.php" class="btn btn-secondary btn-lg disabled"<b>PDF</b> </a>
+        <a href="/pdf-fiador.php" class="btn btn-primary"><b>PDF</b> </a>
 		</div>
 		<br>
+
 
 
     <!-- <table  class= "table table-bordered table-striped table-hover table_id"> -->

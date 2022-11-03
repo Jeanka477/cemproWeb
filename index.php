@@ -243,26 +243,26 @@ require 'includes/app.php';
       <div class="container" data-aos="fade-up">
 
         <header class="section-header wow fadeInUp">
-          <h3>Services</h3>
-          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus, ad pro quaestio laboramus. Ei ubique vivendum pro. At ius nisl accusam lorenta zanos paradigno tridexa panatarel.</p>
+          <h3>Servicios</h3>
+          <p>En CEMPRODECA nos preocupamos por nuestros clientes y asociados. Por esta razón contamos con una variedad de facilidades y oportunidades para brindarle a nuestros clientes una mejor oportunidad de superarse.</p>
         </header>
 
         <div class="row">
 
           <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="bi bi-briefcase"></i></div>
-            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+            <h4 class="title"><a href="">Apoyo a la comunidad</a></h4>
+            <p class="description">Nos caracterizamos por estar invlucrados con aquellos proyectos de pequeños y medianos emprendedores.</p>
           </div>
           <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
             <div class="icon"><i class="bi bi-card-checklist"></i></div>
-            <h4 class="title"><a href="">Dolor Sitema</a></h4>
-            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+            <h4 class="title"><a href="">Créditos</a></h4>
+            <p class="description">Contamos con opciones de créditos. Acceda a ellos de una manera sencilla y con un bajo porcentaje de intereses.</p>
           </div>
           <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="300">
             <div class="icon"><i class="bi bi-bar-chart"></i></div>
-            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+            <h4 class="title"><a href="">Cursos</a></h4>
+            <p class="description">Servimos como mediador entre todas aquellas personas que deseen adquirir nuevos conocimientos y las organizaciones que ofrecen la oportunidad de aprendizaje.</p>
           </div>
           <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
             <div class="icon"><i class="bi bi-binoculars"></i></div>
@@ -878,7 +878,7 @@ require 'includes/app.php';
         Licensing information: https://bootstrapmade.com/license/
         Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=BizPage
       -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Desarrollado por <a href="https://bootstrapmade.com/">Universidad Nacional de Costa Rica</a>
       </div>
     </div>
   </footer><!-- End Footer -->
