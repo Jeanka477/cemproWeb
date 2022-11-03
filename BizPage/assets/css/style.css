@@ -782,7 +782,7 @@ section {
 }
 
 .anuncio{
-  background-color: rgb(235, 235, 227);
+  background-color: rgb(255, 255, 255);
   border: 1px rgb(114, 114, 114);
   box-shadow: 1px 1px 9px;
   display: block;
@@ -847,10 +847,13 @@ h3, p{
 /* Login
 --------------------------------*/
 .login{
-  background-color: #a3dcef;
+  /* background-color: #47c1d1; */
+  background: rgba(0, 0, 0, 0.5);
   box-shadow: 5px 5px 5px;
   padding: 80px;
   border-radius: 7px;
+  width: 400px;
+  margin: 0 auto
 }
 
 .input{
@@ -870,10 +873,14 @@ h3, p{
   border: none;
   width: 60%;
   border-radius: 5px;
-  margin-right: 0px;
+  margin-right: 50px;
   text-decoration: none;
 
 }
+
+
+
+
 
 .boton-login:hover{
   background-color: #011b15;
@@ -882,6 +889,14 @@ h3, p{
 }
 
 
+.legendLogin{
+  color: white;
+}
+
+
+.labelLogin{
+  color: white;
+}
 
 
 .botones-admin{
@@ -898,6 +913,9 @@ h3, p{
     border-radius: 12px;
 }
 
+.imagenl{
+  background-image: url(BizPage/assets/img/zana.jpg)
+}
 
 
 

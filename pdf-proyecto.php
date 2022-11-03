@@ -6,6 +6,7 @@ class PDF extends FPDF
 // Cabecera de página
 function Header()
 {
+    $this->Image('BizPage\assets\img\CEMPRODECA.png', 5, 5, 30); 
     // Arial bold 15
     $this->SetFont('Arial','B',18);
     // Movernos a la derecha

@@ -27,6 +27,7 @@ function Header()
 // Pie de página
 function Footer()
 {
+    $this->Image('BizPage\assets\img\CEMPRODECA.png', 5, 5, 30); 
     // Posición: a 1,5 cm del final
     $this->SetY(-15);
     // Arial italic 8

@@ -70,13 +70,16 @@ if ($_SERVER['REQUEST_METHOD']==='POST'){
 
 incluirTemplate('header');
 ?>
+<div style="background-size:cover; background-repeat: no-repeat;  background-image: url(BizPage/assets/img/CemproWebInicio.jpg);" >
+<br>
+<br>
 <br>
 <br>
 <br>
 <br>
 
 <main class="contenedor seccion contenido-centrado">
-    <h1>Iniciar Sesión</h1>    
+    <!-- <h1>Iniciar Sesión</h1>     -->
 
 
 
@@ -90,21 +93,22 @@ incluirTemplate('header');
 
     <form method="POST" class="formulario">
         <fieldset class="login">
-            <legend>Email y Password</legend>
+            <div class="login-contenedor">
+            <legend class="legendLogin">Email y Password</legend>
 
-            <label for="email">Email</label>
+            <label class="labelLogin" for="email">Email</label>
             <input class="input" type="email" name="email" placeholder="Tu Email" id="email">
 
-            <label for="password">Password</label>
+            <label class="labelLogin" for="password">Password</label>
             <input class="input" type="password" name="password" placeholder="Tu Password" id="password" >
 
             <input type="submit" value="Iniciar Sesión" class="boton-login">
-
+            </div>
         </fieldset>
 
     </form> 
 <br>
-    <div    " >
+    <div    >
 
  
    <a href="olvideContrasena.php" class="btn btn-success" > Olvide mi password </a>
@@ -115,5 +119,7 @@ incluirTemplate('header');
 
 </main>
 
+
 <link href="/BizPage/assets/css/style.css" rel="stylesheet">
     <?php incluirTemplate('footer');?>
+    </div>
