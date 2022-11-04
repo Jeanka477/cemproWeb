@@ -4,7 +4,7 @@ require 'includes/app.php';
 
 incluirTemplate('header');
  ?>
- 
+  <body style="background-color: #b5ffe545">
 <br>
 <br>
 <br>
@@ -22,6 +22,7 @@ incluirTemplate('header');
             ?>            
         
     </main>
+  </body>
 
     <link href="/BizPage/assets/css/style.css" rel="stylesheet">
     <?php incluirTemplate('footer');?>

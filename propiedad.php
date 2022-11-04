@@ -43,8 +43,8 @@ $propiedad = mysqli_fetch_assoc($resultado);
 
         <div class="resumen-propiedad ">
             
-        <p>Tamaño: <?php echo $propiedad['tamano']; ?></p>
-        <p class="precio">Precio: $<?php echo $propiedad['precio']; ?></p>
+        <h2>Tamaño: <?php echo $propiedad['tamano']; ?></h2>
+        <h2 class="precio">Precio: $<?php echo $propiedad['precio']; ?></h2>
           
 
             <?php echo $propiedad['descripcion']; ?>

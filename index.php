@@ -69,10 +69,10 @@ require 'includes/app.php';
               <li><a class="nav-link scrollto" href="propiedades.php">Propiedades</a></li>
               <li><a class="nav-link scrollto" href="proyectos.php">Proyectos</a></li>
               <li><a class="nav-link scrollto " href="cursos.php">Cursos</a></li>
-              <li><a class="nav-link scrollto" href="#team">Team</a></li>
+              
               <li><a class="nav-link  " href="login.php">Iniciar Sesión</a></li>
 
-              <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
           </nav><!-- .navbar -->
@@ -95,47 +95,47 @@ require 'includes/app.php';
           <div class="carousel-item active" style="background-image: url(BizPage/assets/img/CemproWebInicio.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">We are professional</h2>
+                <h2 class="animate__animated animate__fadeInDown">Somos Profesionales</h2>
                 <p class="animate__animated animate__fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <a href="nosotros.php" class="btn-get-started scrollto animate__animated animate__fadeInUp">Nuestra Historia</a>
               </div>
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url(BizPage/assets/img/zana.jpg)">
+          <div class="carousel-item" style="background-image: url(BizPage/assets/img/milpa.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">At vero eos et accusamus</h2>
+                <h2 class="animate__animated animate__fadeInDown">Apoyamos todo tipo de emprendimiento</h2>
                 <p class="animate__animated animate__fadeInUp">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
                 <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
               </div>
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/3.jpg)">
+          <div class="carousel-item" style="background-image: url(BizPage/assets/img/apicultura.jpg">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Temporibus autem quibusdam</h2>
+                <h2 class="animate__animated animate__fadeInDown">Apicultura</h2>
                 <p class="animate__animated animate__fadeInUp">Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
                 <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
               </div>
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/4.jpg)">
+          <div class="carousel-item" style="background-image: url(BizPage/assets/img/naranjal.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Nam libero tempore</h2>
+                <h2 class="animate__animated animate__fadeInDown">Cítricos</h2>
                 <p class="animate__animated animate__fadeInUp">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum.</p>
                 <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
               </div>
             </div>
           </div>
 
-          <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/5.jpg)">
+          <div class="carousel-item" style="background-image: url(BizPage/assets/img/FOTOhojancha.jpg)">
             <div class="carousel-container">
               <div class="container">
-                <h2 class="animate__animated animate__fadeInDown">Magnam aliquam quaerat</h2>
+                <h2 class="animate__animated animate__fadeInDown">Hojancha</h2>
                 <p class="animate__animated animate__fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
               </div>
@@ -159,7 +159,7 @@ require 'includes/app.php';
   <main id="main">
 
     <!-- ======= Featured Services Section Section ======= -->
-    <section id="featured-services">
+    <!-- <section id="featured-services">
       <div class="container">
         <div class="row">
 
@@ -183,15 +183,15 @@ require 'includes/app.php';
 
         </div>
       </div>
-    </section><!-- End Featured Services Section -->
+    </section>End Featured Services Section -->
 
     <!-- ======= About Us Section ======= -->
     <section id="about">
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <h3>About Us</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h3>Sobre nosotros</h3>
+          <p>Durante años nos hemos caracterizado por apyoyar el desarrollo de pequeños y medianos emprendedores.</p>
         </header>
 
         <div class="row about-cols">
@@ -214,10 +214,9 @@ require 'includes/app.php';
                <img src="BizPage/assets/img/about-plan.jpg" alt="" class="img-fluid">
                 <div class="icon"><i class="bi bi-brightness-high"></i></div>
               </div>
-              <h2 class="title"><a href="#">Our Plan</a></h2>
+              <h2 class="title"><a href="#">Nuestro Plan</a></h2>
               <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-              </p>
+              Ayudar a toda aquel emprendedor que superarse pero no cuenta con los recursos necesarios para lograrlo.</p>
             </div>
           </div>
 
@@ -255,7 +254,7 @@ require 'includes/app.php';
             <p class="description">Nos caracterizamos por estar invlucrados con aquellos proyectos de pequeños y medianos emprendedores.</p>
           </div>
           <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="bi bi-card-checklist"></i></div>
+            <div class="icon"><i class="bi bi-cash"></i></div>
             <h4 class="title"><a href="">Créditos</a></h4>
             <p class="description">Contamos con opciones de créditos. Acceda a ellos de una manera sencilla y con un bajo porcentaje de intereses.</p>
           </div>
@@ -264,7 +263,7 @@ require 'includes/app.php';
             <h4 class="title"><a href="">Cursos</a></h4>
             <p class="description">Servimos como mediador entre todas aquellas personas que deseen adquirir nuevos conocimientos y las organizaciones que ofrecen la oportunidad de aprendizaje.</p>
           </div>
-          <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
+          <!-- <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
             <div class="icon"><i class="bi bi-binoculars"></i></div>
             <h4 class="title"><a href="">Magni Dolores</a></h4>
             <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
@@ -278,7 +277,7 @@ require 'includes/app.php';
             <div class="icon"><i class="bi bi-calendar4-week"></i></div>
             <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
             <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-          </div>
+          </div> -->
 
         </div>
 
@@ -289,7 +288,7 @@ require 'includes/app.php';
     <section id="call-to-action">
       <div class="container text-center" data-aos="zoom-in">
         <h3>Propiedades en Venta</h3>
-        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p></p>
         <a class="cta-btn" href="propiedades.php">Ver Todas las Propiedades</a>
       </div>
     </section>
@@ -300,7 +299,6 @@ require 'includes/app.php';
     <section id="call-to-action">
       <div class="container text-center" data-aos="zoom-in">
         <h3>Proyectos Financiados</h3>
-        <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <a class="cta-btn" href="proyectos.php">Ver Todos los Proyectos</a>
       </div>
     </section><!-- End Call To Action Section -->
@@ -660,7 +658,7 @@ require 'includes/app.php';
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h3>Team</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <p>Estudiantes encargados del desarrollo de la plataforma</p>
         </div>
 
         <div class="row">
@@ -671,12 +669,12 @@ require 'includes/app.php';
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Jean Carlos Quirós</h4>
-                  <span>Chief Executive Officer</span>
+                  <span>Desarrollador</span>
                   <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
                   </div>
                 </div>
               </div>
@@ -689,12 +687,12 @@ require 'includes/app.php';
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Ariana Pérez</h4>
-                  <span>Product Manager</span>
+                  <span>Desarrollador</span>
                   <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
                   </div>
                 </div>
               </div>
@@ -707,12 +705,12 @@ require 'includes/app.php';
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Kerlin Carranza</h4>
-                  <span>CTO</span>
+                  <span>Desarrollador</span>
                   <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B50685842149&text&type=phone_number&app_absent=0"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/kerlyn.carranza.1/"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/kerlyn_cs20/"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
                   </div>
                 </div>
               </div>
@@ -725,12 +723,12 @@ require 'includes/app.php';
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Jorge Villalobos</h4>
-                  <span>Accountant</span>
+                  <span>Desarrollador</span>
                   <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
+                    <a href="https://api.whatsapp.com/send/?phone=%2B50684807024&text&type=phone_number&app_absent=0"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100012694808945"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/jorge_v26/"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
                   </div>
                 </div>
               </div>
@@ -822,44 +820,42 @@ require 'includes/app.php';
 
           <div class="col-lg-3 col-md-6 footer-info">
             <h3>CemproWeb</h3>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+            <p>Plataforma digital web desarrollada por estudiantes de la Universidad Nacional de Costa Rica en la carrera de Ingeniería de Sistemas de la Información, para la organizacion Centro de Promoción y Desarrollo Campesino CEMPRODECA.</p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Partes de la página</h4>
             <ul>
               <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Sobre nosotros</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Servicios</a></li>
+              
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
+            <h4>Contáctenos</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+            Provincia de Guanacaste<br>
+              Hojancha 51101<br>
+              Costa Rica <br>
+              <strong>Teléfono:</strong> +506 8855 7250<br>
+              <strong>Correo:</strong> cemprodeca@gmail.com<br>
             </p>
 
             <div class="social-links">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100063784601391" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="https://api.whatsapp.com/send/?phone=%2B50688557250&text&type=phone_number&app_absent=0" class="instagram"><i class="bi bi-whatsapp"></i></a>
+              
             </div>
 
           </div>
 
           <div class="col-lg-3 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+            <h4>Ubicación</h4>
+            <iframe <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4792.96789994426!2d-85.41782338316608!3d10.05850659033916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9fbb6c05e6dc73%3A0xb0b0e349b2990a84!2sCEMPRODECA%20Hojancha!5e1!3m2!1ses-419!2scr!4v1667517170218!5m2!1ses-419!2scr"
+               width="350" height="250" 
+              style="border-radius:3%;;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </form>
           </div>
 

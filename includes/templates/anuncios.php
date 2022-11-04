@@ -38,10 +38,10 @@ $resultado = mysqli_query($db, $query);
               <li><a class="nav-link scrollto" href="propiedades.php">Propiedades</a></li>
               <li><a class="nav-link scrollto" href="proyectos.php">Proyectos</a></li>
               <li><a class="nav-link scrollto " href="cursos.php">Cursos</a></li>
-              <li><a class="nav-link scrollto" href="#team">Team</a></li>
+              <!-- <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
               <li><a class="nav-link  " href="login.php">Iniciar Sesión</a></li>
 
-              <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+              <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
           </nav><!-- .navbar -->
@@ -54,12 +54,12 @@ $resultado = mysqli_query($db, $query);
 
 <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 </head>
-<div class="contenedor-anuncios">
+<div class="contenedor-anuncios"  >
     <?php while($propiedad = mysqli_fetch_assoc($resultado)): ?>
             <div class="anuncio">
 
 
-            <img  class="imagen" loading="lazy" src="/imagenes/<?php echo $propiedad['imagen']; ?>" alt="anuncio">
+            <img  class="imagen" loading="lazy" src="/imagenes/<?php echo $propiedad['imagen']; ?>" alt="anuncio" style="margin: 10px">
             </picture>
             
             <div class="contenido-anuncio">

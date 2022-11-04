@@ -40,11 +40,14 @@ incluirTemplate('header');
             <div class="botones-admin">
                 <a class="btn btn-success" href="admin/cursos/index.php"> Agregar un curso</a>
             </div>
-            <br>
+            <br><br>
             <div class="botones-admin">
-                <a class="btn btn-success" href="admin\formularios_fiador\index.php"> Formularios</a>
+                <a class="btn btn-success" href="admin\formularios_fiador\index.php"> Formularios de Fiador</a>
             </div>
-
+            <br><br>
+            <div class="botones-admin">
+                <a class="btn btn-success" href="admin\formularios_hipoteca\index.php"> Formularios de Hipoteca</a>
+            </div>
     <table class= "propiedades">  
         <thead>
 <?php

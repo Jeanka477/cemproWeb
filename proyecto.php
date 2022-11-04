@@ -28,6 +28,9 @@ $proyecto = mysqli_fetch_assoc($resultado);
 
  incluirTemplate('header');
  ?>
+
+<body style="background-color: #b5ffe545">
+
 <br>
 <br>
 <br>
@@ -35,7 +38,7 @@ $proyecto = mysqli_fetch_assoc($resultado);
 <br>
 <br>
 
-    <main class="contenido-proyecto">
+    <main class="contenido-proyecto" >
         <h1><?php echo $proyecto['nom_proyecto']; ?></h1>
 
         <picture>
@@ -43,17 +46,18 @@ $proyecto = mysqli_fetch_assoc($resultado);
         </picture>
 
         <div class="resumen-proyecto ">
-            <p class="ubicacion">Ubicación: <?php echo $proyecto['ubicacion_proyecto']; ?></p>
+            <h2 class="ubicacion">Ubicación: <?php echo $proyecto['ubicacion_proyecto']; ?></h2>
 
-            <p class="fecha_inicio">Fecha de inicio: <?php echo $proyecto['fecha_inicio']; ?></p>
+            <h2 class="fecha_inicio">Fecha de inicio: <?php echo $proyecto['fecha_inicio']; ?></h2>
           
-            <p class="fecha_fin">Fecha de finalización: <?php echo $proyecto['fecha_fin']; ?></p>
+            <h2 class="fecha_fin">Fecha de finalización: <?php echo $proyecto['fecha_fin']; ?></h2>
 
-            <?php echo $proyecto['descripcion']; ?>
+            <h2 class="fecha_fin">Descripción: <?php echo $proyecto['descripcion']; ?>
 
 
         </div>
     </main>
+</body>
 
     <link href="/BizPage/assets/css/style.css" rel="stylesheet">
     <?php 
