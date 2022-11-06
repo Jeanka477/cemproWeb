@@ -21,6 +21,37 @@ if(!$auth){
 
     $resultado = $_GET ['mensaje'] ?? null;
 
+    if($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $id =  $_POST['cod_curso'];
+        $id = filter_var($id, FILTER_VALIDATE_INT);
+
+        if($id){
+
+             //eliminar archivo
+             $query =  "SELECT imagen_curso FROM  curso WHERE cod_curso = ${id}";
+
+             $resultado = mysqli_query($db, $query);
+             $curso = mysqli_fetch_assoc($resultado);
+            
+ 
+             unlink('../../imagenes/' . $curso['imagen_curso']);
+
+
+
+             //eliminar proyecto
+            $query = "DELETE FROM curso WHERE cod_curso = ${id}";
+
+            $resultado = mysqli_query($db, $query);
+
+            if($resultado) {
+                header('location: /admin/cursos/index?resultado=3');
+            }
+        }
+
+        
+    }
+
+
    
 
 require '../../includes/funciones.php';

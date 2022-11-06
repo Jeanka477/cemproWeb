@@ -29,7 +29,7 @@ $propiedad = mysqli_fetch_assoc($resultado);
  incluirTemplate('header');
  ?>
 
-<br><br><br><br>
+<br><br><br><br> <br><br>
 
     <main >
         <div class="contenido-propiedad">
