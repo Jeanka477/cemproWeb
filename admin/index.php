@@ -48,6 +48,10 @@ incluirTemplate('header');
             <div class="botones-admin">
                 <a class="btn btn-success" href="admin\formularios_hipoteca\index.php"> Formularios de Hipoteca</a>
             </div>
+            <br><br>
+            <div class="botones-admin">
+                <a class="btn btn-success" href="admin\usuarios\index.php"> Usuarios</a>
+            </div>
     <table class= "propiedades">  
         <thead>
 <?php

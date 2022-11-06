@@ -28,9 +28,9 @@ $curso = mysqli_fetch_assoc($resultado);
 
  incluirTemplate('header');
  ?>
+<br><br><br><br><br><br>
 
-
-    <main class="contenedor seccion contenido-centrado">
+    <main class="contenido-curso">
         <h1><?php echo $curso['nombre_curso']; ?></h1>
 
         <picture>
@@ -58,3 +58,5 @@ $curso = mysqli_fetch_assoc($resultado);
     mysqli_close($db);
 
     incluirTemplate('footer');?>
+    
+    <link href="/BizPage/assets/css/style.css" rel="stylesheet">

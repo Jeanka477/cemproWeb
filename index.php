@@ -762,7 +762,7 @@ require 'includes/app.php';
             <div class="contact-phone">
               <i class="bi bi-phone"></i>
               <h3>Número de Teléfono</h3>
-              <p><a href="tel:+155895548855">+506 8855 7250</a></p>
+              <p><a href="tel:+155895548855">+506 2659 9038</a></p>
             </div>
           </div>
 
@@ -839,13 +839,13 @@ require 'includes/app.php';
             Provincia de Guanacaste<br>
               Hojancha 51101<br>
               Costa Rica <br>
-              <strong>Teléfono:</strong> +506 8855 7250<br>
+              <strong>Teléfono:</strong> +506 2659 9038<br>
               <strong>Correo:</strong> cemprodeca@gmail.com<br>
             </p>
 
             <div class="social-links">
               <a href="https://www.facebook.com/profile.php?id=100063784601391" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="https://api.whatsapp.com/send/?phone=%2B50688557250&text&type=phone_number&app_absent=0" class="instagram"><i class="bi bi-whatsapp"></i></a>
+              <!-- <a href="https://api.whatsapp.com/send/?phone=%2B50688557250&text&type=phone_number&app_absent=0" class="instagram"><i class="bi bi-whatsapp"></i></a> -->
               
             </div>
 
@@ -853,7 +853,7 @@ require 'includes/app.php';
 
           <div class="col-lg-3 col-md-6 footer-newsletter">
             <h4>Ubicación</h4>
-            <iframe <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4792.96789994426!2d-85.41782338316608!3d10.05850659033916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9fbb6c05e6dc73%3A0xb0b0e349b2990a84!2sCEMPRODECA%20Hojancha!5e1!3m2!1ses-419!2scr!4v1667517170218!5m2!1ses-419!2scr"
+            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4792.96789994426!2d-85.41782338316608!3d10.05850659033916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9fbb6c05e6dc73%3A0xb0b0e349b2990a84!2sCEMPRODECA%20Hojancha!5e1!3m2!1ses-419!2scr!4v1667517170218!5m2!1ses-419!2scr"
                width="350" height="250" 
               style="border-radius:3%;;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </form>

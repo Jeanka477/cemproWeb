@@ -840,6 +840,14 @@ h3, p{
   border-radius: 10px;
 }
 
+.contenido-curso{
+  text-align: center;
+  background-color: #e4e9e7;
+  margin-right: 25rem;
+  margin-left: 25rem;
+  border-radius: 10px;
+}
+
 
 
 /* Logo
