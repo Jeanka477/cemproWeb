@@ -22,18 +22,19 @@
 
         if($id){
 
-             //eliminar archivo
-             $query =  "SELECT imagen_proyecto FROM  proyecto WHERE cod_proyecto = ${id}";
 
-             $resultado = mysqli_query($db, $query);
-             $proyecto = mysqli_fetch_assoc($resultado);
+            //eliminar archivo
+            $query =  "SELECT imagen_proyecto FROM  proyecto WHERE cod_proyecto = ${id}";
+
+            $resultado = mysqli_query($db, $query);
+            $propiedad = mysqli_fetch_assoc($resultado);
+           
+
+            unlink('../imagenes/' . $propiedad['imagen_proyecto']);
             
- 
-             unlink('../../imagenes/' . $propiedad['imagen_proyecto']);
 
 
-
-             //eliminar proyecto
+        //eliminar la proyectos
             $query = "DELETE FROM proyecto WHERE cod_proyecto = ${id}";
 
             $resultado = mysqli_query($db, $query);
@@ -42,7 +43,6 @@
                 header('location: /admin/proyectos/index?resultado=3');
             }
         }
-
         
     }
 
@@ -165,49 +165,6 @@ function confirmation(){
         </tbody>
 </table>
 <div id="paginador" class=""></div>
- <!--<a href="/admin/proyectos/crear.php" class="boton bton-ver-propiedades">Crear una nuevo proyecto</a>
-
-
-
-    <table class= "propiedades">  
-        <thead>
-            <tr>
-
-            <th>Codigo proyecto</th>
-            <th>Nombre Proyecto</th>
-            <th>Ubicacion</th>
-            <th>Fecha de inicio</th>
-            <th>fecha de final</th>
-            <th>descripcion</th>
-            <th>Acciones</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td> /<?// echo $proyecto['id']; ?></td>
-                <td><?php //echo $proyecto['cod_proyecto']; ?></td>
-                <td><?php //echo $proyecto['nom_proyecto']; ?></td>
-                <td><img src="/imagenes/<?php //echo $proyecto['imagen']; ?>" class="imagen-tabla">  </td>
-                <td><?// echo $proyecto['fecha_inicio']; ?></td>
-                <td><?php //echo $proyecto['fecha_fin']; ?></td>
-                <td><?php //echo $proyecto['descripcion']; ?></td>
-                <td></td>
-                <td>
-            
-<br>
-                <a href="#"class="boton-eliminar">Eliminar</a>
-                <br>
-                <br>
-                <br>
-                <a href="#" class="boton-Actualizar">Actualizar</a>
-
-                </td>
-            </tr>
-          
-        </tbody>
-    </table>
--->
 
 
 </main>

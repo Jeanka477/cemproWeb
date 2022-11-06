@@ -131,12 +131,15 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 require '../../includes/funciones.php';
 incluirTemplate('header');
 ?>
-
+<br>
+<br>
+<br>
+<br>
 <main class="contenedor seccion">
     <h1>Actualizar</h1>   
     
     
-    <a href="/admin" class="boton bton-ver-propiedades">Volver</a> <br>
+    <a href="/admin" class="btn btn-success">Volver</a> <br>
 
 <br>
 
@@ -182,5 +185,7 @@ incluirTemplate('header');
 
 
 <?php
+
     incluirTemplate('footer');
 ?>
+<link href="/BizPage/assets/css/style.css" rel="stylesheet">

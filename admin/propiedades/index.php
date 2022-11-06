@@ -147,7 +147,7 @@ function confirmation(){
                 <!--Eliminar-->
                 <form method="POST" class="w-100">
 
-                <input type="hidden" name="cod_propiedad" value="<?php echo $propiedad['cod_prpiedad'];?>">
+                <input type="hidden" name="cod_propiedad" value="<?php echo $propiedad['cod_propiedad'];?>">
                 <input type="submit"class="btn btn-outline-danger"value="Eliminar" onclick='return confirmation()'>
                 </form>
 
