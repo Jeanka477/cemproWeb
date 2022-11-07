@@ -58,6 +58,18 @@ require '../../includes/funciones.php';
 incluirTemplate('header');
 ?>
 <br><br><br><br>
+
+<body>
+<script>    
+function confirmation(){
+    var respuesta = confirm("Esta seguro de eliminar esta Propiedad?");
+    if(respuesta == true){
+        return true;
+    }else{
+        return false;
+    }
+}
+</script>
 <main class="contenedor seccion">
     <h1>Administrador de cemproweb</h1>    
 
@@ -107,7 +119,7 @@ incluirTemplate('header');
                 <form method="POST" class="w-100">
 
                 <input type="hidden" name="cod_curso" value="<?php echo $curso['cod_curso'];?>">
-                <input type="submit"class="btn btn-outline-danger"value="Eliminar">
+                <input type="submit"class="btn btn-outline-danger"value="Eliminar" onclick='return confirmation()'>
                 </form>
 
                  <!--Actualizar-->
@@ -126,7 +138,7 @@ incluirTemplate('header');
 </main>
 <script src="/BizPage/assets/js/paje.js" ></script>
 <link href="/BizPage/assets/css/style.css" rel="stylesheet">
-
+</body>
 
 <?php
 

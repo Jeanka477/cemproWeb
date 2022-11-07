@@ -120,7 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
  $resultado = mysqli_query($db, $query);
  if($resultado){
-    header('location: /admin?resultado=2');
+    header('location: /admin/cursos/crear?resultado=2');
  }
     }   
         }

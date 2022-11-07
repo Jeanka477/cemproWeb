@@ -136,7 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
  $resultado = mysqli_query($db, $query);
  if($resultado){
-    header('location: /admin?resultado=2');
+    header('location: /admin/proyectos/crear?resultado=2');
  }
     }   
         }
@@ -156,7 +156,7 @@ incluirTemplate('header');
     <h1>Actualizar</h1>   
     
     
-    <a href="/admin" class="boton bton-ver-propiedades">Volver</a> <br>
+    <a href="/admin" class="btn btn-success">Volver</a> <br>
 
 <br>
 

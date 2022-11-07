@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
 
  $resultado = mysqli_query($db, $query);
  if($resultado){
-    header('location: /admin?resultado=1');
+    header('location: /admin/propiedades/crear?resultado=1');
  }
 
     }
