@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD']==='POST'){
 
 incluirTemplate('header');
 ?>
-<body style="background-size:cover; background-repeat: no-repeat;  background-image: url(BizPage/assets/img/CemproWebInicio.jpg);">
+<body style="background-size: cover; background-repeat: no-repeat;  background-image: url(BizPage/assets/img/CemproWebInicio.jpg);">
     
 <br>
 <br>
