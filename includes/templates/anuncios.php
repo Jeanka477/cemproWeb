@@ -12,54 +12,52 @@ $resultado = mysqli_query($db, $query);
 
 ?>
 
-<header id="header" class="fixed-top d-flex align-items-center header-transparent">
-    <div class="container-fluid">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-      <div class="row justify-content-center align-items-center">
-        <div class="col-xl-11 d-flex align-items-center justify-content-between">
-        <a href="/">
-                   <!-- <img src="build/img/logo.svg" alt="Logotipo de cemprodeca">-->
+  <title>CEMPRODECA</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-                   <img loading="lazy" src="BizPage/assets/img/CEMPRODECA.png" alt="anincio" class="logoCemprodeca">
-                </a>
-          <!-- Uncomment below if you prefer to use an image logo -->
-          <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-          <nav id="navbar" class="navbar">
-            <ul>
-            <li class="dropdown"><a href="#"><span>Solicitar Crédito</span> <i class="bi bi-chevron-down"></i></a>
-                <ul>
-                  <li><a href="requisitoHipoteca.php">Por Hipoteca</a></li>
-                  <li><a href="RequisitoFiador.php">Por Fiador</a></li>
-                  </li>
-                </ul>
-              </li>
-              
-              <li><a class="nav-link scrollto" href="propiedades.php">Propiedades</a></li>
-              <li><a class="nav-link scrollto" href="proyectos.php">Proyectos</a></li>
-              <li><a class="nav-link scrollto " href="cursos.php">Cursos</a></li>
-              <!-- <li><a class="nav-link scrollto" href="#team">Team</a></li> -->
-              <li><a class="nav-link  " href="login.php">Iniciar Sesión</a></li>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
-              <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
-            </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav><!-- .navbar -->
-        </div>
-      </div>
+  <!-- Vendor CSS Files -->
+  <link href="/BizPage/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="/BizPage/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/BizPage/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/BizPage/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/BizPage/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/BizPage/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    </div>
-  </header>
+  <!-- Template Main CSS File -->
+  <link href="/BizPage/assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: BizPage - v5.8.0
+  * Template URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
 
 
 <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
 </head>
+
+
+
 <div class="contenedor-anuncios"  >
     <?php while($propiedad = mysqli_fetch_assoc($resultado)): ?>
             <div class="anuncio">
 
 
-            <img  class="imagen" loading="lazy" src="/imagenes/<?php echo $propiedad['imagen']; ?>" alt="anuncio" style="margin: 10px">
+            <img  class="imagen" loading="lazy" src="/imagenes/<?php echo $propiedad['imagen']; ?>" alt="anuncio" >
             </picture>
             
             <div class="contenido-anuncio">
@@ -68,20 +66,7 @@ $resultado = mysqli_query($db, $query);
                 <p class="precio"><?php echo $propiedad['precio']; ?></p>
 
 
-                <!-- <ul class="iconos-cararteristicas">
-                    <li>
-                        <img loading="lazy" src="build/img/IconoAgua.svg" alt="">
-                        <p>   No</p>
-                    </li>
-                    <li>
-                        <img loading="lazy" src="build/img/Electricidad.svg" alt="">
-                        <p>No</p>
-                    </li>
-                    <li>
-                        <img loading="lazy" src="build/img/Paisaje.svg" alt="">
-                        <p>SI</p>
-                    </li>
-                </ul> -->
+            
 
                 <br>
                 <br>
@@ -96,6 +81,15 @@ $resultado = mysqli_query($db, $query);
             </div><!--.contenedor anuncios-->
 
 
+
+
+
+
+
+
+
+
+            
             <?php
 
         //cerrar la conexion

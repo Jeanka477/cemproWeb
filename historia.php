@@ -4,10 +4,17 @@ require 'includes/app.php';
 
  incluirTemplate('header');
  ?>
+
+<body style="background-color: #b5ffe545">
+
+
 <br><br><br><br>
     <main class="contenedor seccion">
-        <h1>Historia de CEMPRODECA </h1>
-        <h2>Eslogan de CEMPRODECA</h2>
+<div class="container aos-init aos-animate">
+    <header class="section-header wow fadeInUp">
+          
+        <h3>Historia de CEMPRODECA </h3>
+   
         <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis rerum at ad quam eius necessitatibus amet nostrum, 
             molestias qui vero debitis animi voluptatibus quasi atque reiciendis velit ipsam libero quae quaerat magnam nostrum. 
             Corporis repellendus nemo ullam incidunt laudantium cupiditate optio, maiores ad nisi animi neque inventore harum officiis rerum reprehenderit. 
@@ -17,19 +24,20 @@ require 'includes/app.php';
             Amet, commodi laboriosam, blanditiis architecto, saepe explicabo quasi inventore eveniet necessitatibus iste? Quae quia laudantium quidem voluptate 
             Sed eos in at a eveniet inventore, nam, debitis expedita culpa, odit eum. Eos explicabo tempore ipsum, facere sequi consectetur deleniti non nostrum eius nobis aperiam atque.
             Eius quia sit nulla numquam laboriosam libero magnam natus voluptatibus amet, rem qui illo tempora perspiciatis perferendis aspernatur? Quaerat, maiores!</p>
+    </header>
 
+    </div>
         <section class="fundadores">
-            <h2> Fundadores de CEMPRODECA </h2>
-            <div class="contenedor-historia">
-                <div class="anuncio-historia">
+            <!-- <h2> Fundadores</h2>
+            <div class="contenedor-anuncios" style="min-height: 30rem;">
+                <div class="anuncio">
     
                 <picture>
-                    <!-- <source srcset="build/img/propiedad1.webp" type="image/webp"> 
-                    <source srcset="build/img/propiedad1.jpg" type="image/jpg">  -->
+                   
                     <img class="imagen-historia" loading="lazy" src="build/img/sin foto.png" alt="anincio">
                 </picture>
                 
-                <div class="contenido-historia">
+                <div class="contenido-anuncio">
                     <p>Fundador</p>
                   
                     
@@ -37,14 +45,14 @@ require 'includes/app.php';
                     
                 </div>
                 </div>
-                <div class="anuncio-historia">
+                <div class="anuncio">
     
                     <picture>
                         
                         <img class="imagen-historia" loading="lazy" src="build/img/sin foto.png"alt="anincio">
                     </picture>
                     
-                    <div class="contenido-historia">
+                    <div class="contenido-anuncio">
                         <p> Fundador</p>
                         
                        
@@ -52,14 +60,14 @@ require 'includes/app.php';
                         
                     </div>
                     </div>
-                    <div class="anuncio-historia">
+                    <div class="anuncio">
     
                         <picture>
                             
                             <img class="imagen-historia" loading="lazy" src="build/img/sin foto.png" alt="anincio">
                         </picture>
                         
-                        <div class="contenido-historia">
+                        <div class="contenido-anuncio">
                             <p>Fundador</p>
                             
                            
@@ -67,7 +75,73 @@ require 'includes/app.php';
                             
                         </div>
                      </div>
+                </div> -->
+
+                <section id="team" style="background-color: #b5ffe545">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3>Fundadores</h3>
+          <p></p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6" style="border-radius: 50px;">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+             <img src="BizPage\assets\img\sinfoto.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Nombre Apellido</h4>
+                  <span>Fundador</span>
+                  
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="200" >
+             <img src="BizPage\assets\img\sinfoto.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                <h4>Nombre Apellido</h4>
+                  <span>Fundador</span>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+             <img src="BizPage\assets\img\sinfoto.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                <h4>Nombre Apellido</h4>
+                  <span>Fundador</span>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+             <img src="BizPage\assets\img\sinfoto.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                <h4>Nombre Apellido</h4>
+                  <span>Fundador</span>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
     
                 <br>
                 <br>
@@ -75,6 +149,21 @@ require 'includes/app.php';
     
         </section>
     </main>
+    <script src="BizPage/assets/js/main.js"></script>
+    </body>
+
+
+
+  <script src="BizPage/assets/vendor/aos/aos.js"></script>
+  <script src="BizPage/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="BizPage/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="BizPage/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <script src="BizPage/assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="BizPage/assets/vendor/php-email-form/validate.js"></script>
+
+    <!--  -->
+
 
     <link href="/BizPage/assets/css/style.css" rel="stylesheet">
     <?php incluirTemplate('footer');?>

@@ -611,6 +611,7 @@ section {
   border-radius: 0 0 4px 4px;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
   margin-bottom: 20px;
+  min-height: 30rem;
 }
 #about .about-col .img {
   position: relative;
@@ -772,10 +773,7 @@ section {
 /* Propiedades contenedor
 --------------------------------*/
 
-.contenido-anuncio{
-  padding: 2rem;
-  
-}
+
 
 .contenedor-anuncios{
   display: grid;
@@ -793,11 +791,14 @@ section {
   box-shadow: 1px 1px 9px;
   display: block;
   border-radius: 5px;
+  position:relative;
 }
 
 .contenido-anuncio{
-  padding: 2rem;
+
+  padding-bottom: 2rem;
   text-align: center;
+  
   
 }
 h3, p{
@@ -816,8 +817,12 @@ h3, p{
 }
 
 .imagen{
-  width: 100%;
+  max-width: 93%;
+  max-height: 93%;
+  margin: auto;
+  padding: 1rem;
   display: block;
+  
 }
 
 
@@ -825,6 +830,8 @@ h3, p{
 /* Propiedad
 --------------------------------*/
 .contenido-propiedad{
+  position:absolute;
+  bottom:0px;
   text-align: center;
   background-color: #e4e9e7;
   margin-right: 25rem;
