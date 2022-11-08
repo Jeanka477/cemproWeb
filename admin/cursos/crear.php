@@ -116,9 +116,10 @@ incluirTemplate('header');
     <?php endforeach; ?>
 
 
-
+    <div class="formulario-crear">
     <form   method="POST" action="/admin/cursos/crear.php" enctype="multipart/form-data">
-        <fieldset class="form-control w-25 aling text-center">
+   
+    <fieldset class="form-control w-25 aling text-center ">
             <legend>Informacion general</legend>
             <label for="nombre_curso">Nombre:</label>
             <input class="form-control w-25 aling text-center" class="" type="text" id="nombre_curso" name="nombre_curso" value="<?php echo $nombre_curso; ?>">
@@ -142,6 +143,7 @@ incluirTemplate('header');
 
         <input  type="submit" value="Crear Proyecto" class="boton bton-ver-propiedades">
     </form>
+    </div>    
 
 
 
