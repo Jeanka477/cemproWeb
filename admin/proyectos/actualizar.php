@@ -88,12 +88,9 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST'){
         $errores[] = "Debe agregar una descripcion al proyecto";
     }
 
-   if(!$imagen_proyecto['name']){
-       $errores[] = 'Es obligatorio poner una imagen';
-   }
     //Tamano de las imagenes 
     $medida = 1000 * 1000;
-    if ($imagen['size'] > $medida ){
+    if ($imagen_proyecto['size'] > $medida ){
        $errores[] = 'La imagen es muy pesada';
     }
 
@@ -208,11 +205,10 @@ incluirTemplate('header');
 <br>
 <textarea id="descripcion"  name="descripcion"placeholder="Escriba una descripcion del proyecto "cols="60" rows="10" ><?php echo $descripcion; ?></textarea>
 
+        
         </fieldset>
 
-               
-            </select>
-        </fieldset>
+
         <input type="submit" value="Actualizar Proyecto" class="boton bton-ver-propiedades">
 
 </main>
