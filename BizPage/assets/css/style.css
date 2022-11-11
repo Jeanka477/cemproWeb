@@ -857,6 +857,28 @@ h3, p{
 
 
 
+
+/* CRUD FORMULARIOS
+--------------------------------*/
+.formulario-crear{
+  min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: #fafafa;
+    padding: 20px;
+    width: 40%;
+    box-shadow: 0px 1px 9px 5px rgba(0,0,0,0.42);
+    margin: 10px;
+    margin-left: 25%;
+    border-radius: 6px;
+    
+  
+}
+
+
+
+
 /* Logo
 --------------------------------*/
 .logoCemprodeca {
