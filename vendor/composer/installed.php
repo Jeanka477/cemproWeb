@@ -3,7 +3,7 @@
         'name' => 'ariana/cempro-web',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '80642a225e174bc7a103f6809076c1a94c54910c',
+        'reference' => '84a3de239d76306c5b655f1230ed4ce5f1db84e8',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'ariana/cempro-web' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '80642a225e174bc7a103f6809076c1a94c54910c',
+            'reference' => '84a3de239d76306c5b655f1230ed4ce5f1db84e8',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
