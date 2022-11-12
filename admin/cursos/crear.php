@@ -102,7 +102,7 @@ incluirTemplate('header');
     <h1>Crear</h1>   
     
     
-    <a href="/admin/cursos"  class="formulario aling text-left">Volver</a> <br>
+
 
 <br>
 
@@ -119,14 +119,14 @@ incluirTemplate('header');
     <div class="formulario-crear">
     <form   method="POST" action="/admin/cursos/crear.php" enctype="multipart/form-data">
    
-    <fieldset class="form-control w-25 aling text-center ">
+    <fieldset class="form-control  aling text-center ">
             <legend>Informacion general</legend>
             <label for="nombre_curso">Nombre:</label>
-            <input class="form-control w-25 aling text-center" class="" type="text" id="nombre_curso" name="nombre_curso" value="<?php echo $nombre_curso; ?>">
+            <input class="form-control  aling text-center" class="" type="text" id="nombre_curso" name="nombre_curso" value="<?php echo $nombre_curso; ?>">
             <br>
            
             <label for="imagen_curso">Imagen:</label>
-            <input class="form-control w-25 aling text-center" type="file" id="imagen_curso" accept="image.jpeg, image/png" name="imagen_curso" >
+            <input class="form-control  aling text-center" type="file" id="imagen_curso" accept="image.jpeg, image/png" name="imagen_curso" >
             <br>
             <label for="estado" >Estado:</label>
         <input type="text" id="estado" name="estado" value="<?php echo $estado; ?>">
@@ -141,7 +141,9 @@ incluirTemplate('header');
         </fieldset>
 
 
-        <input  type="submit" value="Crear Proyecto" class="boton bton-ver-propiedades">
+        <input  type="submit" value="Crear Proyecto" class="btn btn-primary">
+
+        <a href="/admin/cursos"  class="btn btn-success">Cancelar</a> <br>
     </form>
     </div>    
 
